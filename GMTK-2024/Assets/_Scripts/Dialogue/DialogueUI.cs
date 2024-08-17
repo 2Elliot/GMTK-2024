@@ -12,7 +12,7 @@ public class DialogueUI : MonoBehaviour
 
     public void SetDialogue(Dialogue dialogue, int turnIndex) {
         DialogueTurn dialogueTurn = dialogue._textTurns[turnIndex];
-        _characterNameText.text = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogueTurn._character._nameColor)}>{dialogueTurn._character.CharacterName}:</color>";
+        _characterNameText.text = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogueTurn._character.NameColor)}>{dialogueTurn._character.CharacterName}:</color>";
         _textTypingAnimator._text = $"{dialogueTurn._text}";
         _textTypingAnimator._typingSpeed = (dialogueTurn._duration) / dialogueTurn._text.Length;
     }

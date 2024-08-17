@@ -1,18 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class RegisterController : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI _text;
 
-    private CustomerController _customerController;
+    private GameController _customerController;
     
     private int _guess = 0;
 
     private void Start() {
-        _customerController = SingletonContainer.Instance.CustomerController;
+        _customerController = SingletonContainer.Instance.GameController;
     }
 
     public void Add(int amount) {

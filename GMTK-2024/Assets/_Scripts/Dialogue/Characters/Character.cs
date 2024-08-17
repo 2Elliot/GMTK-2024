@@ -9,7 +9,7 @@ public class Character : ScriptableObject
 {
     [SerializeField] private string _characterName;
     [Tooltip("Color of the character's name in the subtitle box.")]
-    [ColorUsage(false, false)] public Color _nameColor;
+    [ColorUsage(false, false)] public Color NameColor;
     [SerializeField] private string _Nickname;
     [SerializeField] private string age, height, gender, occupation, status;
     [SerializeField] private Sprite _characterPortrait;

@@ -349,10 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b8aab90cbf6f044a77f3bf2ffa85db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scaleController: {fileID: 1667468997}
-  _registerController: {fileID: 1850056514}
   _customerImageRenderer: {fileID: 422691130}
-  _dialogueHandler: {fileID: 163598920}
   _customerName: {fileID: 1902073852}
   _customers:
   - {fileID: 11400000, guid: 9f0ca4e147205234b9333220d79e5830, type: 2}
@@ -385,8 +382,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e81cdfdd798b4d48bca3873591fd65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _customerController: {fileID: 163598919}
+  _gameController: {fileID: 163598919}
+  _scaleController: {fileID: 1667468997}
   _registerController: {fileID: 1850056514}
+  _dialogueHandler: {fileID: 163598920}
 --- !u!1 &189326461
 GameObject:
   m_ObjectHideFlags: 0

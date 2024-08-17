@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RegisterAccepterController : ClickableSprite
+public class RegisterAcceptorController : ClickableSprite
 {
     private RegisterController _registerController;
 

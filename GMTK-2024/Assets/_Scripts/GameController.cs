@@ -4,11 +4,11 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CustomerController : MonoBehaviour {
-    [SerializeField] private ScaleController _scaleController;
-    [SerializeField] private RegisterController _registerController;
+public class GameController : MonoBehaviour {
+    private ScaleController _scaleController;
+    private RegisterController _registerController;
     [SerializeField] private SpriteRenderer _customerImageRenderer;
-    [SerializeField] private DialogueHandler _dialogueHandler;
+    private DialogueHandler _dialogueHandler;
     [SerializeField] private TextMeshProUGUI _customerName;
 
     [SerializeField] private List<Customer> _customers;
@@ -18,6 +18,10 @@ public class CustomerController : MonoBehaviour {
     private Item _currentItem;
 
     private void Start() {
+        _scaleController = SingletonContainer.Instance.ScaleController;
+        _registerController = SingletonContainer.Instance.RegisterController;
+        _dialogueHandler = SingletonContainer.Instance.DialogueHandler;
+        
         StartCoroutine(CallAfterOneFrame(NewCustomer)); // Because some other stuff initializes in Start()
     }
 
@@ -25,6 +29,10 @@ public class CustomerController : MonoBehaviour {
         yield return null;
 
         callback?.Invoke();
+    }
+
+    public void SubmitGuess(int guess) {
+        
     }
     
     public void NewCustomer() {
