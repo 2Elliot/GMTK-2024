@@ -9,7 +9,11 @@ public class ClickableSprite : MonoBehaviour {
   protected Camera MainCamera;
 
   protected bool SpriteClicked;
-  
+  protected bool IsHovering;
+
+  // LayerMask to specify which layers to ignore
+  public LayerMask IgnoreLayerMask;
+
   protected virtual void Start() {
     InputActions = InputReader.Instance.InputActions;
 
@@ -32,11 +36,34 @@ public class ClickableSprite : MonoBehaviour {
     Vector2 mousePosition = Mouse.current.position.ReadValue();
     Vector2 worldPosition = MainCamera.ScreenToWorldPoint(mousePosition);
         
-    RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
+    RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero, Mathf.Infinity, ~IgnoreLayerMask);
         
     if (hit.collider != null && hit.collider.gameObject == gameObject) {
       SpriteClicked = true;
       OnSpriteClicked();
+    }
+  }
+
+  protected virtual void Update() {
+    Vector2 mousePosition = Mouse.current.position.ReadValue();
+    Vector2 worldPosition = MainCamera.ScreenToWorldPoint(mousePosition);
+
+    RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero, Mathf.Infinity, ~IgnoreLayerMask);
+
+    if (hit.collider != null && hit.collider.gameObject == gameObject) {
+      if (!IsHovering) {
+        IsHovering = true;
+        OnMouseHoverEnter();
+      }
+    } else {
+      if (IsHovering) {
+        IsHovering = false;
+        OnMouseHoverExit();
+      }
+    }
+
+    if (SpriteClicked) {
+      OnSpriteHeld();
     }
   }
 
@@ -48,13 +75,15 @@ public class ClickableSprite : MonoBehaviour {
     // Override this method in derived class for specific behavior on release
   }
 
-  protected virtual void Update() {
-    if (SpriteClicked) {
-      OnSpriteHeld();
-    }
-  }
-
   protected virtual void OnSpriteHeld() {
     // Override this method in derived classes for specific behavior when sprite is held
+  }
+
+  protected virtual void OnMouseHoverEnter() {
+    // Override this method in derived classes for specific behavior on hover enter
+  }
+
+  protected virtual void OnMouseHoverExit() {
+    // Override this method in derived classes for specific behavior on hover exit
   }
 }

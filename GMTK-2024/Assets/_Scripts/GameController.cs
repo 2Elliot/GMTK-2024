@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
     private ScaleController _scaleController;
-    private RegisterController _registerController;
+    private PrinterController _printerController;
     private DialogueHandler _dialogueHandler;
     private CounterWeightManager _counterWeightManager;
     
@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour {
     private void Start() {
         SingletonContainer instance = SingletonContainer.Instance;
         _scaleController = instance.ScaleController;
-        _registerController = instance.RegisterController;
+        _printerController = instance.PrinterController;
         _dialogueHandler = instance.DialogueHandler;
         _counterWeightManager = instance.CounterWeightManager;
         
@@ -86,7 +86,7 @@ public class GameController : MonoBehaviour {
     }
 
     private void Reset() {
-        _registerController.Reset();
+        _printerController.Reset();
 
         _counterWeightManager.Reset();
     }
