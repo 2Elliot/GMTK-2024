@@ -1,61 +1,28 @@
-using System;
-using InputHandler;
-using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class WeightController : MonoBehaviour {
-    
-    private PlayerInputActions _inputActions;
-    private Camera _mainCamera;
-    
-    [SerializeField] private Transform _connectionPoint;
+public class WeightController : IClickableSprite {
 
-    private Vector3 offset;
+  private Vector3 Offset;
 
-    private bool _spriteClicked;
+  public int Index;
+  public ScaleController ScaleController;
 
-    public int Index;
-    public ScaleController scaleController;
-    
-    private void Start() {
-        _inputActions = InputReader.Instance.InputActions;
+  [SerializeField] private Transform _connectionPoint;
+  
+  protected override void Start() {
+    base.Start();
+    Offset = transform.position - _connectionPoint.position;
+  }
 
-        _inputActions.Player.Mouse0.performed += OnClick;
-        _inputActions.Player.Mouse0.canceled += _ => { _spriteClicked = false; };
+  public void SetPosition(Vector3 position) {
+    transform.position = position + Offset;
+  }
 
-        _mainCamera = Camera.main;
+  protected override void OnSpriteHeld() {
+    Vector2 mousePositionScreen = Mouse.current.position.ReadValue();
+    Vector3 mousePositionWorld = MainCamera.ScreenToWorldPoint(new Vector3(mousePositionScreen.x, mousePositionScreen.y, 0));
         
-        offset = transform.position - _connectionPoint.position;
-    }
-
-    private void OnDisable() {
-        _inputActions.Player.Mouse0.performed -= OnClick;
-    }
-
-    public void SetPosition(Vector3 position) {
-        transform.position = position + offset;
-    }
-    
-    private void OnClick(InputAction.CallbackContext context) {
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
-        Vector2 worldPosition = _mainCamera.ScreenToWorldPoint(mousePosition);
-        
-        RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
-        
-        if (hit.collider != null) {
-            if (hit.collider.gameObject == gameObject) {
-                _spriteClicked = true;
-            }
-        }
-    }
-
-    private void Update() {
-        if (_spriteClicked) {
-            Vector2 mousePositionScreen = Mouse.current.position.ReadValue();
-            Vector3 mousePositionWorld = _mainCamera.ScreenToWorldPoint(new Vector3(mousePositionScreen.x, mousePositionScreen.y, 0));
-        
-            scaleController.SetWeightXPosition(Index, mousePositionWorld);
-        }
-    }
-
+    ScaleController.SetWeightXPosition(Index, mousePositionWorld);
+  }
 }
