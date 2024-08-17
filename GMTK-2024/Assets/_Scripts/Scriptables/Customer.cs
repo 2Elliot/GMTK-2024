@@ -5,6 +5,7 @@ using UnityEngine;
 public class Customer : ScriptableObject
 {
     public string Name;
+    [ColorUsage(false, false)] public Color NameColor;
     public Sprite Image;
     public List<Item> Items;
     public Dialogue Dialogue;

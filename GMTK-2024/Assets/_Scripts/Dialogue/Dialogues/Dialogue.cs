@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class DialogueTurn
 {
-	public Character _character;
+	public Customer _customer;
 	[TextArea(3, 20)] public string _text;
 	public float _startDelay;
 	public float _duration;

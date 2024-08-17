@@ -13,15 +13,10 @@ MonoBehaviour:
   m_Name: BobStart
   m_EditorClassIdentifier: 
   _textTurns:
-  - _character: {fileID: 11400000, guid: d1b47f0c955d194408b18f700f522a3b, type: 2}
+  - _customer: {fileID: 11400000, guid: a0974b7067ae74c4398cc4c7f1342fc9, type: 2}
     _text: Please weigh my pumpkin. I need to know what it's price is for the annual
       Heaviest Pumpkin Competition. If I win this year, I could spend all that money
       on the heaviest pumpkin seeds I could buy!
     _startDelay: 0.3
     _duration: 4
     _endDelay: 4
-  - _character: {fileID: 0}
-    _text: 
-    _startDelay: 0
-    _duration: 0
-    _endDelay: 0

@@ -1,0 +1,1299 @@
+fileFormatVersion: 2
+guid: 5c155f2308541c74dbf91f1a84805aae
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: UI_Animation_Gradient_Frame_0
+    originalName: 
+    pivot: {x: 0.49999997, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 287
+      width: 32
+      height: 32
+    spriteID: 246577e5c733b664e8202583cc386e1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 287}
+  - name: UI_Animation_Gradient_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 327
+      width: 30
+      height: 30
+    spriteID: d22280411c2c5544fb7c75572b229363
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 327}
+  - name: UI_Animation_Gradient_Frame_2
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 70
+      width: 28
+      height: 28
+    spriteID: eefbabecb6bd2dc4db79d82128442aca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 70}
+  - name: UI_Animation_Gradient_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 365
+      width: 30
+      height: 30
+    spriteID: 7fe4f7670c6d55844944e1b60fa13c55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 365}
+  - name: UI_Animation_Gradient_Frame_4
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 233
+      width: 32
+      height: 22
+    spriteID: 6c6c4c69790123d49a0fc95b0c48d311
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 233}
+  - name: UI_Animation_Gradient_Frame_5
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.13043478}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 202
+      width: 32
+      height: 23
+    spriteID: 770ffc99547253c41881b2399f3d7359
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 202}
+  - name: UI_Animation_Gradient_Frame_6
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 4
+      width: 32
+      height: 25
+    spriteID: 7c3b59a211545e94e97f8c7e9fa6a239
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 4}
+  - name: UI_Animation_Gradient_Frame_7
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 403
+      width: 32
+      height: 26
+    spriteID: 11a7df7b7ba261d47b0bc40feb409d86
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 403}
+  - name: UI_Animation_Gradient_Frame_8
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 437
+      width: 32
+      height: 26
+    spriteID: 6354ffe514a83574182ea48219e68e48
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 437}
+  - name: UI_Animation_Gradient_Frame_9
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 106
+      width: 32
+      height: 24
+    spriteID: d4edbc5ec2f514b409ba6ebcd50d924a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 106}
+  - name: UI_Animation_Gradient_Frame_10
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 263
+      width: 32
+      height: 22
+    spriteID: b5a9ed9fe7e067447ad6fc2a87b2f625
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 263}
+  - name: UI_Animation_Gradient_Frame_11
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 138
+      width: 32
+      height: 24
+    spriteID: 65870f98414e90c4aa1f9400f212bd9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 138}
+  - name: UI_Animation_Gradient_Frame_12
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 170
+      width: 32
+      height: 24
+    spriteID: 2a636093ebe3f89488fec3454982a05a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 170}
+  - name: UI_Animation_Gradient_Frame_13
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 293
+      width: 32
+      height: 22
+    spriteID: cbf8550dabac9624fa0c7012b88c7adb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 293}
+  - name: UI_Animation_Gradient_Frame_14
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 37
+      width: 32
+      height: 25
+    spriteID: 524fc6ce71e34f9499cc123fdbdf2a4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 37}
+  - name: UI_Animation_Gradient_Frame_15
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 471
+      width: 32
+      height: 26
+    spriteID: 4417b370d1cca3c48b1f864879fdbd9f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 471}
+  - name: UI_Animation_Gradient_Frame_16
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 197
+      width: 64
+      height: 22
+    spriteID: d63ee2deea5597a48bfc1501fe6eeb80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 197}
+  - name: UI_Animation_Gradient_Frame_17
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.13043478}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 166
+      width: 64
+      height: 23
+    spriteID: 739a75a4a3827c84991ea6054d41bf5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 166}
+  - name: UI_Animation_Gradient_Frame_18
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 4
+      width: 64
+      height: 25
+    spriteID: c8ba8967cc8d19d46a822a33214860d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 4}
+  - name: UI_Animation_Gradient_Frame_19
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 389
+      width: 64
+      height: 26
+    spriteID: 10ac90a8c3d11384181bd805548c6765
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 389}
+  - name: UI_Animation_Gradient_Frame_20
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 423
+      width: 64
+      height: 26
+    spriteID: 37df465f34836ce469e2d33aac01a16c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 423}
+  - name: UI_Animation_Gradient_Frame_21
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 70
+      width: 64
+      height: 24
+    spriteID: 08ee860e6d03eb047a2a7a88813c7abe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 70}
+  - name: UI_Animation_Gradient_Frame_22
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 227
+      width: 64
+      height: 22
+    spriteID: 35ff55a10d1e4e44a9c8c7fd795dd866
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 227}
+  - name: UI_Animation_Gradient_Frame_23
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 102
+      width: 64
+      height: 24
+    spriteID: 2a3dd9316798d414c84a34c21c9e72b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 102}
+  - name: UI_Animation_Gradient_Frame_24
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 134
+      width: 64
+      height: 24
+    spriteID: b3a15ff9c984af6488806dfc44a427d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 134}
+  - name: UI_Animation_Gradient_Frame_25
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 257
+      width: 64
+      height: 22
+    spriteID: d7de1a357e3c34540ad37d2ee3e08be2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 257}
+  - name: UI_Animation_Gradient_Frame_26
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 37
+      width: 64
+      height: 25
+    spriteID: f7b5562dc3a2e6f4ea490668e5b25e57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 37}
+  - name: UI_Animation_Gradient_Frame_27
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 457
+      width: 64
+      height: 26
+    spriteID: 2dcdb30327bf41645b6378c3f09aaadf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 457}
+  - name: UI_Animation_Gradient_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 299
+      width: 96
+      height: 22
+    spriteID: 512a95b2661e65f479f4999a41aacaf0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 299}
+  - name: UI_Animation_Gradient_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: -0.13043478}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 268
+      width: 96
+      height: 23
+    spriteID: 3495724456a3dec4798034caafa14cf8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 268}
+  - name: UI_Animation_Gradient_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 106
+      width: 96
+      height: 25
+    spriteID: 68bcfc05aadde64439d4bc361c98102f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 106}
+  - name: UI_Animation_Gradient_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 96
+      height: 26
+    spriteID: 2c88cde5f6ff2c04f815b476afa4368d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: UI_Animation_Gradient_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 38
+      width: 96
+      height: 26
+    spriteID: 2797243f2a05a4848ab0165d4e442f1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 38}
+  - name: UI_Animation_Gradient_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 172
+      width: 96
+      height: 24
+    spriteID: ce62b8278927b034e8a5a45d7bae7f7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 172}
+  - name: UI_Animation_Gradient_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 329
+      width: 96
+      height: 22
+    spriteID: 0c94a4e152d7cf347ad818f06322ca84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 329}
+  - name: UI_Animation_Gradient_Frame_35
+    originalName: 
+    pivot: {x: 0.5, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 204
+      width: 96
+      height: 24
+    spriteID: 2125e6de2d787524fa6d5d0b6092b403
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 204}
+  - name: UI_Animation_Gradient_Frame_36
+    originalName: 
+    pivot: {x: 0.5, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 236
+      width: 96
+      height: 24
+    spriteID: ec3f4b602c75909438a8210b448902bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 236}
+  - name: UI_Animation_Gradient_Frame_37
+    originalName: 
+    pivot: {x: 0.5, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 359
+      width: 96
+      height: 22
+    spriteID: 49d935329fd3fde4ba846fff49fab552
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 359}
+  - name: UI_Animation_Gradient_Frame_38
+    originalName: 
+    pivot: {x: 0.5, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 139
+      width: 96
+      height: 25
+    spriteID: 3e11ba7422996214b9cb735d34949405
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 139}
+  - name: UI_Animation_Gradient_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: -0.11538462}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 72
+      width: 96
+      height: 26
+    spriteID: 5abb14f5228cbd14fa8d4d2515defdfa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 72}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1194838522
+    name: UI_Animation_Gradient
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: UI_Animation_Gradient_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      spriteId: 246577e5c733b664e8202583cc386e1f
+    - name: UI_Animation_Gradient_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 33
+        y: 1
+        width: 30
+        height: 30
+      spriteId: d22280411c2c5544fb7c75572b229363
+    - name: UI_Animation_Gradient_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 34
+        y: 2
+        width: 28
+        height: 28
+      spriteId: eefbabecb6bd2dc4db79d82128442aca
+    - name: UI_Animation_Gradient_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 33
+        y: 1
+        width: 30
+        height: 30
+      spriteId: 7fe4f7670c6d55844944e1b60fa13c55
+    - name: UI_Animation_Gradient_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 22
+      spriteId: 6c6c4c69790123d49a0fc95b0c48d311
+    - name: UI_Animation_Gradient_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 23
+      spriteId: 770ffc99547253c41881b2399f3d7359
+    - name: UI_Animation_Gradient_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 25
+      spriteId: 7c3b59a211545e94e97f8c7e9fa6a239
+    - name: UI_Animation_Gradient_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 26
+      spriteId: 11a7df7b7ba261d47b0bc40feb409d86
+    - name: UI_Animation_Gradient_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 26
+      spriteId: 6354ffe514a83574182ea48219e68e48
+    - name: UI_Animation_Gradient_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 24
+      spriteId: d4edbc5ec2f514b409ba6ebcd50d924a
+    - name: UI_Animation_Gradient_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 22
+      spriteId: b5a9ed9fe7e067447ad6fc2a87b2f625
+    - name: UI_Animation_Gradient_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 24
+      spriteId: 65870f98414e90c4aa1f9400f212bd9e
+    - name: UI_Animation_Gradient_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 24
+      spriteId: 2a636093ebe3f89488fec3454982a05a
+    - name: UI_Animation_Gradient_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 22
+      spriteId: cbf8550dabac9624fa0c7012b88c7adb
+    - name: UI_Animation_Gradient_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 25
+      spriteId: 524fc6ce71e34f9499cc123fdbdf2a4c
+    - name: UI_Animation_Gradient_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 3
+        width: 32
+        height: 26
+      spriteId: 4417b370d1cca3c48b1f864879fdbd9f
+    - name: UI_Animation_Gradient_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 22
+      spriteId: d63ee2deea5597a48bfc1501fe6eeb80
+    - name: UI_Animation_Gradient_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 23
+      spriteId: 739a75a4a3827c84991ea6054d41bf5f
+    - name: UI_Animation_Gradient_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 25
+      spriteId: c8ba8967cc8d19d46a822a33214860d8
+    - name: UI_Animation_Gradient_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 26
+      spriteId: 10ac90a8c3d11384181bd805548c6765
+    - name: UI_Animation_Gradient_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 26
+      spriteId: 37df465f34836ce469e2d33aac01a16c
+    - name: UI_Animation_Gradient_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 24
+      spriteId: 08ee860e6d03eb047a2a7a88813c7abe
+    - name: UI_Animation_Gradient_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 22
+      spriteId: 35ff55a10d1e4e44a9c8c7fd795dd866
+    - name: UI_Animation_Gradient_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 24
+      spriteId: 2a3dd9316798d414c84a34c21c9e72b4
+    - name: UI_Animation_Gradient_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 24
+      spriteId: b3a15ff9c984af6488806dfc44a427d6
+    - name: UI_Animation_Gradient_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 22
+      spriteId: d7de1a357e3c34540ad37d2ee3e08be2
+    - name: UI_Animation_Gradient_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 25
+      spriteId: f7b5562dc3a2e6f4ea490668e5b25e57
+    - name: UI_Animation_Gradient_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 3
+        width: 64
+        height: 26
+      spriteId: 2dcdb30327bf41645b6378c3f09aaadf
+    - name: UI_Animation_Gradient_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 22
+      spriteId: 512a95b2661e65f479f4999a41aacaf0
+    - name: UI_Animation_Gradient_Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 23
+      spriteId: 3495724456a3dec4798034caafa14cf8
+    - name: UI_Animation_Gradient_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 25
+      spriteId: 68bcfc05aadde64439d4bc361c98102f
+    - name: UI_Animation_Gradient_Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 26
+      spriteId: 2c88cde5f6ff2c04f815b476afa4368d
+    - name: UI_Animation_Gradient_Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 26
+      spriteId: 2797243f2a05a4848ab0165d4e442f1a
+    - name: UI_Animation_Gradient_Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 24
+      spriteId: ce62b8278927b034e8a5a45d7bae7f7e
+    - name: UI_Animation_Gradient_Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 22
+      spriteId: 0c94a4e152d7cf347ad818f06322ca84
+    - name: UI_Animation_Gradient_Frame_35
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 24
+      spriteId: 2125e6de2d787524fa6d5d0b6092b403
+    - name: UI_Animation_Gradient_Frame_36
+      frameIndex: 36
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 24
+      spriteId: ec3f4b602c75909438a8210b448902bb
+    - name: UI_Animation_Gradient_Frame_37
+      frameIndex: 37
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 22
+      spriteId: 49d935329fd3fde4ba846fff49fab552
+    - name: UI_Animation_Gradient_Frame_38
+      frameIndex: 38
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 25
+      spriteId: 3e11ba7422996214b9cb735d34949405
+    - name: UI_Animation_Gradient_Frame_39
+      frameIndex: 39
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 3
+        width: 96
+        height: 26
+      spriteId: 5abb14f5228cbd14fa8d4d2515defdfa
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 96, y: 32}
