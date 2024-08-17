@@ -15,18 +15,17 @@ public class CustomerController : MonoBehaviour {
     private Item _currentItem;
     
     public void NewCustomer() {
-        Debug.Log("New Customer");
         ChooseNewCustomer();
 
         ChooseNewItem();
 
+        _scaleController.ResetScale(_currentItem);
     }
 
     private void ChooseNewCustomer() {
         int currentCustomerID = -1;
 
         currentCustomerID = Random.Range(0, _customers.Count);
-        Debug.Log(currentCustomerID);
         while (currentCustomerID == _previousCustomerId) {
             currentCustomerID = Random.Range(0, _customers.Count);
         }

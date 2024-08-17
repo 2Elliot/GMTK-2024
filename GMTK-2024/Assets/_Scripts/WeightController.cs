@@ -37,8 +37,7 @@ public class WeightController : MonoBehaviour {
         
         RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
         
-        if (hit.collider != null)
-        {
+        if (hit.collider != null) {
             if (hit.collider.gameObject == gameObject) {
                 _spriteClicked = true;
             }

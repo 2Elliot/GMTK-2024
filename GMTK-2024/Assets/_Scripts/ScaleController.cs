@@ -4,10 +4,17 @@ public class ScaleController : MonoBehaviour {
 
     [SerializeField] private Transform _bar;
 
+    [SerializeField] private GameObject _chainPrefab;
+
+    [SerializeField] private Transform[] _connectionPoints;
+
+    private bool _initiated;
+    
     [System.Serializable]
     public struct Weight {
+        public GameObject weightObject;
         public Transform connectionPoint;
-        public WeightController weightObject;
+        public WeightController weightScript;
         public float weight;
         [Range(1f, 4.5f)] public float xPos;
         [Range(-1, 1)] public int direction; // -1 for left, 1 for right
@@ -31,20 +38,18 @@ public class ScaleController : MonoBehaviour {
     }
 
     private void Start() {
-        for (int i = 0; i < _weights.Length; i++) {
-            _weights[i].weightObject.Index = i;
-            _weights[i].weightObject.scaleController = this;
-        }
+        _weights = new Weight[2];
     }
 
     private void Update() {
-
+        if (!_initiated) return;
+        
         foreach (Weight currWeight in _weights) {
             Vector3 connectionPointLocalPosition = currWeight.connectionPoint.localPosition;
             currWeight.connectionPoint.localPosition = new Vector3(currWeight.xPos * currWeight.direction, connectionPointLocalPosition.y,
                 connectionPointLocalPosition.z);
 
-            currWeight.weightObject.SetPosition(currWeight.connectionPoint.position);
+            currWeight.weightScript.SetPosition(currWeight.connectionPoint.position);
         }
 
         _currentRotation = CalculateRotation(_weights[0], _weights[1]);
@@ -74,5 +79,65 @@ public class ScaleController : MonoBehaviour {
     private static Vector2 AngleToDirection(float angle) {
         float radians = Mathf.Deg2Rad * angle;
         return new Vector2(Mathf.Cos(radians), Mathf.Sin(radians));
+    }
+
+    public void ResetScale(Item item) {
+        Debug.Log("Reset");
+        
+        if (_initiated) {
+            Destroy(_weights[0].weightObject);
+            Destroy(_weights[1].weightObject);
+            Debug.Log("Destroyed");
+        }
+
+        _currentRotation = 0;
+        transform.rotation = Quaternion.identity;
+
+        _connectionPoints[0].GetComponent<ConnectionPointController>().Reset();
+        _connectionPoints[1].GetComponent<ConnectionPointController>().Reset();
+
+        // Customer's item
+        GameObject obj = InstantiateItem(item, 0);
+        Weight weight0 = new Weight {
+            weightObject = obj,
+            weightScript = obj.GetComponent<WeightController>(),
+            connectionPoint = _connectionPoints[0],
+            weight = item.Weight,
+            xPos = 4,
+            direction = -1
+        };
+
+        // Your item
+        GameObject obj2 = InstantiateItem(1);
+        Weight weight1 = new Weight {
+            weightObject = obj2,
+            weightScript = obj2.GetComponent<WeightController>(),
+            connectionPoint = _connectionPoints[1],
+            weight = 5f,
+            xPos = 4,
+            direction = 1
+        };
+
+        _weights[0] = weight0;
+        _weights[1] = weight1;
+
+        _initiated = true;
+
+    }
+
+    private GameObject InstantiateItem(Item item, int index) {
+        GameObject newItem = Instantiate(_chainPrefab);
+        newItem.GetComponent<WeightController>().Index = index;
+        newItem.GetComponent<WeightController>().scaleController = this;
+
+        newItem.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = item.Image;
+        return newItem;
+    }
+    
+    private GameObject InstantiateItem(int index) {
+        GameObject newItem = Instantiate(_chainPrefab);
+        newItem.GetComponent<WeightController>().Index = index;
+        newItem.GetComponent<WeightController>().scaleController = this;
+        return newItem;
     }
 }

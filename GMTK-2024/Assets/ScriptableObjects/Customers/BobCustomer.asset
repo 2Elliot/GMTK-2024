@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Bob
   Image: {fileID: 21300000, guid: 87df7ba5f96cad941a96e52b9f1112e3, type: 3}
-  Items: []
+  Items:
+  - {fileID: 11400000, guid: 7d12d6cb519abfb4ba7bd55ac661104c, type: 2}
+  - {fileID: 11400000, guid: d4f9d6a14c3796447b6c0d3d3a3ac8b0, type: 2}
+  - {fileID: 11400000, guid: fbd0099071d28984b96e0f99336566e5, type: 2}
