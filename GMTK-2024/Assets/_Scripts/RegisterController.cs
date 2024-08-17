@@ -24,6 +24,6 @@ public class RegisterController : MonoBehaviour {
     }
 
     public void Submit() {
-        _customerController.NewCustomer();
+        _customerController.SubmitGuess(_guess);
     }
 }

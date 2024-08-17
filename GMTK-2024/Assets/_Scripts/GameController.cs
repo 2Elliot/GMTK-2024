@@ -7,12 +7,17 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
     private ScaleController _scaleController;
     private RegisterController _registerController;
-    [SerializeField] private SpriteRenderer _customerImageRenderer;
     private DialogueHandler _dialogueHandler;
+    
+    [SerializeField] private SpriteRenderer _customerImageRenderer;
     [SerializeField] private TextMeshProUGUI _customerName;
+    [SerializeField] private TextMeshProUGUI _scoreText;
 
     [SerializeField] private List<Customer> _customers;
     private int _previousCustomerId = -1;
+
+    private float _startGuessTime;
+    private int _currentItemWeight;
 
     private Customer _currentCustomer;
     private Item _currentItem;
@@ -32,7 +37,37 @@ public class GameController : MonoBehaviour {
     }
 
     public void SubmitGuess(int guess) {
+        float score = 0;
+
+        float deltaTime = (Time.time - _startGuessTime);
+        float deltaGuess = Mathf.Abs(guess - _currentItemWeight);
+
+        const float maxTimeBeforePenalty = 8f;
+        // Score calculations
+        if (deltaTime > maxTimeBeforePenalty) {
+            score += (deltaTime - maxTimeBeforePenalty);
+        }
+        score += deltaGuess;
+
+        string scoreText;
+        if (score == 0) {
+            scoreText = "S+";
+        } else if (score <= 1.5) {
+            scoreText = "S";
+        } else if (score <= 3) {
+            scoreText = "A";
+        } else if (score <= 4.5) {
+            scoreText = "B";
+        } else if (score <= 6.5) {
+            scoreText = "C";
+        }
+        else {
+            scoreText = "F";
+        }
+
+        _scoreText.text = scoreText;
         
+        NewCustomer();
     }
     
     public void NewCustomer() {
@@ -43,6 +78,8 @@ public class GameController : MonoBehaviour {
         ChooseNewItem();
 
         _scaleController.ResetScale(_currentItem);
+
+        _startGuessTime = Time.time;
     }
 
     private void Reset() {
@@ -70,5 +107,6 @@ public class GameController : MonoBehaviour {
 
         int itemIndex = Random.Range(0, items.Count);
         _currentItem = items[itemIndex];
+        _currentItemWeight = _currentItem.Weight;
     }
 }

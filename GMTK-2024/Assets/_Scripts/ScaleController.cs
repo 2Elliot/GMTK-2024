@@ -68,14 +68,11 @@ public class ScaleController : MonoBehaviour {
     
     private static float ConvertToClosest(float input)
     {
-        // Define the target values
         float[] targets = { 1.5f, 2.75f, 4f };
         
-        // Start with the first target value as the closest one
         float closest = targets[0];
         float minDifference = Mathf.Abs(input - closest);
 
-        // Loop through the target values to find the closest one
         foreach (float target in targets)
         {
             float difference = Mathf.Abs(input - target);
@@ -134,7 +131,7 @@ public class ScaleController : MonoBehaviour {
             weightObject = obj2,
             weightScript = obj2.GetComponent<WeightController>(),
             connectionPoint = _connectionPoints[1],
-            weight = 5f,
+            weight = 5f, // Temporary value I hard coded
             xPos = 4,
             direction = 1
         };
