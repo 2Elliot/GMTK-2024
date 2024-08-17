@@ -20,7 +20,7 @@ public class ScaleController : MonoBehaviour {
         [Range(-1, 1)] public int direction; // -1 for left, 1 for right
     }
 
-    [SerializeField] private Weight[] _weights;
+    [SerializeField] public Weight[] _weights;
     
     [SerializeField, Range(-30, 30)] private float _currentRotation = 0;
     [SerializeField] private float _rotationMultiplier = 5f;
@@ -131,7 +131,7 @@ public class ScaleController : MonoBehaviour {
             weightObject = obj2,
             weightScript = obj2.GetComponent<WeightController>(),
             connectionPoint = _connectionPoints[1],
-            weight = 5f, // Temporary value I hard coded
+            weight = 0, // Temporary value I hard coded
             xPos = 4,
             direction = 1
         };
