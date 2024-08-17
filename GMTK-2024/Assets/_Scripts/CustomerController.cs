@@ -8,6 +8,7 @@ public class CustomerController : MonoBehaviour {
     [SerializeField] private ScaleController _scaleController;
     [SerializeField] private RegisterController _registerController;
     [SerializeField] private SpriteRenderer _customerImageRenderer;
+    [SerializeField] private DialogueHandler _dialogueHandler;
     [SerializeField] private TextMeshProUGUI _customerName;
 
     [SerializeField] private List<Customer> _customers;
@@ -53,6 +54,7 @@ public class CustomerController : MonoBehaviour {
 
         _customerImageRenderer.sprite = _currentCustomer.Image;
         _customerName.text = _currentCustomer.Name;
+        _dialogueHandler.PlayDialogue(_currentCustomer.Dialogue, true);
     }
 
     private void ChooseNewItem() {

@@ -24,9 +24,10 @@ public class DialogueHandler : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private DialogueUI _dialogueUI;
-    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private TextTypingAnimator _textTypingAnimator;
     [Header("Dialogue Queue")]
     [SerializeField] private List<Dialogue> _dialoguesQueue = new List<Dialogue>();
+    
     private void AddDialogueToQueue(Dialogue dialogue) {
         if (_dialoguesQueue.Contains(dialogue)) return;
         _dialoguesQueue.Add(dialogue);
@@ -40,21 +41,14 @@ public class DialogueHandler : MonoBehaviour
     private IEnumerator PlayDialogueCoroutine(Dialogue dialogue) {
         _isPlayingDialogue = true;
         for (int i = 0; i < dialogue._textTurns.Count; i++) {
+            _textTypingAnimator.ResetText();
             _dialogueUI.SetDialogue(dialogue, i);
             _dialogueUI.ShowDialogueBox();
             yield return new WaitForSeconds(_dialogueUI.GetDialogueBoxShowTime());
-            if (dialogue._textTurns[i]._audioClip != null) {
-                _audioSource.PlayOneShot(dialogue._textTurns[i]._audioClip);
-                if (dialogue._textTurns[i]._durationIsAudioLength) {
-                    yield return new WaitForSeconds(dialogue._textTurns[i]._audioClip.length);
-                }
-                else {
-                    yield return new WaitForSeconds(dialogue._textTurns[i]._duration);
-                }
-            }
-            else {
-                yield return new WaitForSeconds(dialogue._textTurns[i]._duration);
-            }
+            yield return new WaitForSeconds(dialogue._textTurns[i]._startDelay);
+            _textTypingAnimator.StartTyping();
+            yield return new WaitForSeconds(dialogue._textTurns[i]._duration);
+            yield return new WaitForSeconds(dialogue._textTurns[i]._endDelay);
             _dialogueUI.HideDialogueBox();
             print("called hide dialogue box");
             yield return new WaitForSeconds(_dialogueUI.GetDialogueBoxHideTime());
