@@ -18,3 +18,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0d36ff23f8e01304e8185375d6d15c67, type: 2}
   - {fileID: 11400000, guid: bf6bc1ad1a41ebb46a9b8c6ae1a1ac4a, type: 2}
   - {fileID: 11400000, guid: b480779f3a5218942937471d13a20cc0, type: 2}
+  Dialogue: {fileID: 11400000, guid: 0108c7aafd595f249bfc7665eff42210, type: 2}

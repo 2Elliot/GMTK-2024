@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e248152de8af074ab8d8573fdb9df0a, type: 3}
   m_Name: Bob
   m_EditorClassIdentifier: 
-  _characterName: The Boss
+  _characterName: Bob
   _nameColor: {r: 0.21573095, g: 0.18729973, b: 0.6509434, a: 0}
   _Nickname: 
   age: 

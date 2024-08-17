@@ -8,9 +8,9 @@ public class DialogueTurn
 {
 	public Character _character;
 	[TextArea(3, 20)] public string _text;
+	public float _startDelay;
 	public float _duration;
-	public AudioClip _audioClip;
-	public bool _durationIsAudioLength;
+	public float _endDelay;
 }
 
 [Serializable]

@@ -7,5 +7,6 @@ public class Customer : ScriptableObject
     public string Name;
     public Sprite Image;
     public List<Item> Items;
+    public Dialogue Dialogue;
 }
 
