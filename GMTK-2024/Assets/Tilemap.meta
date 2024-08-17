@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 9c0815359fa9f174692681df2d89d392
+=======
+<<<<<<<< HEAD:GMTK-2024/Assets/Assets.meta
+guid: 6c5586a9ff3b91d468f3982c034c81e8
+========
+guid: acfce47e6f6662a42b6d90987b678906
+>>>>>>>> network-game:GMTK-2024/Assets/Tilemap.meta
+>>>>>>> 4f0c9be (Basis for downscaled render)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
