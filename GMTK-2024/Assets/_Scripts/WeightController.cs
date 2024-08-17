@@ -1,3 +1,4 @@
+using System;
 using InputHandler;
 using UnityEngine.InputSystem;
 using UnityEngine;
@@ -25,6 +26,10 @@ public class WeightController : MonoBehaviour {
         _mainCamera = Camera.main;
         
         offset = transform.position - _connectionPoint.position;
+    }
+
+    private void OnDisable() {
+        _inputActions.Player.Mouse0.performed -= OnClick;
     }
 
     public void SetPosition(Vector3 position) {

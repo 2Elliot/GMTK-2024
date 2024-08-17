@@ -232,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 76462112}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2758, y: 0, z: -0.011798823}
+  m_LocalPosition: {x: 0.275, y: 0, z: -0.011798823}
   m_LocalScale: {x: 0.03484, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -703,7 +703,7 @@ Transform:
   m_GameObject: {fileID: 442981740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4183, y: 0, z: -0.011798823}
+  m_LocalPosition: {x: 0.4, y: 0, z: -0.011798823}
   m_LocalScale: {x: 0.03484, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1067,7 +1067,7 @@ Transform:
   m_GameObject: {fileID: 769018834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4068, y: 0, z: -0.011798823}
+  m_LocalPosition: {x: -0.4, y: 0, z: -0.011798823}
   m_LocalScale: {x: 0.03484, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1320,7 +1320,7 @@ Transform:
   m_GameObject: {fileID: 1279396593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1119, y: 0, z: -0.011798823}
+  m_LocalPosition: {x: 0.15, y: 0, z: -0.011798823}
   m_LocalScale: {x: 0.03484, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1629,7 +1629,7 @@ Transform:
   m_GameObject: {fileID: 1550366663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2759, y: 0, z: -0.011798823}
+  m_LocalPosition: {x: -0.275, y: 0, z: -0.011798823}
   m_LocalScale: {x: 0.03484, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2503,7 +2503,7 @@ Transform:
   m_GameObject: {fileID: 2084837662}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1277, y: 0, z: -0.011798823}
+  m_LocalPosition: {x: -0.15, y: 0, z: -0.011798823}
   m_LocalScale: {x: 0.03484, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

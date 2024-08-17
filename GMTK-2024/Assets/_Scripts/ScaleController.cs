@@ -62,7 +62,31 @@ public class ScaleController : MonoBehaviour {
         Vector2 snappedPosition = SnapPointToLine(position);
         Vector3 newPosition = transform.InverseTransformPoint(snappedPosition);
         int direction = _weights[index].direction;
-        _weights[index].xPos = Mathf.Clamp(direction * newPosition.x, 1f, 4.5f); // jank af
+        float xPos = Mathf.Clamp(direction * newPosition.x, 1f, 4.5f);
+        _weights[index].xPos = ConvertToClosest(xPos);
+    }
+    
+    private static float ConvertToClosest(float input)
+    {
+        // Define the target values
+        float[] targets = { 1.5f, 2.75f, 4f };
+        
+        // Start with the first target value as the closest one
+        float closest = targets[0];
+        float minDifference = Mathf.Abs(input - closest);
+
+        // Loop through the target values to find the closest one
+        foreach (float target in targets)
+        {
+            float difference = Mathf.Abs(input - target);
+            if (difference < minDifference)
+            {
+                closest = target;
+                minDifference = difference;
+            }
+        }
+
+        return closest;
     }
 
     private Vector2 SnapPointToLine(Vector2 point) {
