@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Lev/Main Menu.unity
+    guid: 6836ce2729161744da900fb060154166
+  - enabled: 1
+    path: Assets/Scenes/Lev/Lev Testing.unity
+    guid: 615bf0acc3eee8b49ac32e4f2fd9c7c3
   m_configObjects: {}
