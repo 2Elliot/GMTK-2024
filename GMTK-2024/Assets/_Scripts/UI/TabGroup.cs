@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TabGroup : MonoBehaviour
 {
-    public List<TabButton> tabButtons;
+    public List<TabUIButton> tabButtons;
     
     public Sprite tabIdle;
     public Sprite tabHover;
@@ -21,44 +21,44 @@ public class TabGroup : MonoBehaviour
     }
 
 
-    public void AttachToGroup(TabButton tabButton)
+    public void AttachToGroup(TabUIButton tabUIButton)
     {
-        tabButtons.Add(tabButton);
+        tabButtons.Add(tabUIButton);
     }
     
-    private bool Check(TabButton tabButton)
+    private bool Check(TabUIButton tabUIButton)
     {
-        if (tabButton._isDisabled) {
-            OnTabUpdateWhileDisabled(tabButton);
+        if (tabUIButton._isDisabled) {
+            OnTabUpdateWhileDisabled(tabUIButton);
             return true;
         }
         return false;
     }
-    public void OnTabEnter(TabButton tabButton) {
-        if (Check(tabButton)) return;
-        tabButton._tabBackground.sprite = tabHover;
+    public void OnTabEnter(TabUIButton tabUIButton) {
+        if (Check(tabUIButton)) return;
+        tabUIButton._tabBackground.sprite = tabHover;
     }
-    public void OnTabSelect(TabButton tabButton)
+    public void OnTabSelect(TabUIButton tabUIButton)
     {
-        if (Check(tabButton)) return;
-        tabButton._isSelected = true;
-        tabButton._tabBackground.sprite = tabActive;
-        tabButton.ShowContent();
+        if (Check(tabUIButton)) return;
+        tabUIButton._isSelected = true;
+        tabUIButton._tabBackground.sprite = tabActive;
+        tabUIButton.ShowContent();
         ResetTabs();
     }
-    public void OnTabExit(TabButton tabButton)
+    public void OnTabExit(TabUIButton tabUIButton)
     {
-        if (Check(tabButton)) return;
-        tabButton._tabBackground.sprite = tabIdle;
+        if (Check(tabUIButton)) return;
+        tabUIButton._tabBackground.sprite = tabIdle;
     }
-    private void OnTabUpdateWhileDisabled(TabButton tabButton)
+    private void OnTabUpdateWhileDisabled(TabUIButton tabUIButton)
     {
-        tabButton._tabBackground.sprite = tabDisabled;
+        tabUIButton._tabBackground.sprite = tabDisabled;
     }
     
     private void ResetTabs()
     {
-        foreach (TabButton tabButton in tabButtons)
+        foreach (TabUIButton tabButton in tabButtons)
         {
             if (tabButton._isDisabled || tabButton._isSelected) {
                 continue;
