@@ -20,7 +20,10 @@ public class DownscaleRender : MonoBehaviour
         texture.filterMode = FilterMode.Point;
 
         camera.targetTexture = texture;
+        camera.clearFlags = CameraClearFlags.SolidColor;
+        camera.backgroundColor = new Color(0, 0, 0, 0);
 
         raw.texture = texture;
+        raw.material = material;
     }
 }
