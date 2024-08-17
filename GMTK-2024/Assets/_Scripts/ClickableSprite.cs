@@ -3,7 +3,7 @@ using InputHandler;
 using UnityEngine.InputSystem;
 using UnityEngine;
 
-public class IClickableSprite : MonoBehaviour {
+public class ClickableSprite : MonoBehaviour {
     
   protected PlayerInputActions InputActions;
   protected Camera MainCamera;

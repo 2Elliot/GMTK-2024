@@ -1,9 +1,12 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CustomerController : MonoBehaviour {
     [SerializeField] private ScaleController _scaleController;
+    [SerializeField] private RegisterController _registerController;
     [SerializeField] private SpriteRenderer _customerImageRenderer;
     [SerializeField] private TextMeshProUGUI _customerName;
 
@@ -12,13 +15,29 @@ public class CustomerController : MonoBehaviour {
 
     private Customer _currentCustomer;
     private Item _currentItem;
+
+    private void Start() {
+        StartCoroutine(CallAfterOneFrame(NewCustomer)); // Because some other stuff initializes in Start()
+    }
+
+    private IEnumerator CallAfterOneFrame(System.Action callback) {
+        yield return null;
+
+        callback?.Invoke();
+    }
     
     public void NewCustomer() {
+        Reset();
+        
         ChooseNewCustomer();
 
         ChooseNewItem();
 
         _scaleController.ResetScale(_currentItem);
+    }
+
+    private void Reset() {
+        _registerController.Reset();
     }
 
     private void ChooseNewCustomer() {

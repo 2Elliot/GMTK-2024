@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class WeightController : IClickableSprite {
+public class WeightController : ClickableSprite {
 
   private Vector3 Offset;
 

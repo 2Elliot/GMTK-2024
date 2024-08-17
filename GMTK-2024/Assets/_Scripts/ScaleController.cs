@@ -106,12 +106,9 @@ public class ScaleController : MonoBehaviour {
     }
 
     public void ResetScale(Item item) {
-        Debug.Log("Reset");
-        
         if (_initiated) {
             Destroy(_weights[0].weightObject);
             Destroy(_weights[1].weightObject);
-            Debug.Log("Destroyed");
         }
 
         _currentRotation = 0;

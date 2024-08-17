@@ -4,10 +4,12 @@ using UnityEngine;
 public class SingletonContainer : MonoBehaviour
 {
     public static SingletonContainer Instance { get; private set; }
+    public CustomerController CustomerController { get; private set; }
+    public RegisterController RegisterController { get; private set; }
 
-    public PlayerController PlayerController { get; private set; }
+    [SerializeField] private CustomerController _customerController;
+    [SerializeField] private RegisterController _registerController;
 
-    [SerializeField] private PlayerController _playerController;
 
     private void Awake()
     {
@@ -19,6 +21,7 @@ public class SingletonContainer : MonoBehaviour
 
         Instance = this;
 
-        PlayerController = _playerController;
+        CustomerController = _customerController;
+        RegisterController = _registerController;
     }
 }
