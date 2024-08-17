@@ -552,8 +552,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scaleController: {fileID: 1667468997}
-  _registerController: {fileID: 626061846}
+  _registerController: {fileID: 0}
   _customerImageRenderer: {fileID: 422691130}
+  _dialogueHandler: {fileID: 0}
   _customerName: {fileID: 1902073852}
   _customers:
   - {fileID: 11400000, guid: 9f0ca4e147205234b9333220d79e5830, type: 2}
@@ -571,8 +572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e81cdfdd798b4d48bca3873591fd65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _customerController: {fileID: 163598919}
-  _registerController: {fileID: 626061846}
+  _customerController: {fileID: 0}
+  _registerController: {fileID: 0}
 --- !u!1 &189326461
 GameObject:
   m_ObjectHideFlags: 0
