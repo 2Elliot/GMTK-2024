@@ -3,95 +3,87 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
-public class CounterWeight : ClickableSprite
-{
-    private Vector3 Offset;
+public class CounterWeight : ClickableSprite {
+    private CounterWeightManager _counterWeightManager;
 
-    [SerializeField] private Transform _offsetPoint;
-
-    [HideInInspector] public CounterWeightManager manager;
-    [HideInInspector] public int index; // index for where in counterweight script
-
+    [SerializeField] private LayerMask _counterweightLayer;
+    
+    [SerializeField] private Transform _offsetTransform;
+    private Vector3 _offset;
+    
+    [HideInInspector] public int Index;
 
     [SerializeField] private float weight;
 
-    private bool addWeight = true;
-    
+    private bool _inWeight;
+    private WeightController _weightController;
     
     // Start is called before the first frame update
-    protected override void Start()
-    {
+    protected override void Start() {
+        _counterWeightManager = SingletonContainer.Instance.CounterWeightManager;
+        
         base.Start();
-        Offset = transform.position - _offsetPoint.position;
+        _offset = transform.position - _offsetTransform.position;
     }
 
-    protected override void Update()
-    {
-        if (!manager.isObjectClicked)
-            base.Update();
-        if (!SpriteClicked)
-        {
-            manager.isObjectClicked = false;
-            SnapPosition();
+    protected override void OnSpriteClicked() {
+        if (_inWeight) {
+            _weightController.ChangeWeight(-weight);
+            _inWeight = false;
+            _weightController = null;
         }
-        else if (SpriteClicked)
-        {
-            manager.isObjectClicked = true;
+    }
+
+    protected override void OnSpriteHeld() {
+        Vector3 mousePositionWorld = MouseToWorld();
+        mousePositionWorld.z = -5f;
+        
+        transform.position = mousePositionWorld + _offset;
+    }
+
+    protected override void OnSpriteReleased() {
+        Vector3 origin = MouseToWorld();
+        Vector3 direction = new Vector3(0, 0, 1);
+        float distance = 10f;
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance, _counterweightLayer);
+
+        if (hit.collider == null) {
+            transform.position = _counterWeightManager.OriginalPositions[Index];
+            return;
         }
         
+        if (hit.transform.CompareTag("Weight")) {
+            if (hit.transform.GetComponent<WeightController>().Index == 1) {
+                // Really bad way but works
+                _weightController = hit.transform.GetComponent<WeightController>();
+            }
+            else {
+                transform.position = _counterWeightManager.OriginalPositions[Index];
+                return;
+            }
+        } else {
+            transform.position = _counterWeightManager.OriginalPositions[Index];
+            return;
+        }
+
+        _weightController.ChangeWeight(weight);
+        _inWeight = true;
     }
 
+    protected override void Update() {
+        base.Update();
 
-    protected override void OnSpriteHeld()
-    {
+        if (_inWeight) {
+            transform.position = _weightController.CounterWeightPoint.position + _offset;
+        }
+    }
+
+    private Vector3 MouseToWorld() {
         Vector2 mousePositionScreen = Mouse.current.position.ReadValue();
-        Vector3 mousePositionWorld = MainCamera.ScreenToWorldPoint(new Vector3(mousePositionScreen.x, mousePositionScreen.y, 0.0f));
-        mousePositionWorld.z = 0;
+        Vector3 mousePositionWorld = MainCamera.ScreenToWorldPoint(new Vector3(mousePositionScreen.x, mousePositionScreen.y, 0));
 
-        SetPosition(mousePositionWorld);
+        return mousePositionWorld;
     }
-
-    public void SetPosition(Vector3 position)
-    {
-        transform.position = position + Offset;
-    }
-
-    public void SnapPosition()
-    {
-        if (manager.scale != null)
-        {
-            float distance = Vector3.Distance(transform.position, manager.scale.transform.position);
-
-            if (distance <= manager.chainSnapRadius)
-            {
-                transform.position = manager.scale.transform.position;
-                ChangeScaleWeight();
-                addWeight = false;
-            }
-            else
-            {
-                transform.position = manager.counterweightsTransform[index];
-                ChangeScaleWeight();
-                addWeight = true;
-            }
-        }
-        else
-        {
-            transform.position = manager.counterweightsTransform[index];
-        }
-    }
-
-    public void ChangeScaleWeight()
-    {
-        if (manager.scaleController._weights[1].weight > weight-1 && addWeight)
-        {
-            manager.scaleController._weights[1].weight -= weight;
-        }
-        else if (manager.scaleController._weights[1].weight < 1 && !addWeight)
-        {
-            manager.scaleController._weights[1].weight += weight;
-        }
-    }
-    
 }

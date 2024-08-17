@@ -146,7 +146,6 @@ public class ScaleController : MonoBehaviour {
     private GameObject InstantiateItem(Item item, int index) {
         GameObject newItem = Instantiate(_chainPrefab);
         newItem.GetComponent<WeightController>().Index = index;
-        newItem.GetComponent<WeightController>().ScaleController = this;
 
         newItem.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = item.Image;
         return newItem;
@@ -155,7 +154,6 @@ public class ScaleController : MonoBehaviour {
     private GameObject InstantiateItem(int index) {
         GameObject newItem = Instantiate(_chainPrefab);
         newItem.GetComponent<WeightController>().Index = index;
-        newItem.GetComponent<WeightController>().ScaleController = this;
         return newItem;
     }
 }

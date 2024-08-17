@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
     private ScaleController _scaleController;
     private RegisterController _registerController;
     private DialogueHandler _dialogueHandler;
+    private CounterWeightManager _counterWeightManager;
     
     [SerializeField] private SpriteRenderer _customerImageRenderer;
     [SerializeField] private TextMeshProUGUI _customerName;
@@ -23,9 +24,11 @@ public class GameController : MonoBehaviour {
     private Item _currentItem;
 
     private void Start() {
-        _scaleController = SingletonContainer.Instance.ScaleController;
-        _registerController = SingletonContainer.Instance.RegisterController;
-        _dialogueHandler = SingletonContainer.Instance.DialogueHandler;
+        SingletonContainer instance = SingletonContainer.Instance;
+        _scaleController = instance.ScaleController;
+        _registerController = instance.RegisterController;
+        _dialogueHandler = instance.DialogueHandler;
+        _counterWeightManager = instance.CounterWeightManager;
         
         StartCoroutine(CallAfterOneFrame(NewCustomer)); // Because some other stuff initializes in Start()
     }
@@ -84,6 +87,8 @@ public class GameController : MonoBehaviour {
 
     private void Reset() {
         _registerController.Reset();
+
+        _counterWeightManager.Reset();
     }
 
     private void ChooseNewCustomer() {

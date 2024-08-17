@@ -14,7 +14,12 @@ public class ClickableSprite : MonoBehaviour {
     InputActions = InputReader.Instance.InputActions;
 
     InputActions.Player.Mouse0.performed += OnClick;
-    InputActions.Player.Mouse0.canceled += _ => { SpriteClicked = false; };
+    InputActions.Player.Mouse0.canceled += _ => { 
+      if (SpriteClicked) {
+        SpriteClicked = false; 
+        OnSpriteReleased();
+      }
+    };
 
     MainCamera = Camera.main;
   }
@@ -37,6 +42,10 @@ public class ClickableSprite : MonoBehaviour {
 
   protected virtual void OnSpriteClicked() {
     // Override this method in derived classes for specific behavior on click
+  }
+
+  protected virtual void OnSpriteReleased() {
+    // Override this method in derived class for specific behavior on release
   }
 
   protected virtual void Update() {
