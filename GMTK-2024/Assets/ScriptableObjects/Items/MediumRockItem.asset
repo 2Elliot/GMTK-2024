@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Medium Rock
   Weight: 9
-  Image: {fileID: 21300000, guid: d9cee044370b5d5479ec1bf5bb9344bf, type: 3}
+  Image: {fileID: 21300000, guid: 2d11c786d54eb98488143550eebf3e00, type: 3}

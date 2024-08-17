@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Large Box
   Weight: 10
-  Image: {fileID: 21300000, guid: d9cee044370b5d5479ec1bf5bb9344bf, type: 3}
+  Image: {fileID: 21300000, guid: 3b77a0ca4fc5f644e97704242a359149, type: 3}
