@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
@@ -63,8 +62,7 @@ public class GameController : MonoBehaviour {
             scoreText = "B";
         } else if (score <= 6.5) {
             scoreText = "C";
-        }
-        else {
+        } else {
             scoreText = "F";
         }
 

@@ -7,6 +7,11 @@ public class ScaleController : MonoBehaviour {
     [SerializeField] private GameObject _chainPrefab;
 
     [SerializeField] private Transform[] _connectionPoints;
+    
+    private float _angularVelocity = 0f;
+    private float _damping = 0.6f;
+    private float _springForce = 1f;
+    private float _torqueMultiplier = 5f;
 
     private bool _initiated;
     
@@ -23,27 +28,20 @@ public class ScaleController : MonoBehaviour {
     [SerializeField] public Weight[] _weights;
     
     [SerializeField, Range(-30, 30)] private float _currentRotation = 0;
-    [SerializeField] private float _rotationMultiplier = 5f;
+    private void Start() {
+        _weights = new Weight[2];
+    }
     
-    private float CalculateRotation(Weight weight1, Weight weight2) {
+    private float CalculateTorque(Weight weight1, Weight weight2) {
         float moment1 = weight1.weight * weight1.xPos * weight1.direction;
         float moment2 = weight2.weight * weight2.xPos * weight2.direction;
 
-        float netMoment = moment1 + moment2;
-
-        float angle = netMoment * _rotationMultiplier;
-        angle = Mathf.Clamp(angle, -30f, 30f);
-
-        return -angle; // Negative because Unity's weird
-    }
-
-    private void Start() {
-        _weights = new Weight[2];
+        return moment1 + moment2; // Net torque
     }
 
     private void Update() {
         if (!_initiated) return;
-        
+
         foreach (Weight currWeight in _weights) {
             Vector3 connectionPointLocalPosition = currWeight.connectionPoint.localPosition;
             currWeight.connectionPoint.localPosition = new Vector3(currWeight.xPos * currWeight.direction, connectionPointLocalPosition.y,
@@ -52,10 +50,21 @@ public class ScaleController : MonoBehaviour {
             currWeight.weightScript.SetPosition(currWeight.connectionPoint.position);
         }
 
-        _currentRotation = CalculateRotation(_weights[0], _weights[1]);
+        float torque = CalculateTorque(_weights[0], _weights[1]);
+        _angularVelocity += torque * _torqueMultiplier * Time.deltaTime;
+
+        float spring = -_currentRotation * _springForce;
+        _angularVelocity += spring * Time.deltaTime;
+        _angularVelocity *= (1f - _damping * Time.deltaTime);
+        _currentRotation += _angularVelocity * Time.deltaTime;
+        _currentRotation = Mathf.Clamp(_currentRotation, -30f, 30f);
         
-        _bar.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y,
-            _currentRotation);
+        if (_currentRotation <= -30f || _currentRotation >= 30f) {
+            _angularVelocity *= -0.5f; // Reverse and reduce angular velocity on hitting limit for bounce-back
+        }
+        _currentRotation = Mathf.Clamp(_currentRotation, -30f, 30f);
+
+        _bar.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -_currentRotation);
     }
 
     public void SetWeightXPosition(int index, Vector2 position) {
