@@ -600,7 +600,7 @@ MonoBehaviour:
   _printerController: {fileID: 1673210626}
   _dialogueHandler: {fileID: 163598920}
   _counterWeightManager: {fileID: 1063683541}
-  _dayManager: {fileID: 625676986}
+  _dayManager: {fileID: 2134925065}
 --- !u!1 &189326461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,60 +1533,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &625676985
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 625676987}
-  - component: {fileID: 625676986}
-  m_Layer: 0
-  m_Name: DayManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &625676986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625676985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a1689fbcce95d45a45511c39874f96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  days:
-  - {fileID: 11400000, guid: 0d61343f3b4bf424c8945afd6368f5af, type: 2}
-  - {fileID: 11400000, guid: 2829141c0bcdae94ab7fae9c723d395b, type: 2}
-  - {fileID: 11400000, guid: 4692342dcb9831a479eec8efb44df878, type: 2}
-  - {fileID: 11400000, guid: d049600e6e9b6854d910c13a8cb14207, type: 2}
-  - {fileID: 11400000, guid: cdcdea08ce28a034e930d6a321855870, type: 2}
-  - {fileID: 11400000, guid: 3fa117eb368398543ad84480df846af9, type: 2}
-  - {fileID: 11400000, guid: cc9d176e3a4d2ea4ca63c72ae331cedf, type: 2}
-  customers: []
-  currentCustomer: {fileID: 0}
---- !u!4 &625676987
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625676985}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4842377, y: -0.9260362, z: 6.280686}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &655651848
 GameObject:
   m_ObjectHideFlags: 0
@@ -6378,6 +6324,60 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2134925064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134925066}
+  - component: {fileID: 2134925065}
+  m_Layer: 0
+  m_Name: DayManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2134925065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134925064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a1689fbcce95d45a45511c39874f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  days:
+  - {fileID: 11400000, guid: 0d61343f3b4bf424c8945afd6368f5af, type: 2}
+  - {fileID: 11400000, guid: 2829141c0bcdae94ab7fae9c723d395b, type: 2}
+  - {fileID: 11400000, guid: 4692342dcb9831a479eec8efb44df878, type: 2}
+  - {fileID: 11400000, guid: d049600e6e9b6854d910c13a8cb14207, type: 2}
+  - {fileID: 11400000, guid: cdcdea08ce28a034e930d6a321855870, type: 2}
+  - {fileID: 11400000, guid: 3fa117eb368398543ad84480df846af9, type: 2}
+  - {fileID: 11400000, guid: cc9d176e3a4d2ea4ca63c72ae331cedf, type: 2}
+  customers: []
+  currentCustomer: {fileID: 0}
+--- !u!4 &2134925066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134925064}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4842377, y: -0.9260362, z: 6.280686}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6394,4 +6394,4 @@ SceneRoots:
   - {fileID: 1673210625}
   - {fileID: 1712485433}
   - {fileID: 1120031841}
-  - {fileID: 625676987}
+  - {fileID: 2134925066}

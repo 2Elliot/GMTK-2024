@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
     private PrinterController _printerController;
     private DialogueHandler _dialogueHandler;
     private CounterWeightManager _counterWeightManager;
+    private DayManager _dayManager;
     
     [SerializeField] private SpriteRenderer _customerImageRenderer;
     [SerializeField] private TextMeshProUGUI _customerName;
@@ -28,8 +29,9 @@ public class GameController : MonoBehaviour {
         _printerController = instance.PrinterController;
         _dialogueHandler = instance.DialogueHandler;
         _counterWeightManager = instance.CounterWeightManager;
+        _dayManager = instance.DayManager;
         
-        StartCoroutine(CallAfterOneFrame(NewCustomer)); // Because some other stuff initializes in Start()
+        StartCoroutine(CallAfterOneFrame(_dayManager.StartGame)); // Because some other stuff initializes in Start()
     }
 
     private IEnumerator CallAfterOneFrame(System.Action callback) {
@@ -68,13 +70,13 @@ public class GameController : MonoBehaviour {
 
         _scoreText.text = scoreText;
         
-        NewCustomer();
+        _dayManager.NextCustomer();
     }
     
-    public void NewCustomer() {
+    public void NewCustomer(Customer customer) {
         Reset();
         
-        ChooseNewCustomer();
+        ChooseNewCustomer(customer);
 
         ChooseNewItem();
 
@@ -89,16 +91,9 @@ public class GameController : MonoBehaviour {
         _counterWeightManager.Reset();
     }
 
-    private void ChooseNewCustomer() {
-        int currentCustomerID = -1;
-
-        currentCustomerID = Random.Range(0, _customers.Count);
-        while (currentCustomerID == _previousCustomerId) {
-            currentCustomerID = Random.Range(0, _customers.Count);
-        }
-        _previousCustomerId = currentCustomerID;
-
-        _currentCustomer = _customers[currentCustomerID];
+    private void ChooseNewCustomer(Customer customer)
+    {
+        _currentCustomer = customer;
 
         _customerImageRenderer.sprite = _currentCustomer.Image;
         _customerName.text = _currentCustomer.Name;
