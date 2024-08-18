@@ -515,6 +515,7 @@ GameObject:
   - component: {fileID: 163598919}
   - component: {fileID: 163598920}
   - component: {fileID: 163598921}
+  - component: {fileID: 163598922}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -600,6 +601,23 @@ MonoBehaviour:
   _printerController: {fileID: 1673210626}
   _dialogueHandler: {fileID: 163598920}
   _counterWeightManager: {fileID: 1063683541}
+--- !u!320 &163598922
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163598915}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 33a2371bf2547e34aa9ef7da996f8fdd, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &189326461
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,6 +3549,131 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1276880019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1276880020}
+  - component: {fileID: 1276880023}
+  - component: {fileID: 1276880022}
+  - component: {fileID: 1276880021}
+  m_Layer: 0
+  m_Name: Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1276880020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276880019}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 348.33188, y: 182.69614, z: -0.1876494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1276880021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276880019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fef3ff30d875144085d6d3a792bc377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1276880022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276880019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 4407846ac8b0a924ba07c43a7cbf99e8, type: 2}
+    - {fileID: 11400000, guid: 7bbae490bf8268a4a93c7f5f433bf26b, type: 2}
+    - {fileID: 11400000, guid: f9d365b5af154e84c8e5d917211ff9f6, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1276880021}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: BossStartDialogueDay1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1276880021}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: BossItemDay1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1276880021}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: StartDay1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!320 &1276880023
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276880019}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 8738c1df200a9bd47a15703d6572e7ea, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 1490704568322174501, guid: 8738c1df200a9bd47a15703d6572e7ea, type: 2}
+    value: {fileID: 1276880022}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1279396593
 GameObject:
   m_ObjectHideFlags: 0
@@ -4593,10 +4736,6 @@ MonoBehaviour:
   _connectionPoints:
   - {fileID: 523148555}
   - {fileID: 697877121}
-  _angularVelocity: 0
-  _damping: 0.6
-  _springForce: 1
-  _torqueMultiplier: 5
   _weights: []
   _currentRotation: 0
 --- !u!1 &1673210623
@@ -5595,3 +5734,4 @@ SceneRoots:
   - {fileID: 1366118360}
   - {fileID: 818631671}
   - {fileID: 1673210625}
+  - {fileID: 1276880020}

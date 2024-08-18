@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour {
         _dialogueHandler = instance.DialogueHandler;
         _counterWeightManager = instance.CounterWeightManager;
         
-        StartCoroutine(CallAfterOneFrame(NewCustomer)); // Because some other stuff initializes in Start()
+        // StartCoroutine(CallAfterOneFrame(NewCustomer)); // Because some other stuff initializes in Start()
     }
 
     private IEnumerator CallAfterOneFrame(System.Action callback) {
