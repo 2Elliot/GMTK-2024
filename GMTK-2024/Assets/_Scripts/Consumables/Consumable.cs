@@ -8,9 +8,9 @@ public class Consumable : ClickableSprite
 {
     public enum ConsumableActions
     {
-        TimeSlow,
+        GainTime,
         WeighLess,
-        Placeholder1
+        Skip
     }
     
     public ConsumableActions action;
@@ -19,6 +19,13 @@ public class Consumable : ClickableSprite
     [SerializeField] private Sprite[] _sprites;
 
     private GameController _gameController;
+    private ScaleController _scaleController;
+
+
+    private float _gainTimeAmount = 10;
+    private float _weighLessAmount = 2; // this is devided
+    
+    
     
     protected override void Start()
     {
@@ -26,20 +33,21 @@ public class Consumable : ClickableSprite
 
         SetSpriteBasedOnAction();
 
-        _gameController = FindObjectOfType<GameController>();
+        _gameController = SingletonContainer.Instance.GameController;
+        _scaleController = SingletonContainer.Instance.ScaleController;
     }
     
     private void SetSpriteBasedOnAction()
     {
         switch (action)
         {
-            case ConsumableActions.TimeSlow:
+            case ConsumableActions.GainTime:
                 _spriteRenderer.sprite = _sprites[0];
                 break;
             case ConsumableActions.WeighLess:
                 _spriteRenderer.sprite = _sprites[1];
                 break;
-            case ConsumableActions.Placeholder1:
+            case ConsumableActions.Skip:
                 _spriteRenderer.sprite = _sprites[2];
                 break;
             default:
@@ -52,37 +60,42 @@ public class Consumable : ClickableSprite
     {
         switch (action)
         {
-            case ConsumableActions.TimeSlow:
-                TimeSlow();
+            case ConsumableActions.GainTime:
+                GainTime();
+                Debug.Log("yes");
                 break;
             case ConsumableActions.WeighLess:
                 WeighLess();
                 break;
-            case ConsumableActions.Placeholder1:
-                Placeholder1();
+            case ConsumableActions.Skip:
+                Skip();
                 break;
         }
     }
 
-    protected override void Update()
+    private void GainTime()
     {
-        base.Update();
-        
-        
-    }
-
-    private void TimeSlow()
-    {
-        // implemet slow time
+        _gameController.startGuessTime -= _gainTimeAmount;
+        Destroy();
     }
 
     private void WeighLess()
     {
-        // make person object weigh less
+        _scaleController._weights[0].weight /= _weighLessAmount;
+        Destroy();
     }
 
-    private void Placeholder1()
+    private void Skip()
     {
-        // 
+        // add later
+    }
+
+
+
+    
+    
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 }
