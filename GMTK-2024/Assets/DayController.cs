@@ -5,7 +5,7 @@ using UnityEngine;
 public class DayController : MonoBehaviour {
     [SerializeField] private List<Day> _days;
     public Day _currentDay;
-    private List<Customer> _customers;
+    private List<Customer> _customers = new();
     
     private int _currentDayIndex = -1; // Must start before day 0
     private int _currentCustomerIndex;
