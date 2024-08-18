@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour {
     private Customer _currentCustomer;
     private Item _currentItem;
 
+    public bool CanSubmitPrinter;
+
     private void Start() {
         SingletonContainer instance = SingletonContainer.Instance;
         _scaleController = instance.ScaleController;
@@ -39,6 +41,8 @@ public class GameController : MonoBehaviour {
     }
 
     public void SubmitGuess(int guess) {
+        if (!CanSubmitPrinter) return;
+        
         float score = 0;
 
         float deltaTime = (Time.time - _startGuessTime);
@@ -51,65 +55,72 @@ public class GameController : MonoBehaviour {
         }
         score += deltaGuess;
 
+        bool success;
         string scoreText;
         if (score == 0) {
             scoreText = "S+";
+            success = true;
         } else if (score <= 1.5) {
             scoreText = "S";
+            success = true;
         } else if (score <= 3) {
             scoreText = "A";
+            success = true;
         } else if (score <= 4.5) {
             scoreText = "B";
+            success = true;
         } else if (score <= 6.5) {
             scoreText = "C";
+            success = false;
         } else {
             scoreText = "F";
+            success = false;
         }
 
         _scoreText.text = scoreText;
         
-        NewCustomer();
-    }
-    
-    public void NewCustomer() {
         Reset();
         
-        ChooseNewCustomer();
+        _dialogueHandler.PlayDialogue(success ? _currentCustomer.EndDialogueSuccess : _currentCustomer.EndDialogueFailure, true, callbackFunction: GetNewCustomerOrNewDay);
 
-        ChooseNewItem();
+        CanSubmitPrinter = false;
+    }
 
-        _scaleController.ResetScale(_currentItem);
-
-        _startGuessTime = Time.time;
+    private void GetNewCustomerOrNewDay() {
+        return;
+    }
+    
+    public void NewCustomer(Customer customer) {
+        if (customer == null) return;
+        
+        ChooseNewCustomer(customer);
+        
     }
 
     private void Reset() {
+        _scaleController.ResetScale();
         _printerController.Reset();
-
         _counterWeightManager.Reset();
     }
 
-    private void ChooseNewCustomer() {
-        int currentCustomerID = -1;
-
-        currentCustomerID = Random.Range(0, _customers.Count);
-        while (currentCustomerID == _previousCustomerId) {
-            currentCustomerID = Random.Range(0, _customers.Count);
-        }
-        _previousCustomerId = currentCustomerID;
-
-        _currentCustomer = _customers[currentCustomerID];
+    private void ChooseNewCustomer(Customer customer) {
+        _currentCustomer = customer;
 
         _customerImageRenderer.sprite = _currentCustomer.Image;
         _customerName.text = _currentCustomer.Name;
-        _dialogueHandler.PlayDialogue(_currentCustomer.Dialogue, true);
+        _dialogueHandler.PlayDialogue(_currentCustomer.StartDialogue, true, ChooseNewItem);
     }
 
     private void ChooseNewItem() {
+        _startGuessTime = Time.time;
         List<Item> items = _currentCustomer.Items;
 
         int itemIndex = Random.Range(0, items.Count);
         _currentItem = items[itemIndex];
         _currentItemWeight = _currentItem.Weight;
+        
+        _scaleController.SetNewItem(_currentItem);
+
+        CanSubmitPrinter = true;
     }
 }

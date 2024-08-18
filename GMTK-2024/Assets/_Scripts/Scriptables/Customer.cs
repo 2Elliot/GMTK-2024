@@ -8,6 +8,9 @@ public class Customer : ScriptableObject
     [ColorUsage(false, false)] public Color NameColor;
     public Sprite Image;
     public List<Item> Items;
-    public Dialogue Dialogue;
+    public List<int> Weights;
+    public Dialogue StartDialogue;
+    public Dialogue EndDialogueSuccess;
+    public Dialogue EndDialogueFailure;
 }
 

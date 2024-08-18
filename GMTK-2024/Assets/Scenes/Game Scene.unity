@@ -566,9 +566,9 @@ MonoBehaviour:
   _customerName: {fileID: 1902073852}
   _scoreText: {fileID: 603567136}
   _customers:
-  - {fileID: 11400000, guid: 9f0ca4e147205234b9333220d79e5830, type: 2}
-  - {fileID: 11400000, guid: a0974b7067ae74c4398cc4c7f1342fc9, type: 2}
-  - {fileID: 11400000, guid: 993b9c7430927a84b88b720f38f2353b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &163598920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3595,6 +3595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fef3ff30d875144085d6d3a792bc377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _boss1: {fileID: 11400000, guid: 8d631d329c70dc2408cd93222956408d, type: 2}
 --- !u!114 &1276880022
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class DialogueHandler : MonoBehaviour
     [Header("Dialogue Queue")]
     [SerializeField] private List<Dialogue> _dialoguesQueue = new List<Dialogue>();
     
+    private Action _functionToCall;
+    
     private void AddDialogueToQueue(Dialogue dialogue) {
         if (_dialoguesQueue.Contains(dialogue)) return;
         _dialoguesQueue.Add(dialogue);
@@ -34,13 +36,17 @@ public class DialogueHandler : MonoBehaviour
             yield return new WaitForSeconds(dialogue._textTurns[i]._duration);
             yield return new WaitForSeconds(dialogue._textTurns[i]._endDelay);
             _dialogueUI.HideDialogueBox();
-            print("called hide dialogue box");
+            // print("called hide dialogue box");
             yield return new WaitForSeconds(_dialogueUI.GetDialogueBoxHideTime());
         }
         _dialoguesQueue.RemoveAt(0);
         _isPlayingDialogue = false;
+        _functionToCall();
     }
-    public void PlayDialogue(Dialogue dialogue, bool forcePlay = false) {
+    public void PlayDialogue(Dialogue dialogue, bool forcePlay = false, Action callbackFunction = null) {
+        _functionToCall = null;
+        if (callbackFunction != null) _functionToCall = callbackFunction;
+        
         if (forcePlay) {
             _dialoguesQueue.Clear();
             StopAllCoroutines();
@@ -58,4 +64,8 @@ public class DialogueHandler : MonoBehaviour
         }
     }
 
+    private void SetCallbackFunction(Action function) {
+        _functionToCall = function;
+    }
+    
 }

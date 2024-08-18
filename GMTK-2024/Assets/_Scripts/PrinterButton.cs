@@ -21,8 +21,6 @@ public class PrinterButton : ClickableSprite {
     }
 
     protected override void OnSpriteClicked() {
-        Debug.Log("Clicked");
-        
         switch (_buttonType) {
             case ButtonType.Number:
                 _printerController.UpdateGuess(_number);

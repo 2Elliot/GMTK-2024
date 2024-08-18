@@ -12,8 +12,6 @@ public class ScaleController : MonoBehaviour {
     private float _damping = 0.6f;
     private float _springForce = 1f;
     private float _torqueMultiplier = 5f;
-
-    private bool _initiated;
     
     [System.Serializable]
     public struct Weight {
@@ -30,6 +28,8 @@ public class ScaleController : MonoBehaviour {
     [SerializeField, Range(-30, 30)] private float _currentRotation = 0;
     private void Start() {
         _weights = new Weight[2];
+        
+        ResetScale();
     }
     
     private float CalculateTorque(Weight weight1, Weight weight2) {
@@ -40,8 +40,6 @@ public class ScaleController : MonoBehaviour {
     }
 
     private void Update() {
-        if (!_initiated) return;
-
         foreach (Weight currWeight in _weights) {
             Vector3 connectionPointLocalPosition = currWeight.connectionPoint.localPosition;
             currWeight.connectionPoint.localPosition = new Vector3(currWeight.xPos * currWeight.direction, connectionPointLocalPosition.y,
@@ -111,18 +109,46 @@ public class ScaleController : MonoBehaviour {
         return new Vector2(Mathf.Cos(radians), Mathf.Sin(radians));
     }
 
-    public void ResetScale(Item item) {
-        if (_initiated) {
-            Destroy(_weights[0].weightObject);
-            Destroy(_weights[1].weightObject);
+    public void ResetScale() {
+        foreach (Weight w in _weights) {
+            Destroy(w.weightObject);
         }
 
-        _currentRotation = 0;
         transform.rotation = Quaternion.identity;
 
+        // Some default objects
+        GameObject obj = Instantiate(_chainPrefab);
+        Weight weight0 = new Weight {
+            weightObject = obj,
+            weightScript = obj.GetComponent<WeightController>(),
+            connectionPoint = _connectionPoints[0],
+            weight = 0,
+            xPos = 4,
+            direction = -1
+        };
+
+        GameObject obj2 = Instantiate(_chainPrefab);
+        Weight weight1 = new Weight {
+            weightObject = obj2,
+            weightScript = obj2.GetComponent<WeightController>(),
+            connectionPoint = _connectionPoints[0],
+            weight = 0,
+            xPos = 4,
+            direction = 1
+        };
+
+        _weights[0] = weight0;
+        _weights[1] = weight1;
+        
         _connectionPoints[0].GetComponent<ConnectionPointController>().Reset();
         _connectionPoints[1].GetComponent<ConnectionPointController>().Reset();
+    }
 
+    public void SetNewItem(Item item) {
+        foreach (Weight w in _weights) {
+            Destroy(w.weightObject);
+        }
+        
         // Customer's item
         GameObject obj = InstantiateItem(item, 0);
         Weight weight0 = new Weight {
@@ -147,9 +173,6 @@ public class ScaleController : MonoBehaviour {
 
         _weights[0] = weight0;
         _weights[1] = weight1;
-
-        _initiated = true;
-
     }
 
     private GameObject InstantiateItem(Item item, int index) {
