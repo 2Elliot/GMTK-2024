@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: d473d14e16a6ac145915e6ee3b4a24fb, type: 2}
-    _text: 
+    _text: Bill Neg
     _startDelay: 0
     _duration: 0
     _endDelay: 0

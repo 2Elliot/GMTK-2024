@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 9dbdefd9ac0839442a9cb0619fe69f36, type: 2}
-    _text: 
+    _text: Greg Pos
     _startDelay: 0
     _duration: 0
     _endDelay: 0

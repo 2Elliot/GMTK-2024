@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: f8befcec3380df645997d29066826f66, type: 2}
-    _text: 
+    _text: Tom Neg
     _startDelay: 0
     _duration: 0
     _endDelay: 0

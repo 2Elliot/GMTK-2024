@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 7fd65143e17801948bd03921b58fc1e7, type: 2}
-    _text: 
+    _text: John Pos
     _startDelay: 0
     _duration: 0
     _endDelay: 0

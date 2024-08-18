@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 9a01adc5a69eab34abd82738c2b9f570, type: 2}
-    _text: 
+    _text: Jane Start
     _startDelay: 0
     _duration: 0
     _endDelay: 0

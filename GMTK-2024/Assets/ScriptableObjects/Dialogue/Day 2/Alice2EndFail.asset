@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 72c1d45113cea724eaa0f8e38d90da15, type: 2}
-    _text: 
+    _text: Alice Neg
     _startDelay: 0
     _duration: 0
     _endDelay: 0

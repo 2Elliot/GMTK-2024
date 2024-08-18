@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: c82ef99e4fdf8c9498d28fc8014bf9f3, type: 2}
-    _text: 
+    _text: Kiki Start
     _startDelay: 0
     _duration: 0
     _endDelay: 0

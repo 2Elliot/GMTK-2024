@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 2e7ad4d62d1ca254ab9bf48ff8311337, type: 2}
-    _text: 
+    _text: Kiki Pos
     _startDelay: 0
     _duration: 0
     _endDelay: 0
