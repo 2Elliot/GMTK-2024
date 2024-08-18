@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Day 1
   m_EditorClassIdentifier: 
   DayNumber: 0
-  Customers: []
+  Customers:
+  - {fileID: 11400000, guid: 993b9c7430927a84b88b720f38f2353b, type: 2}
+  - {fileID: 11400000, guid: a0974b7067ae74c4398cc4c7f1342fc9, type: 2}
+  - {fileID: 11400000, guid: 9f0ca4e147205234b9333220d79e5830, type: 2}
