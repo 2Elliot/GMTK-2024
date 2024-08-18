@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Day 4
   m_EditorClassIdentifier: 
   DayNumber: 4
+  Boss: {fileID: 11400000, guid: 348c0709f3f7b0440a5b2142f89badf4, type: 2}
   Customers:
   - {fileID: 11400000, guid: 0c58b8ee0e2f8854d8e99a058f4c0939, type: 2}
   - {fileID: 11400000, guid: a7ebe6300b6950345935e6e933aa8ea0, type: 2}

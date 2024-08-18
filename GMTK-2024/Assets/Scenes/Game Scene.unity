@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 163598920}
   - component: {fileID: 163598921}
   - component: {fileID: 163598922}
+  - component: {fileID: 163598923}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -565,10 +566,8 @@ MonoBehaviour:
   _customerImageRenderer: {fileID: 422691130}
   _customerName: {fileID: 1902073852}
   _scoreText: {fileID: 603567136}
-  _customers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  StartGuessTime: 0
+  CanSubmitPrinter: 0
 --- !u!114 &163598920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,6 +596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameController: {fileID: 163598919}
+  _dayController: {fileID: 163598923}
   _scaleController: {fileID: 1667468997}
   _printerController: {fileID: 1673210626}
   _dialogueHandler: {fileID: 163598920}
@@ -618,6 +618,28 @@ PlayableDirector:
   m_SceneBindings: []
   m_ExposedReferences:
     m_References: []
+--- !u!114 &163598923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163598915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9a8081f6b529549bba354ffc4f771a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _days:
+  - {fileID: 11400000, guid: 0d61343f3b4bf424c8945afd6368f5af, type: 2}
+  - {fileID: 11400000, guid: 2829141c0bcdae94ab7fae9c723d395b, type: 2}
+  - {fileID: 11400000, guid: 4692342dcb9831a479eec8efb44df878, type: 2}
+  - {fileID: 11400000, guid: d049600e6e9b6854d910c13a8cb14207, type: 2}
+  - {fileID: 11400000, guid: cdcdea08ce28a034e930d6a321855870, type: 2}
+  - {fileID: 11400000, guid: 3fa117eb368398543ad84480df846af9, type: 2}
+  - {fileID: 11400000, guid: cc9d176e3a4d2ea4ca63c72ae331cedf, type: 2}
+  _currentDay: {fileID: 0}
+  _customers: []
 --- !u!1 &189326461
 GameObject:
   m_ObjectHideFlags: 0
@@ -3611,42 +3633,12 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 4407846ac8b0a924ba07c43a7cbf99e8, type: 2}
-    - {fileID: 11400000, guid: 7bbae490bf8268a4a93c7f5f433bf26b, type: 2}
-    - {fileID: 11400000, guid: f9d365b5af154e84c8e5d917211ff9f6, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1276880021}
           m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
           m_MethodName: BossStartDialogueDay1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1276880021}
-          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
-          m_MethodName: BossItemDay1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1276880021}
-          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
-          m_MethodName: StartDay1
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

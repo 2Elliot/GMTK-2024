@@ -1,19 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameController : MonoBehaviour {
     private ScaleController _scaleController;
     private PrinterController _printerController;
     private DialogueHandler _dialogueHandler;
     private CounterWeightManager _counterWeightManager;
+    private DayController _dayController;
     
     [SerializeField] private SpriteRenderer _customerImageRenderer;
     [SerializeField] private TextMeshProUGUI _customerName;
     [SerializeField] private TextMeshProUGUI _scoreText;
-
-    [SerializeField] private List<Customer> _customers;
     
     public float StartGuessTime;
     private int _currentItemWeight;
@@ -29,7 +30,8 @@ public class GameController : MonoBehaviour {
         _printerController = instance.PrinterController;
         _dialogueHandler = instance.DialogueHandler;
         _counterWeightManager = instance.CounterWeightManager;
-        
+        _dayController = instance.DayController;
+
         // StartCoroutine(CallAfterOneFrame(NewCustomer)); // Because some other stuff initializes in Start()
     }
 
@@ -80,20 +82,24 @@ public class GameController : MonoBehaviour {
         
         Reset();
         
-        _dialogueHandler.PlayDialogue(success ? _currentCustomer.EndDialogueSuccess : _currentCustomer.EndDialogueFailure, true, callbackFunction: GetNewCustomerOrNewDay);
+        _dialogueHandler.PlayDialogue(success ? _currentCustomer.EndDialogueSuccess : _currentCustomer.EndDialogueFailure, true, callbackFunction: WaitForNextCustomer);
 
         CanSubmitPrinter = false;
     }
 
-    private void GetNewCustomerOrNewDay() {
-        return;
+    private void WaitForNextCustomer() {
+        float timeToWait = Random.Range(0.5f, 1.5f);
+        CallFunctionsWithDelay(GetNewCustomerOrNewDay, timeToWait);
     }
     
-    public void NewCustomer(Customer customer) {
-        if (customer == null) return;
-        
+    public void GetNewCustomerOrNewDay() {
+        Customer customer = _dayController.FetchNewCustomer();
+        if (customer == null) {
+            Debug.Log("New day, put code here.");
+            GetNewCustomerOrNewDay();
+            return;
+        }
         ChooseNewCustomer(customer);
-        
     }
 
     private void Reset() {
@@ -121,5 +127,17 @@ public class GameController : MonoBehaviour {
         _scaleController.SetNewItem(_currentItem);
 
         CanSubmitPrinter = true;
+    }
+    
+    void CallFunctionsWithDelay(Action function, float delay)
+    {
+        StartCoroutine(CallFunctionsWithDelayCoroutine(function, delay));
+    }
+    
+    private IEnumerator CallFunctionsWithDelayCoroutine(Action function, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        
+        function?.Invoke();
     }
 }
