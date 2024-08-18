@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
     private DialogueHandler _dialogueHandler;
     private CounterWeightManager _counterWeightManager;
     private DayController _dayController;
+    private MusicController _musicController;
     
     [SerializeField] private SpriteRenderer _customerImageRenderer;
     [SerializeField] private TextMeshProUGUI _customerName;
@@ -31,8 +32,9 @@ public class GameController : MonoBehaviour {
         _dialogueHandler = instance.DialogueHandler;
         _counterWeightManager = instance.CounterWeightManager;
         _dayController = instance.DayController;
+        _musicController = instance.MusicController;
 
-        // StartCoroutine(CallAfterOneFrame(NewCustomer)); // Because some other stuff initializes in Start()
+        _musicController.PlayMusic();
     }
 
     private IEnumerator CallAfterOneFrame(System.Action callback) {

@@ -8,8 +8,12 @@ public class MainMenuController : MonoBehaviour {
     [SerializeField] private string _mainMenuSceneName;
 
     [SerializeField] private Crossfade _crossfade;
+    [SerializeField] private MusicController _musicController;
 
-    
+    private void Start() {
+        _musicController.PlayMusic();
+    }
+
     public void StartButton()
     {
         StartCoroutine(_crossfade.PlayTransition(this, nameof(OnStartButtonTransitionEnd)));

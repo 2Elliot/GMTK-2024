@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
+using MoreMountains.Feedbacks;
 
 public class CounterWeight : ClickableSprite {
     private CounterWeightManager _counterWeightManager;
@@ -17,12 +14,15 @@ public class CounterWeight : ClickableSprite {
 
     [SerializeField] private float weight;
 
+    private MMFeedbacks _screenShake;
+
     private bool _inWeight;
     private WeightController _weightController;
     
     // Start is called before the first frame update
     protected override void Start() {
         _counterWeightManager = SingletonContainer.Instance.CounterWeightManager;
+        _screenShake = SingletonContainer.Instance.FeedbackHolder.ScreenShake;
         
         base.Start();
         _offset = transform.position - _offsetTransform.position;
@@ -44,6 +44,8 @@ public class CounterWeight : ClickableSprite {
     }
 
     protected override void OnSpriteReleased() {
+        _screenShake.PlayFeedbacks();
+        
         Vector3 origin = MouseToWorld();
         Vector3 direction = new Vector3(0, 0, 1);
         float distance = 10f;
