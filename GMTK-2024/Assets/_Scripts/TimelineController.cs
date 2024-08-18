@@ -1,26 +1,21 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class TimelineController : MonoBehaviour {
     private GameController _gameController;
     private DialogueHandler _dialogueHandler;
+    private DayController _dayController;
 
     [SerializeField] private Customer _boss1;
 
     private void Start() {
         _gameController = SingletonContainer.Instance.GameController;
         _dialogueHandler = SingletonContainer.Instance.DialogueHandler;
-    }
-
-    public void BossStartDialogueDay1() {
-        _gameController.NewCustomer(_boss1);
+        _dayController = SingletonContainer.Instance.DayController;
     }
     
-    public void BossItemDay1() {
-        _gameController.NewCustomer(_boss1);
-    }
-
-    public void StartDay1() {
-        // _gameController.NewCustomer();
+    public void BossStartDialogueDay1() {
+        _gameController.GetNewCustomerOrNewDay();
     }
 }

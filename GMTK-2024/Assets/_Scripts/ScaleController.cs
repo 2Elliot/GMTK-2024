@@ -127,15 +127,19 @@ public class ScaleController : MonoBehaviour {
             direction = -1
         };
 
+        weight0.weightScript.Index = 0;
+        
         GameObject obj2 = Instantiate(_chainPrefab);
         Weight weight1 = new Weight {
             weightObject = obj2,
             weightScript = obj2.GetComponent<WeightController>(),
-            connectionPoint = _connectionPoints[0],
+            connectionPoint = _connectionPoints[1],
             weight = 0,
             xPos = 4,
             direction = 1
         };
+
+        weight1.weightScript.Index = 1;
 
         _weights[0] = weight0;
         _weights[1] = weight1;
