@@ -1,12 +1,12 @@
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class CounterWeightManager : MonoBehaviour {
     [SerializeField] private List<GameObject> _prefabs;
     public bool[] Unlocks;
     public List<Vector3> OriginalPositions;
-
+    
     private List<GameObject> _counterweights = new List<GameObject>();
     
     // Start is called before the first frame update

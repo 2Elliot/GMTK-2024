@@ -10,6 +10,7 @@ public class SingletonContainer : MonoBehaviour
     public PrinterController PrinterController { get; private set; }
     public DialogueHandler DialogueHandler { get; private set; }
     public CounterWeightManager CounterWeightManager { get; private set; }
+    public FeedbackHolder FeedbackHolder { get; private set; }
 
     [SerializeField] private GameController _gameController;
     [SerializeField] private DayController _dayController;
@@ -17,6 +18,7 @@ public class SingletonContainer : MonoBehaviour
     [SerializeField] private PrinterController _printerController;
     [SerializeField] private DialogueHandler _dialogueHandler;
     [SerializeField] private CounterWeightManager _counterWeightManager;
+    [SerializeField] private FeedbackHolder _feedbackHolder;
 
     private void Awake()
     {
@@ -34,9 +36,10 @@ public class SingletonContainer : MonoBehaviour
         PrinterController = _printerController;
         DialogueHandler = _dialogueHandler;
         CounterWeightManager = _counterWeightManager;
+        FeedbackHolder = _feedbackHolder;
 
         if ((GameController == null) || (DayController == null) || (ScaleController == null) || (PrinterController == null) ||
-            (DialogueHandler == null) || (CounterWeightManager == null)) {
+            (DialogueHandler == null) || (CounterWeightManager == null) || (FeedbackHolder == null)) {
             Debug.LogError($"Unassigned Reference in {this}");
         }
     }
