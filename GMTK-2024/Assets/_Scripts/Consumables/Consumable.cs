@@ -75,7 +75,7 @@ public class Consumable : ClickableSprite
 
     private void GainTime()
     {
-        _gameController.startGuessTime -= _gainTimeAmount;
+        _gameController.StartGuessTime -= _gainTimeAmount;
         Destroy();
     }
 

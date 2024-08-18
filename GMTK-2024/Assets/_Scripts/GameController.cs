@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameController : MonoBehaviour {
     private ScaleController _scaleController;
@@ -15,9 +14,8 @@ public class GameController : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI _scoreText;
 
     [SerializeField] private List<Customer> _customers;
-    private int _previousCustomerId = -1;
     
-    public float startGuessTime;
+    public float StartGuessTime;
     private int _currentItemWeight;
 
     private Customer _currentCustomer;
@@ -46,7 +44,7 @@ public class GameController : MonoBehaviour {
         
         float score = 0;
 
-        float deltaTime = (Time.time - startGuessTime);
+        float deltaTime = (Time.time - StartGuessTime);
         float deltaGuess = Mathf.Abs(guess - _currentItemWeight);
 
         const float maxTimeBeforePenalty = 8f;
@@ -113,7 +111,7 @@ public class GameController : MonoBehaviour {
     }
 
     private void ChooseNewItem() {
-        _startGuessTime = Time.time;
+        StartGuessTime = Time.time;
         List<Item> items = _currentCustomer.Items;
 
         int itemIndex = Random.Range(0, items.Count);
