@@ -105,9 +105,9 @@ public class GameController : MonoBehaviour {
     }
 
     private void Reset() {
+        _counterWeightManager.Reset();
         _scaleController.ResetScale();
         _printerController.Reset();
-        _counterWeightManager.Reset();
     }
 
     private void ChooseNewCustomer(Customer customer) {
@@ -119,6 +119,8 @@ public class GameController : MonoBehaviour {
     }
 
     private void ChooseNewItem() {
+        _counterWeightManager.Reset();
+        
         StartGuessTime = Time.time;
         List<Item> items = _currentCustomer.Items;
 

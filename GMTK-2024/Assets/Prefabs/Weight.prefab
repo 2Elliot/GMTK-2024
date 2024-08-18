@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 3439421835404760442}
   - component: {fileID: 7189922131558536365}
   - component: {fileID: 8229585247189917878}
+  - component: {fileID: 5163365241792351165}
   m_Layer: 0
   m_Name: Weight
   m_TagString: Weight
@@ -194,6 +195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae44693f3b5c164449d258acd15c9318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IgnoreLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   HasCounterweight: 0
   Index: 0
   _connectionPoint: {fileID: 7180036262834042153}
@@ -243,3 +247,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9948864, y: 2.3327796}
   m_EdgeRadius: 0
+--- !u!114 &5163365241792351165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8324203575140119202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174b33f041e10b349a505b0c3e7d10cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: c83f55ba8e28b8948a5ebce7a99c08be, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1130218400103112619}
   - component: {fileID: 8892144982803890353}
   - component: {fileID: 4227530410953525435}
+  - component: {fileID: 1348041915322746729}
   m_Layer: 8
   m_Name: SmallBox
   m_TagString: Untagged
@@ -92,12 +93,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f91ac7251dd47ca41b95030e069832ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IgnoreLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   _counterweightLayer:
     serializedVersion: 2
     m_Bits: 119
   _offsetTransform: {fileID: 5202047108858597001}
   Index: 0
   weight: 5
+--- !u!114 &1348041915322746729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4051672804342075020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174b33f041e10b349a505b0c3e7d10cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: 873e469100c3ad840842ed560851e55e, type: 3}
 --- !u!1 &7267551971387577825
 GameObject:
   m_ObjectHideFlags: 0

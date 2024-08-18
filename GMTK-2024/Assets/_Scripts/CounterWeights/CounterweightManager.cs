@@ -7,7 +7,7 @@ public class CounterWeightManager : MonoBehaviour {
     public bool[] Unlocks;
     public List<Vector3> OriginalPositions;
     
-    private List<GameObject> _counterweights = new List<GameObject>();
+    public List<GameObject> _counterweights = new List<GameObject>();
     
     // Start is called before the first frame update
     void Start() {
@@ -21,11 +21,12 @@ public class CounterWeightManager : MonoBehaviour {
     }
 
     public void Reset() {
-        if (_counterweights.Count != 0) {
-            foreach (GameObject g in _counterweights) {
-                Destroy(g);
-            }
+        Debug.Log("Reset");
+        foreach (GameObject g in _counterweights) {
+            Destroy(g);
         }
+
+        _counterweights.Clear();
 
         for (int i = 0; i < Unlocks.Length; i++) {
             if (Unlocks[i]) AddCounterweight(_prefabs[i], i);

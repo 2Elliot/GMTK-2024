@@ -45,6 +45,7 @@ public class CounterWeight : ClickableSprite {
 
     protected override void OnSpriteReleased() {
         _screenShake.PlayFeedbacks();
+        GetComponent<SFXController>().PlaySound();
         
         Vector3 origin = MouseToWorld();
         Vector3 direction = new Vector3(0, 0, 1);
@@ -57,6 +58,11 @@ public class CounterWeight : ClickableSprite {
         }
         
         if (hit.transform.CompareTag("Weight")) {
+            if (!hit.transform.GetComponent<WeightController>().CanHoldObject) {
+                transform.position = _counterWeightManager.OriginalPositions[Index];
+                return;
+            }
+
             if (hit.transform.GetComponent<WeightController>().Index == 1) {
                 // Really bad way but works
                 _weightController = hit.transform.GetComponent<WeightController>();
@@ -77,7 +83,7 @@ public class CounterWeight : ClickableSprite {
     protected override void Update() {
         base.Update();
 
-        if (_inWeight) {
+        if (_inWeight && _weightController.CounterWeightPoint != null) {
             transform.position = _weightController.CounterWeightPoint.position + _offset;
         }
     }

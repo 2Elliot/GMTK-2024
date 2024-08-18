@@ -6,6 +6,6 @@ public class MusicController : MonoBehaviour {
 
     public void PlayMusic() {
         MMSoundManagerSoundPlayEvent.Trigger(_musicClip, MMSoundManager.MMSoundManagerTracks.Music,
-            this.transform.position);
+            this.transform.position, loop: true);
     }
 }

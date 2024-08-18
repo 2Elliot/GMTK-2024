@@ -32,5 +32,7 @@ public class PrinterButton : ClickableSprite {
                 _printerController.DeleteGuess();
                 break;
         }
+        
+        GetComponent<SFXController>().PlaySound();
     }
 }

@@ -12,6 +12,9 @@ public class ScaleController : MonoBehaviour {
     private float _damping = 0.6f;
     private float _springForce = 1f;
     private float _torqueMultiplier = 5f;
+
+    private float _previousXPos1;
+    private float _previousXPos2;
     
     [System.Serializable]
     public struct Weight {
@@ -63,6 +66,13 @@ public class ScaleController : MonoBehaviour {
         _currentRotation = Mathf.Clamp(_currentRotation, -30f, 30f);
 
         _bar.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -_currentRotation);
+
+        if (!Mathf.Approximately(_previousXPos1, _weights[0].xPos) ||
+            !Mathf.Approximately(_previousXPos2, _weights[1].xPos)) {
+            GetComponent<SFXController>().PlaySound();
+            _previousXPos1 = _weights[0].xPos;
+            _previousXPos2 = _weights[1].xPos;
+        }
     }
 
     public void SetWeightXPosition(int index, Vector2 position) {
@@ -146,6 +156,9 @@ public class ScaleController : MonoBehaviour {
         
         _connectionPoints[0].GetComponent<ConnectionPointController>().Reset();
         _connectionPoints[1].GetComponent<ConnectionPointController>().Reset();
+
+        _previousXPos1 = 4f;
+        _previousXPos2 = 4f;
     }
 
     public void SetNewItem(Item item) {
