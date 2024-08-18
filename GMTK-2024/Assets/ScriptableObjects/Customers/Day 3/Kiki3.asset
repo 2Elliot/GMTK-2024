@@ -16,4 +16,7 @@ MonoBehaviour:
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 0}
   Items: []
-  Dialogue: {fileID: 0}
+  Weights: 
+  StartDialogue: {fileID: 11400000, guid: 81462211bf9ca1e478262580fef0045d, type: 2}
+  EndDialogueSuccess: {fileID: 11400000, guid: 95e7dd67058833c4ca327795f65e72aa, type: 2}
+  EndDialogueFailure: {fileID: 11400000, guid: a86d4b71271908642b24437d3cfb1c6d, type: 2}

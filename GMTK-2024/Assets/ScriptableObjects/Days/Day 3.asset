@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93dab269204e804f8d08556b1157df9, type: 3}
   m_Name: Day 3
   m_EditorClassIdentifier: 
-  DayNumber: 2
-  Customers: []
+  DayNumber: 3
+  Customers:
+  - {fileID: 11400000, guid: e6e8d48296ca452459dfdccc2279427b, type: 2}
+  - {fileID: 11400000, guid: 97e06839d212bd6499e224e09e967982, type: 2}
+  - {fileID: 11400000, guid: 4094de42739ba5245a9ba04eacaf6884, type: 2}
+  - {fileID: 11400000, guid: b025772c25e570649baba3d9dc66ebad, type: 2}
+  - {fileID: 11400000, guid: 0858b2e18d2d2a34eaff741d74c32b5c, type: 2}
+  - {fileID: 11400000, guid: 43e63b4c77dea634083891ac3189112a, type: 2}
+  - {fileID: 11400000, guid: f8befcec3380df645997d29066826f66, type: 2}
