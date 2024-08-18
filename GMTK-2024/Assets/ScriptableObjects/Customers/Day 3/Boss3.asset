@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: Boss
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 0}
-  Items: []
+  Items:
+  - {fileID: 11400000, guid: ba247a943c2eeac47bcd1f97ce1c1bff, type: 2}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: ec8639cdc91dfc740a3f27c0f305f9c0, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: ea85b1e965a704a4ab810b942061e2ed, type: 2}

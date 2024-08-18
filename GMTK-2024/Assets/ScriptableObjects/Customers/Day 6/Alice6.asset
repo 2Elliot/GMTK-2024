@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: Alice
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 0}
-  Items: []
+  Items:
+  - {fileID: 11400000, guid: de1da24b15f6a1f4ea2c283d907c8191, type: 2}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: 56b06bce5b197a944886c9ac1c29ac87, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: 640a8acc80cac7743b857c765176a3c7, type: 2}

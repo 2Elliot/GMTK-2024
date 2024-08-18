@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: John
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 0}
-  Items: []
+  Items:
+  - {fileID: 11400000, guid: ba247a943c2eeac47bcd1f97ce1c1bff, type: 2}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: 9d9c78f6b287e4e4aad96c8aa7dfb9ff, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: 8af7ac1292cc30f46a9e6fc46d6cfdb8, type: 2}

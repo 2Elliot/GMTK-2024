@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: Kiki
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 0}
-  Items: []
+  Items:
+  - {fileID: 11400000, guid: 675fdbbd1d6446f42bd730cf5c09e8e5, type: 2}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: c7a01dd3255a45043984fb3e730de4d0, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: 1f0cfd929f915c94f8abc759f50b792e, type: 2}

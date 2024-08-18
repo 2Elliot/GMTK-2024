@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: Bill
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 0}
-  Items: []
+  Items:
+  - {fileID: 11400000, guid: f32b2326b8d6d0043893d7552716117e, type: 2}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: ba78d89239825634daf7abc52023f9f2, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: 049c0dcc7b3dc13488811b4edad1d7c3, type: 2}

@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: Tom
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 0}
-  Items: []
+  Items:
+  - {fileID: 11400000, guid: b27cdd575a34f4a4c98baca5a225e7c9, type: 2}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: cecc980c22c382b44a27a84b85c72749, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: 9752a2a54b27d2944b7fc2f806f959f2, type: 2}

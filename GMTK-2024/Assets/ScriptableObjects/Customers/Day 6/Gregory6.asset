@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: Gregory
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 0}
-  Items: []
+  Items:
+  - {fileID: 11400000, guid: ba02654533e32ab40a6d590a0d183ef7, type: 2}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: c273a9541c9b28a4686f6a95986f962d, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: 878c3386d9329ef448027eb449241af1, type: 2}
