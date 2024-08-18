@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d000a423abe13b44d81d0836f504ff85, type: 3}
+  m_Name: Alice5Start
+  m_EditorClassIdentifier: 
+  _textTurns:
+  - _customer: {fileID: 11400000, guid: 2d71f98914263e64f96a6ace4b91aade, type: 2}
+    _text: I found a box outside Bill's house. When I shake it, it makes a weird
+      noise.
+    _startDelay: 0
+    _duration: 6
+    _endDelay: 0

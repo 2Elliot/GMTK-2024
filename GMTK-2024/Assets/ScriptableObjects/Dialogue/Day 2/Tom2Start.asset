@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d000a423abe13b44d81d0836f504ff85, type: 3}
+  m_Name: Tom2Start
+  m_EditorClassIdentifier: 
+  _textTurns:
+  - _customer: {fileID: 11400000, guid: e18bc8a1c9d42e946b971602a42ce8b2, type: 2}
+    _text: My friend Bill's been tinkering with some ol' rocks for some reason. I
+      joked that "a rock's size is set in stone", and he got real real mad. I gave
+      that sucker some produce to calm him down, and it worked! Only a farmer's mate
+      knows the value of a real good harvest.
+    _startDelay: 0
+    _duration: 18
+    _endDelay: 0

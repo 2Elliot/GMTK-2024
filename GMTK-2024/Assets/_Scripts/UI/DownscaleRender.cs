@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class DownscaleRender : MonoBehaviour
 {
-    public Camera camera;
+    public new Camera camera;
     public CustomRenderTexture texture;
     public Vector2Int downscaleValue;
     public Material material;

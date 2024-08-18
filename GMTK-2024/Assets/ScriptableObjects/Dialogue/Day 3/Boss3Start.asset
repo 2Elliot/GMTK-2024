@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d000a423abe13b44d81d0836f504ff85, type: 3}
+  m_Name: Boss3Start
+  m_EditorClassIdentifier: 
+  _textTurns:
+  - _customer: {fileID: 11400000, guid: aa55c4a32a9b75f49848fb7f37cef8c4, type: 2}
+    _text: So you're the new apprentice? Better get your stuff together quick. I
+      don't have time for messing around.
+    _startDelay: 0
+    _duration: 7
+    _endDelay: 0
+  - _customer: {fileID: 11400000, guid: 8d631d329c70dc2408cd93222956408d, type: 2}
+    _text: I know you're new to this town, so I'll give you the quick rundown. Here
+      in this village, people value things by how heavy they are. I know it sounds
+      crazy, but people here like that, so don't complain.
+    _startDelay: 0
+    _duration: 11.4
+    _endDelay: 0
+  - _customer: {fileID: 11400000, guid: 8d631d329c70dc2408cd93222956408d, type: 2}
+    _text: ' Your job is to weigh the items our valued customers bring in. Over here
+      you''ve got your counterweights which you can use to estimate the weight of
+      the valued customer''s item. I''ll give you three to start with, but you''ll
+      have to buy some more from the market if you want to have any chance in succeeding.'
+    _startDelay: 0
+    _duration: 15.2
+    _endDelay: 0
