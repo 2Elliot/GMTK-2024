@@ -11,7 +11,7 @@ public class PrinterController : ClickableSprite {
   [SerializeField] private GameObject _downAsset;
   [SerializeField] private GameObject _upAsset;
   
-  //[SerializeField] private TextMeshProUGUI _text;
+  [SerializeField] private TextMeshProUGUI _text;
 
   private void Start() {
     _gameController = SingletonContainer.Instance.GameController;
@@ -20,17 +20,13 @@ public class PrinterController : ClickableSprite {
   protected override void OnMouseHoverEnter() {
     _downAsset.SetActive(false);
     _upAsset.SetActive(true);
-    // GetComponent<SpriteRenderer>().enabled = false;
-    // transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
-    // _text.gameObject.SetActive(true);
+    _text.gameObject.SetActive(true);
   }
   
   protected override void OnMouseHoverExit() {
     _downAsset.SetActive(true);
     _upAsset.SetActive(false);
-    // GetComponent<SpriteRenderer>().enabled = true;
-    // transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
-    // _text.gameObject.SetActive(false);
+    _text.gameObject.SetActive(false);
   }
 
   public void UpdateGuess(int guess) {
@@ -39,12 +35,12 @@ public class PrinterController : ClickableSprite {
     _currentGuess *= 10;
     _currentGuess += guess;
 
-    // _text.text = _currentGuess.ToString();
+    _text.text = _currentGuess.ToString();
   }
 
   public void DeleteGuess() {
     _currentGuess /= 10;
-    // _text.text = _currentGuess.ToString();
+    _text.text = _currentGuess.ToString();
   }
 
   public void SubmitGuess() {
@@ -53,6 +49,6 @@ public class PrinterController : ClickableSprite {
 
   public void Reset() {
     _currentGuess = 0;
-    // _text.text = _currentGuess.ToString();
+    _text.text = _currentGuess.ToString();
   }
 }

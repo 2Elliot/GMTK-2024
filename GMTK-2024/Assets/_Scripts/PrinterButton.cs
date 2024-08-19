@@ -24,7 +24,7 @@ public class PrinterButton : ClickableSprite {
                 _printerController.UpdateGuess(_number);
                 break;
             case ButtonType.Check:
-                // _printerController.SubmitGuess();
+                _printerController.SubmitGuess();
                 break;
             case ButtonType.Ex:
                 _printerController.DeleteGuess();

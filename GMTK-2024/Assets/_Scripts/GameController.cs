@@ -14,8 +14,6 @@ public class GameController : MonoBehaviour {
     private MusicController _musicController;
     
     [SerializeField] private SpriteRenderer _customerImageRenderer;
-    [SerializeField] private TextMeshProUGUI _customerName;
-    [SerializeField] private TextMeshProUGUI _scoreText;
     
     public float StartGuessTime;
     private int _currentItemWeight;
@@ -79,8 +77,8 @@ public class GameController : MonoBehaviour {
             scoreText = "F";
             success = false;
         }
-
-        _scoreText.text = scoreText;
+        
+        Debug.Log($"Score {score}.");
         
         Reset();
         
@@ -114,7 +112,6 @@ public class GameController : MonoBehaviour {
         _currentCustomer = customer;
 
         _customerImageRenderer.sprite = _currentCustomer.Image;
-        _customerName.text = _currentCustomer.Name;
         _dialogueHandler.PlayDialogue(_currentCustomer.StartDialogue, true, ChooseNewItem);
     }
 

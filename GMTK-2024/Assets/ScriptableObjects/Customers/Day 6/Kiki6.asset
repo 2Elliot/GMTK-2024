@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Kiki
   NameColor: {r: 0, g: 0, b: 0, a: 0}
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: e43e4a668d3b7c64c87af51be5c92640, type: 3}
   Items:
   - {fileID: 11400000, guid: ba247a943c2eeac47bcd1f97ce1c1bff, type: 2}
   Weights: 
