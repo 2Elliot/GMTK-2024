@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d000a423abe13b44d81d0836f504ff85, type: 3}
+  m_Name: Kiki3Start
+  m_EditorClassIdentifier: 
+  _textTurns:
+  - _customer: {fileID: 11400000, guid: 43e63b4c77dea634083891ac3189112a, type: 2}
+    _text: Things have been so weird lately since I read those books. I keep finding
+      these marbles in my house, and this talking bat named Charlie showed up. I
+      told Jane about everything, and she instantly believed me!
+    _startDelay: 0
+    _duration: 0
+    _endDelay: 0
