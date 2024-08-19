@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour {
     private CounterWeightManager _counterWeightManager;
     private DayController _dayController;
     private MusicController _musicController;
+    private FeedbackHolder _feedbackHolder;
     
     [SerializeField] private SpriteRenderer _customerImageRenderer;
     
@@ -31,6 +32,7 @@ public class GameController : MonoBehaviour {
         _counterWeightManager = instance.CounterWeightManager;
         _dayController = instance.DayController;
         _musicController = instance.MusicController;
+        _feedbackHolder = instance.FeedbackHolder;
 
         _musicController.PlayMusic();
     }
@@ -82,6 +84,7 @@ public class GameController : MonoBehaviour {
         
         Reset();
         
+        
         _dialogueHandler.PlayDialogue(success ? _currentCustomer.EndDialogueSuccess : _currentCustomer.EndDialogueFailure, true, callbackFunction: WaitForNextCustomer);
 
         CanSubmitPrinter = false;
@@ -99,7 +102,11 @@ public class GameController : MonoBehaviour {
             GetNewCustomerOrNewDay();
             return;
         }
-        ChooseNewCustomer(customer);
+
+        _currentCustomer = customer;
+
+        _feedbackHolder.CustomerOut.PlayFeedbacks();
+        CallFunctionsWithDelay(ChooseNewCustomer, 0.1f);
     }
 
     private void Reset() {
@@ -108,10 +115,9 @@ public class GameController : MonoBehaviour {
         _printerController.Reset();
     }
 
-    private void ChooseNewCustomer(Customer customer) {
-        _currentCustomer = customer;
-
+    private void ChooseNewCustomer() {
         _customerImageRenderer.sprite = _currentCustomer.Image;
+        _feedbackHolder.CustomerIn.PlayFeedbacks();
         _dialogueHandler.PlayDialogue(_currentCustomer.StartDialogue, true, ChooseNewItem);
     }
 
