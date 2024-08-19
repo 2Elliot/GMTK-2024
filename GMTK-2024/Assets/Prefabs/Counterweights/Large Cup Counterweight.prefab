@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 6170b01453552fa42a05e3ac709595f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -109,6 +109,8 @@ MonoBehaviour:
   Index: 0
   weight: 30
   _outlinedSprite: {fileID: 21300000, guid: da2f2288995039c4680b290db08fb6d6, type: 3}
+  _32Sprite: {fileID: 21300000, guid: 6969e14e55298e048b0e2cad53f9faa4, type: 3}
+  _32SpriteOutlined: {fileID: 21300000, guid: 0ae91428dd76112439684f088fd43078, type: 3}
   ScreenShakeSize: 3
 --- !u!114 &239208237769757949
 MonoBehaviour:
@@ -157,7 +159,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.028856784, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -168,7 +170,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6978521, y: 0.88032746}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1001 &4379748116199865910
 PrefabInstance:
@@ -181,6 +183,10 @@ PrefabInstance:
     - target: {fileID: 652919707608229201, guid: 646c39ebd6b55914cab3c6d765bfa8eb, type: 3}
       propertyPath: m_Name
       value: WeightDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655095147615652901, guid: 646c39ebd6b55914cab3c6d765bfa8eb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8512051724648422125, guid: 646c39ebd6b55914cab3c6d765bfa8eb, type: 3}
       propertyPath: m_LocalPosition.x
