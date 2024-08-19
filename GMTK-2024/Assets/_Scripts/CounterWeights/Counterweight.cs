@@ -36,7 +36,7 @@ public class CounterWeight : ClickableSprite {
         _renderer = GetComponent<SpriteRenderer>();
         _originalSprite = _renderer.sprite;
 
-        _canvas = transform.GetChild(0).gameObject;
+        _canvas = transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
         _canvas.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = weight.ToString(); // This hard coding is just cause I'm lazy
         
         _canvas.SetActive(false);
@@ -123,7 +123,8 @@ public class CounterWeight : ClickableSprite {
         _weightController.ChangeWeight(weight);
         _inWeight = true;
 
-        transform.localScale = Vector3.one * 2;
+        Debug.Log("Change this line to change scaling of counterweight when on scale");
+        transform.localScale = Vector3.one;
     }
 
     protected override void Update() {

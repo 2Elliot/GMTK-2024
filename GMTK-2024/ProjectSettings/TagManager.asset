@@ -15,7 +15,7 @@ TagManager:
   - RenderLayer1
   - PrinterButtons
   - Counterweight
-  - 
+  - OnTop
   - 
   - 
   - 
@@ -44,4 +44,7 @@ TagManager:
     locked: 0
   - name: Front
     uniqueID: 1830087987
+    locked: 0
+  - name: UI Priority
+    uniqueID: 6993159
     locked: 0
