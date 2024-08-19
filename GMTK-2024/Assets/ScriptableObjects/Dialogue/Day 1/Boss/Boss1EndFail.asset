@@ -16,5 +16,5 @@ MonoBehaviour:
   - _customer: {fileID: 11400000, guid: 8d631d329c70dc2408cd93222956408d, type: 2}
     _text: Bad job.
     _startDelay: 0
-    _duration: 7
-    _endDelay: 0
+    _duration: 3
+    _endDelay: 1
