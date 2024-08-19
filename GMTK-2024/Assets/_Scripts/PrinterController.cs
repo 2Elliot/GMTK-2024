@@ -7,23 +7,25 @@ public class PrinterController : ClickableSprite {
   private GameController _gameController;
   
   private int _currentGuess = 0;
+
+  [SerializeField] private GameObject _downAsset;
+  [SerializeField] private GameObject _upAsset;
+  
   [SerializeField] private TextMeshProUGUI _text;
 
-  protected override void Start() {
+  private void Start() {
     _gameController = SingletonContainer.Instance.GameController;
-    
-    base.Start();
   }
 
   protected override void OnMouseHoverEnter() {
-    GetComponent<SpriteRenderer>().enabled = false;
-    transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+    _downAsset.SetActive(false);
+    _upAsset.SetActive(true);
     _text.gameObject.SetActive(true);
   }
   
   protected override void OnMouseHoverExit() {
-    GetComponent<SpriteRenderer>().enabled = true;
-    transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+    _downAsset.SetActive(true);
+    _upAsset.SetActive(false);
     _text.gameObject.SetActive(false);
   }
 

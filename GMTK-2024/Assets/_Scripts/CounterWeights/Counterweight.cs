@@ -30,7 +30,7 @@ public class CounterWeight : ClickableSprite {
     public int ScreenShakeSize; // 0 = small, 1 = medium, 2 = big
     
     // Start is called before the first frame update
-    protected override void Start() {
+    private void Start() {
         _counterWeightManager = SingletonContainer.Instance.CounterWeightManager;
 
         _renderer = GetComponent<SpriteRenderer>();
@@ -60,8 +60,6 @@ public class CounterWeight : ClickableSprite {
         }
 
         _sfxController = GetComponent<SFXController>();
-        
-        base.Start();
         _offset = new Vector3(0, (4.0625f - 3.6875f), 0);
     }
 

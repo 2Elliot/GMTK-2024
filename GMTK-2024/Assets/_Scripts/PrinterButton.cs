@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PrinterButton : ClickableSprite {
     private PrinterController _printerController;
+    private Renderer _renderer;
+    
     private enum ButtonType {
         Number,
         Check,
@@ -14,10 +13,9 @@ public class PrinterButton : ClickableSprite {
     [SerializeField] private ButtonType _buttonType;
     [SerializeField] private int _number;
 
-    protected override void Start() {
+    private void Start() {
         _printerController = SingletonContainer.Instance.PrinterController;
-        
-        base.Start();
+        _renderer = GetComponent<SpriteRenderer>();
     }
 
     protected override void OnSpriteClicked() {
@@ -32,7 +30,13 @@ public class PrinterButton : ClickableSprite {
                 _printerController.DeleteGuess();
                 break;
         }
+
+        _renderer.enabled = true;
         
         GetComponent<SFXController>().PlaySound();
+    }
+
+    protected override void OnSpriteReleased() {
+        _renderer.enabled = false;
     }
 }

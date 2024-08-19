@@ -6,8 +6,7 @@ public class RegisterAcceptorControllerDeprecated : ClickableSprite
 {
     private RegisterController _registerController;
 
-    protected override void Start() {
-        base.Start();
+    private void Start() {
         // _registerController = SingletonContainer.Instance.RegisterController;
     }
     

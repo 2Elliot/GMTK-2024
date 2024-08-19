@@ -1,4 +1,3 @@
-using System;
 using InputHandler;
 using UnityEngine.InputSystem;
 using UnityEngine;
@@ -14,7 +13,7 @@ public class ClickableSprite : MonoBehaviour {
   // LayerMask to specify which layers to ignore
   public LayerMask IgnoreLayerMask;
 
-  protected virtual void Start() {
+  protected virtual void OnEnable() {
     InputActions = InputReader.Instance.InputActions;
 
     InputActions.Player.Mouse0.performed += OnClick;
