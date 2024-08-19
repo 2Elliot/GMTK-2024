@@ -5,12 +5,18 @@ using UnityEngine;
 public class CounterWeightManager : MonoBehaviour {
     [SerializeField] private List<GameObject> _prefabs;
     public bool[] Unlocks;
+    public List<GameObject> _originalObjects;
     public List<Vector3> OriginalPositions;
     
     public List<GameObject> _counterweights = new List<GameObject>();
     
     // Start is called before the first frame update
     void Start() {
+        for (int i = 0; i < _originalObjects.Count; i++) {
+            OriginalPositions.Add(_originalObjects[i].transform.position);
+            Destroy(_originalObjects[i]);
+        }
+        
         Reset();
     }
 

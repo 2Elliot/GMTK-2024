@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using MoreMountains.Feedbacks;
+using TMPro;
 
 public class CounterWeight : ClickableSprite {
     private CounterWeightManager _counterWeightManager;
 
     [SerializeField] private LayerMask _counterweightLayer;
     
-    [SerializeField] private Transform _offsetTransform;
     private Vector3 _offset;
     
     [HideInInspector] public int Index;
@@ -18,14 +18,51 @@ public class CounterWeight : ClickableSprite {
 
     private bool _inWeight;
     private WeightController _weightController;
+
+    private SFXController _sfxController;
+
+    private Sprite _originalSprite;
+    [SerializeField] private Sprite _outlinedSprite;
+    private SpriteRenderer _renderer;
+
+    private GameObject _canvas;
+    
+    public int ScreenShakeSize; // 0 = small, 1 = medium, 2 = big
     
     // Start is called before the first frame update
     protected override void Start() {
         _counterWeightManager = SingletonContainer.Instance.CounterWeightManager;
-        _screenShake = SingletonContainer.Instance.FeedbackHolder.ScreenShake;
+
+        _renderer = GetComponent<SpriteRenderer>();
+        _originalSprite = _renderer.sprite;
+
+        _canvas = transform.GetChild(0).gameObject;
+        _canvas.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = weight.ToString(); // This hard coding is just cause I'm lazy
+        
+        _canvas.SetActive(false);
+
+        switch (ScreenShakeSize) {
+            case 0:
+                _screenShake = SingletonContainer.Instance.FeedbackHolder.SmallScreenShake;
+                break;
+            case 1:
+                _screenShake = SingletonContainer.Instance.FeedbackHolder.MediumScreenShake;
+                break;
+            case 2:
+                _screenShake = SingletonContainer.Instance.FeedbackHolder.BigScreenShake;
+                break;
+            case 3:
+                _screenShake = SingletonContainer.Instance.FeedbackHolder.MassiveScreenShake;
+                break;
+            default:
+                Debug.LogWarning("Bad value");
+                break;
+        }
+
+        _sfxController = GetComponent<SFXController>();
         
         base.Start();
-        _offset = transform.position - _offsetTransform.position;
+        _offset = new Vector3(0, (4.0625f - 3.6875f), 0);
     }
 
     protected override void OnSpriteClicked() {
@@ -93,5 +130,15 @@ public class CounterWeight : ClickableSprite {
         Vector3 mousePositionWorld = MainCamera.ScreenToWorldPoint(new Vector3(mousePositionScreen.x, mousePositionScreen.y, 0));
 
         return mousePositionWorld;
+    }
+
+    protected override void OnMouseHoverEnter() {
+        _renderer.sprite = _outlinedSprite;
+        _canvas.SetActive(true);
+    }
+
+    protected override void OnMouseHoverExit() {
+        _renderer.sprite = _originalSprite;
+        _canvas.SetActive(false);
     }
 }
