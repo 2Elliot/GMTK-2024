@@ -13,6 +13,8 @@ public class PrinterController : ClickableSprite {
   
   [SerializeField] private TextMeshProUGUI _text;
 
+  [SerializeField] private Animator _animator;
+
   private void Start() {
     _gameController = SingletonContainer.Instance.GameController;
   }
@@ -30,7 +32,7 @@ public class PrinterController : ClickableSprite {
   }
 
   public void UpdateGuess(int guess) {
-    if (_currentGuess > 10) return;
+    if (_currentGuess > 99) return;
 
     _currentGuess *= 10;
     _currentGuess += guess;
@@ -45,6 +47,8 @@ public class PrinterController : ClickableSprite {
 
   public void SubmitGuess() {
     _gameController.SubmitGuess(_currentGuess);
+    
+    if (_gameController.CanSubmitPrinter) _animator.SetTrigger("StartAnimation");
   }
 
   public void Reset() {

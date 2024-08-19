@@ -1037,6 +1037,7 @@ GameObject:
   - component: {fileID: 1443153041}
   - component: {fileID: 1443153042}
   - component: {fileID: 1443153043}
+  - component: {fileID: 1443153044}
   m_Layer: 0
   m_Name: Main Menu Controller
   m_TagString: Untagged
@@ -1086,7 +1087,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8203189f09eb24b8718cf6fb914e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _musicClip: {fileID: 8300000, guid: bf39285447f26b94884c22981bd55e2d, type: 3}
+  _musicClip: {fileID: 8300000, guid: 413a525706b80574abcc53d847c6a047, type: 3}
+--- !u!114 &1443153044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443153040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174b33f041e10b349a505b0c3e7d10cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: 285d3d44d2952524983ed55b6b38a716, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &1541795868
 GameObject:
   m_ObjectHideFlags: 0
