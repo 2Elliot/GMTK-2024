@@ -85,7 +85,7 @@ public class GameController : MonoBehaviour {
         Reset();
         
         
-        _dialogueHandler.PlayDialogue(success ? _currentCustomer.EndDialogueSuccess : _currentCustomer.EndDialogueFailure, true, callbackFunction: WaitForNextCustomer);
+        _dialogueHandler.PlayDialogue(success ? _currentCustomer.EndDialogueSuccess : _currentCustomer.EndDialogueFailure, true, dialogueEndCallback: WaitForNextCustomer);
 
         CanSubmitPrinter = false;
     }

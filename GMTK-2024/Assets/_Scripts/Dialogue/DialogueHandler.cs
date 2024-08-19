@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using InputHandler;
 using TMPro;
 using UnityEngine;
 
@@ -9,11 +10,21 @@ public class DialogueHandler : MonoBehaviour
     [Header("References")]
     [SerializeField] private DialogueUI _dialogueUI;
     [SerializeField] private TextTypingAnimator _textTypingAnimator;
+    private PlayerInputActions _inputActions; 
     [Header("Dialogue Queue")]
     [SerializeField] private List<Dialogue> _dialoguesQueue = new List<Dialogue>();
+    [SerializeField] private int _currentDialogueTurnIndex = 0;
     
     private Action _functionToCall;
-    
+
+    private void OnEnable() {
+        _inputActions = InputReader.Instance.InputActions;
+        _inputActions.Player.Mouse0.performed += _ => AdvanceDialogue();
+    }
+    private void OnDisable() {
+        _inputActions.Player.Mouse0.performed -= _ => AdvanceDialogue();
+    }
+
     private void AddDialogueToQueue(Dialogue dialogue) {
         if (_dialoguesQueue.Contains(dialogue)) return;
         _dialoguesQueue.Add(dialogue);
@@ -24,28 +35,51 @@ public class DialogueHandler : MonoBehaviour
     }
     
     private bool _isPlayingDialogue = false;
-    private IEnumerator PlayDialogueCoroutine(Dialogue dialogue) {
+    private bool _firstLoop = true;
+    private IEnumerator PlayDialogueCoroutine(Dialogue dialogue) 
+    {
         _isPlayingDialogue = true;
-        for (int i = 0; i < dialogue._textTurns.Count; i++) {
-            _textTypingAnimator.ResetText();
-            _dialogueUI.SetDialogue(dialogue, i);
-            _dialogueUI.ShowDialogueBox();
-            yield return new WaitForSeconds(_dialogueUI.GetDialogueBoxShowTime());
-            yield return new WaitForSeconds(dialogue._textTurns[i]._startDelay);
-            _textTypingAnimator.StartTyping();
-            yield return new WaitForSeconds(dialogue._textTurns[i]._duration);
-            yield return new WaitForSeconds(dialogue._textTurns[i]._endDelay);
-            _dialogueUI.HideDialogueBox();
-            // print("called hide dialogue box");
-            yield return new WaitForSeconds(_dialogueUI.GetDialogueBoxHideTime());
+        _firstLoop = true;
+        _currentDialogueTurnIndex = 0;
+        _dialogueUI.SetDialogue(dialogue, _currentDialogueTurnIndex);
+        _dialogueUI.ShowDialogueBox();
+        yield return new WaitForSeconds(_dialogueUI.GetDialogueBoxShowTime());
+        DialogueTurn currentTurn;
+        while (_currentDialogueTurnIndex < dialogue._textTurns.Count) {
+            currentTurn = dialogue._textTurns[_currentDialogueTurnIndex];
+            if (_firstLoop) {
+                _textTypingAnimator.ResetText();
+                _dialogueUI.SetDialogue(dialogue, _currentDialogueTurnIndex);
+                _textTypingAnimator.StartTyping(currentTurn, currentTurn._duration / currentTurn._text.Length);
+                _firstLoop = false;
+            }
+            yield return null;
         }
+        _dialogueUI.HideDialogueBox();
+        yield return new WaitForSeconds(_dialogueUI.GetDialogueBoxHideTime());
         _dialoguesQueue.RemoveAt(0);
         _isPlayingDialogue = false;
         _functionToCall();
     }
-    public void PlayDialogue(Dialogue dialogue, bool forcePlay = false, Action callbackFunction = null) {
+
+    private void AdvanceDialogue() {
+        if (!_isPlayingDialogue) {
+            print("AdvanceDialogue() Not advancing dialogue, nothing playing");
+            return;
+        }
+        if (_textTypingAnimator._isTyping) {
+            _textTypingAnimator.DisplayText(_dialoguesQueue[0]._textTurns[_currentDialogueTurnIndex]);
+        }
+        else {
+            _currentDialogueTurnIndex++;
+            _firstLoop = true;
+        }
+        print("AdvanceDialogue() advancing dialogue");
+    }
+    
+    public void PlayDialogue(Dialogue dialogue, bool forcePlay = false, Action dialogueEndCallback = null) {
         _functionToCall = null;
-        if (callbackFunction != null) _functionToCall = callbackFunction;
+        if (dialogueEndCallback != null) _functionToCall = dialogueEndCallback;
         
         if (forcePlay) {
             _dialoguesQueue.Clear();
