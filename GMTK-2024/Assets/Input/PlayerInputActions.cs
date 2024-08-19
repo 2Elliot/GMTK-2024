@@ -62,6 +62,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Space"",
+                    ""type"": ""Button"",
+                    ""id"": ""c40b40ff-e9cb-45c5-9df0-708216480483"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -185,6 +194,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6fb5223e-0e3f-4e78-b6c4-90fd1a52cf3e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Space"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -225,6 +245,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Mouse0 = m_Player.FindAction("Mouse0", throwIfNotFound: true);
         m_Player_Mouse2 = m_Player.FindAction("Mouse2", throwIfNotFound: true);
         m_Player_MousePosition = m_Player.FindAction("MousePosition", throwIfNotFound: true);
+        m_Player_Space = m_Player.FindAction("Space", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -293,6 +314,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Mouse0;
     private readonly InputAction m_Player_Mouse2;
     private readonly InputAction m_Player_MousePosition;
+    private readonly InputAction m_Player_Space;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -301,6 +323,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Mouse0 => m_Wrapper.m_Player_Mouse0;
         public InputAction @Mouse2 => m_Wrapper.m_Player_Mouse2;
         public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
+        public InputAction @Space => m_Wrapper.m_Player_Space;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -322,6 +345,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @MousePosition.started += instance.OnMousePosition;
             @MousePosition.performed += instance.OnMousePosition;
             @MousePosition.canceled += instance.OnMousePosition;
+            @Space.started += instance.OnSpace;
+            @Space.performed += instance.OnSpace;
+            @Space.canceled += instance.OnSpace;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -338,6 +364,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @MousePosition.started -= instance.OnMousePosition;
             @MousePosition.performed -= instance.OnMousePosition;
             @MousePosition.canceled -= instance.OnMousePosition;
+            @Space.started -= instance.OnSpace;
+            @Space.performed -= instance.OnSpace;
+            @Space.canceled -= instance.OnSpace;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -407,6 +436,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnMouse0(InputAction.CallbackContext context);
         void OnMouse2(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
+        void OnSpace(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

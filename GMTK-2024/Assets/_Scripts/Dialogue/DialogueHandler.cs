@@ -19,10 +19,10 @@ public class DialogueHandler : MonoBehaviour
 
     private void OnEnable() {
         _inputActions = InputReader.Instance.InputActions;
-        _inputActions.Player.Mouse0.performed += _ => AdvanceDialogue();
+        _inputActions.Player.Space.performed += _ => AdvanceDialogue();
     }
     private void OnDisable() {
-        _inputActions.Player.Mouse0.performed -= _ => AdvanceDialogue();
+        _inputActions.Player.Space.performed -= _ => AdvanceDialogue();
     }
 
     private void AddDialogueToQueue(Dialogue dialogue) {

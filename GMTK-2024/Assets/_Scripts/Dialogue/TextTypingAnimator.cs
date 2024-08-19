@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
+using TMPro;
 using UnityEngine;
 
 public class TextTypingAnimator : MonoBehaviour
@@ -9,6 +10,8 @@ public class TextTypingAnimator : MonoBehaviour
     public TMPro.TextMeshProUGUI _textMeshPro;
     private string _displayedText;
     public bool _isTyping;
+
+    [SerializeField] private TextMeshProUGUI _skipText;
     
     Coroutine _coroutine;
 
@@ -23,10 +26,14 @@ public class TextTypingAnimator : MonoBehaviour
     public void DisplayText(DialogueTurn turn) {
         ResetText();
         _textMeshPro.text = turn._text;
+        
+        _skipText.enabled = true;
     }
     
     
     public void ResetText() {
+        _skipText.enabled = false;
+        
         if (_coroutine != null) {
             StopCoroutine(_coroutine);
         }
@@ -43,6 +50,8 @@ public class TextTypingAnimator : MonoBehaviour
             _textMeshPro.text = _displayedText;
             yield return new WaitForSeconds(durationPerCharacter);
         }
+
+        _skipText.enabled = true;
         _isTyping = false;
     }
 }

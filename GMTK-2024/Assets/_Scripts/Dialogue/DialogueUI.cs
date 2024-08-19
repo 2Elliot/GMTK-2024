@@ -12,7 +12,7 @@ public class DialogueUI : MonoBehaviour
 
     public void SetDialogue(Dialogue dialogue, int turnIndex) {
         DialogueTurn dialogueTurn = dialogue._textTurns[turnIndex];
-        _characterNameText.text = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogueTurn._customer.NameColor)}>{dialogueTurn._customer.Name}:</color>";
+        _characterNameText.text = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogueTurn._customer.NameColor)}>{dialogueTurn._customer.Name}</color>";
     }
     
     public void ShowDialogueBox() {
