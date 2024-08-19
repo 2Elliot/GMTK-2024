@@ -10,6 +10,8 @@ public class WeightController : ClickableSprite {
   public int Index;
   private ScaleController _scaleController;
 
+  public SpriteRenderer _otherWeightSprite;
+
   [SerializeField] private Transform _connectionPoint;
   public Transform CounterWeightPoint;
 

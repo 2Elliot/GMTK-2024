@@ -22,7 +22,7 @@ public class ScaleController : MonoBehaviour {
         public Transform connectionPoint;
         public WeightController weightScript;
         public float weight;
-        [Range(1f, 4.5f)] public float xPos;
+        [Range(1.3125f, 3.25f)] public float xPos;
         [Range(-1, 1)] public int direction; // -1 for left, 1 for right
     }
 
@@ -79,13 +79,13 @@ public class ScaleController : MonoBehaviour {
         Vector2 snappedPosition = SnapPointToLine(position);
         Vector3 newPosition = transform.InverseTransformPoint(snappedPosition);
         int direction = _weights[index].direction;
-        float xPos = Mathf.Clamp(direction * newPosition.x, 1f, 4.5f);
+        float xPos = Mathf.Clamp(direction * newPosition.x, 1.3125f, 3.25f);
         _weights[index].xPos = ConvertToClosest(xPos);
     }
     
     private static float ConvertToClosest(float input)
     {
-        float[] targets = { 1.5f, 2.75f, 4f };
+        float[] targets = { 1.3125f, 2.3125f, 3.25f };
         
         float closest = targets[0];
         float minDifference = Mathf.Abs(input - closest);
@@ -133,7 +133,7 @@ public class ScaleController : MonoBehaviour {
             weightScript = obj.GetComponent<WeightController>(),
             connectionPoint = _connectionPoints[0],
             weight = 0,
-            xPos = 4,
+            xPos = 3.25f,
             direction = -1
         };
 
@@ -145,7 +145,7 @@ public class ScaleController : MonoBehaviour {
             weightScript = obj2.GetComponent<WeightController>(),
             connectionPoint = _connectionPoints[1],
             weight = 0,
-            xPos = 4,
+            xPos = 3.25f,
             direction = 1
         };
 
@@ -157,8 +157,8 @@ public class ScaleController : MonoBehaviour {
         _connectionPoints[0].GetComponent<ConnectionPointController>().Reset();
         _connectionPoints[1].GetComponent<ConnectionPointController>().Reset();
 
-        _previousXPos1 = 4f;
-        _previousXPos2 = 4f;
+        _previousXPos1 = 3.25f;
+        _previousXPos2 = 3.25f;
     }
 
     public void SetNewItem(Item item) {
@@ -173,7 +173,7 @@ public class ScaleController : MonoBehaviour {
             weightScript = obj.GetComponent<WeightController>(),
             connectionPoint = _connectionPoints[0],
             weight = item.Weight,
-            xPos = 4,
+            xPos = 3.25f,
             direction = -1
         };
 
@@ -184,7 +184,7 @@ public class ScaleController : MonoBehaviour {
             weightScript = obj2.GetComponent<WeightController>(),
             connectionPoint = _connectionPoints[1],
             weight = 0, // Temporary value I hard coded
-            xPos = 4,
+            xPos = 3.25f,
             direction = 1
         };
 
@@ -196,7 +196,7 @@ public class ScaleController : MonoBehaviour {
         GameObject newItem = Instantiate(_chainPrefab);
         newItem.GetComponent<WeightController>().Index = index;
 
-        newItem.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = item.Image;
+        newItem.GetComponent<WeightController>()._otherWeightSprite.sprite = item.Image;
         return newItem;
     }
     
