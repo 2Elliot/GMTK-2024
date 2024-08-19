@@ -16,25 +16,32 @@ public class CounterWeight : ClickableSprite {
 
     private MMFeedbacks _screenShake;
 
-    private bool _inWeight;
     private WeightController _weightController;
 
     private SFXController _sfxController;
 
-    private Sprite _originalSprite;
+    private Sprite _sprite;
     [SerializeField] private Sprite _outlinedSprite;
+
+    [SerializeField] private Sprite _32Sprite;
+    [SerializeField] private Sprite _32SpriteOutlined;
     private SpriteRenderer _renderer;
+    private BoxCollider2D _collider;
 
     private GameObject _canvas;
     
     public int ScreenShakeSize; // 0 = small, 1 = medium, 2 = big
+
+    private bool _inPlatform;
     
     // Start is called before the first frame update
     private void Start() {
         _counterWeightManager = SingletonContainer.Instance.CounterWeightManager;
 
         _renderer = GetComponent<SpriteRenderer>();
-        _originalSprite = _renderer.sprite;
+        _sprite = _renderer.sprite;
+
+        _collider = GetComponent<BoxCollider2D>();
 
         _canvas = transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
         _canvas.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = weight.ToString(); // This hard coding is just cause I'm lazy
@@ -64,9 +71,10 @@ public class CounterWeight : ClickableSprite {
     }
 
     protected override void OnSpriteClicked() {
-        if (_inWeight) {
+        _canvas.SetActive(false);
+        if (_inPlatform) {
             _weightController.ChangeWeight(-weight);
-            _inWeight = false;
+            _inPlatform = false;
             _weightController = null;
         }
     }
@@ -76,9 +84,13 @@ public class CounterWeight : ClickableSprite {
         mousePositionWorld.z = -5f;
         
         transform.position = mousePositionWorld + _offset;
+
+        _counterWeightManager.SomethingHeld = true;
     }
 
     protected override void OnSpriteReleased() {
+        _counterWeightManager.SomethingHeld = false;
+        
         _screenShake.PlayFeedbacks();
         GetComponent<SFXController>().PlaySound();
         
@@ -91,6 +103,7 @@ public class CounterWeight : ClickableSprite {
             transform.position = _counterWeightManager.OriginalPositions[Index];
             
             transform.localScale = Vector3.one;
+            _renderer.sprite = _sprite;
             return;
         }
         
@@ -99,7 +112,8 @@ public class CounterWeight : ClickableSprite {
                 transform.position = _counterWeightManager.OriginalPositions[Index];
                 
                 transform.localScale = Vector3.one;
-
+                _renderer.sprite = _sprite;
+                _collider.size = Vector2.one;
                 return;
             }
 
@@ -111,18 +125,27 @@ public class CounterWeight : ClickableSprite {
                 transform.position = _counterWeightManager.OriginalPositions[Index];
                 
                 transform.localScale = Vector3.one;
+                
+                _renderer.sprite = _sprite;
+                _collider.size = Vector2.one;
                 return;
             }
         } else {
             transform.position = _counterWeightManager.OriginalPositions[Index];
             
             transform.localScale = Vector3.one;
+            
+            _renderer.sprite = _sprite;
+            _collider.size = Vector2.one;
             return;
         }
 
         _weightController.ChangeWeight(weight);
-        _inWeight = true;
+        _inPlatform = true;
 
+        _renderer.sprite = _32Sprite;
+        _collider.size = Vector2.one * 2;
+        
         Debug.Log("Change this line to change scaling of counterweight when on scale");
         transform.localScale = Vector3.one;
     }
@@ -130,7 +153,7 @@ public class CounterWeight : ClickableSprite {
     protected override void Update() {
         base.Update();
 
-        if (_inWeight && _weightController.CounterWeightPoint != null) {
+        if (_inPlatform && _weightController.CounterWeightPoint != null) {
             transform.position = _weightController.CounterWeightPoint.position + _offset;
         }
     }
@@ -143,12 +166,12 @@ public class CounterWeight : ClickableSprite {
     }
 
     protected override void OnMouseHoverEnter() {
-        _renderer.sprite = _outlinedSprite;
-        _canvas.SetActive(true);
+        _renderer.sprite = (_inPlatform ? _32SpriteOutlined : _outlinedSprite);
+        if (!_inPlatform && !_counterWeightManager.SomethingHeld) _canvas.SetActive(true);
     }
 
     protected override void OnMouseHoverExit() {
-        _renderer.sprite = _originalSprite;
+        _renderer.sprite = (_inPlatform ? _32Sprite : _sprite);
         _canvas.SetActive(false);
     }
 }

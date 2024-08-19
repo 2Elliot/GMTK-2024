@@ -9,6 +9,8 @@ public class CounterWeightManager : MonoBehaviour {
     public List<Vector3> OriginalPositions;
     
     public List<GameObject> _counterweights = new List<GameObject>();
+
+    public bool SomethingHeld;
     
     // Start is called before the first frame update
     void Start() {
