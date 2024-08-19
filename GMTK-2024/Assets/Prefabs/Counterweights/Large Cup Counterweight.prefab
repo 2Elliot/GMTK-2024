@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6969e14e55298e048b0e2cad53f9faa4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6170b01453552fa42a05e3ac709595f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
     m_Bits: 119
   Index: 0
   weight: 30
-  _outlinedSprite: {fileID: 21300000, guid: 0ae91428dd76112439684f088fd43078, type: 3}
+  _outlinedSprite: {fileID: 21300000, guid: da2f2288995039c4680b290db08fb6d6, type: 3}
   ScreenShakeSize: 3
 --- !u!114 &239208237769757949
 MonoBehaviour:
