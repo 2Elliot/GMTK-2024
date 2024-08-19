@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: StarBox
   m_EditorClassIdentifier: 
   Name: StarBox
-  Weight: 0
-  Image: {fileID: 21300000, guid: 1e51750b4c5ef2840abf6bf0f78e9e0e, type: 3}
+  Weight: 15
+  Image: {fileID: 21300000, guid: 39ef5528fa93ebc4eadf5868e6939359, type: 3}

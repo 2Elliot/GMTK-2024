@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SphericalBox
   m_EditorClassIdentifier: 
   Name: SphericalBox
-  Weight: 0
-  Image: {fileID: 21300000, guid: e0d500ecdd6a49144824b1b5c1db588a, type: 3}
+  Weight: 19
+  Image: {fileID: 21300000, guid: 2ae988b8d9b7e6e459003b98f49a7012, type: 3}

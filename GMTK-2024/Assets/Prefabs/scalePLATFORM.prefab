@@ -254,6 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: c83f55ba8e28b8948a5ebce7a99c08be, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &6961605047762562821
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +312,7 @@ Transform:
   m_GameObject: {fileID: 7577634218283777035}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0625, y: 1.0000031, z: -0.5}
+  m_LocalPosition: {x: 0, y: 1.3125, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -342,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 7763454820090925053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.087570906, y: 1.3750031, z: 0.029700115}
+  m_LocalPosition: {x: 0, y: 1.3750031, z: 0.029700115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -89,12 +89,17 @@ public class CounterWeight : ClickableSprite {
 
         if (hit.collider == null) {
             transform.position = _counterWeightManager.OriginalPositions[Index];
+            
+            transform.localScale = Vector3.one;
             return;
         }
         
         if (hit.transform.CompareTag("Weight")) {
             if (!hit.transform.GetComponent<WeightController>().CanHoldObject) {
                 transform.position = _counterWeightManager.OriginalPositions[Index];
+                
+                transform.localScale = Vector3.one;
+
                 return;
             }
 
@@ -104,15 +109,21 @@ public class CounterWeight : ClickableSprite {
             }
             else {
                 transform.position = _counterWeightManager.OriginalPositions[Index];
+                
+                transform.localScale = Vector3.one;
                 return;
             }
         } else {
             transform.position = _counterWeightManager.OriginalPositions[Index];
+            
+            transform.localScale = Vector3.one;
             return;
         }
 
         _weightController.ChangeWeight(weight);
         _inWeight = true;
+
+        transform.localScale = Vector3.one * 2;
     }
 
     protected override void Update() {

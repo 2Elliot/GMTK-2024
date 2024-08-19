@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LongBox
   m_EditorClassIdentifier: 
   Name: LongBox
-  Weight: 0
-  Image: {fileID: 21300000, guid: 96062819cd3961b45ab4136d608fcbe3, type: 3}
+  Weight: 15
+  Image: {fileID: 21300000, guid: 748e66cb1cd2c1141a4ed4c197ee7c92, type: 3}
