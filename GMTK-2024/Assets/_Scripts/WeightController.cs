@@ -20,14 +20,12 @@ public class WeightController : ClickableSprite {
 
   public bool CanHoldObject = true;
   
-  protected override void Start() {
+  private void Start() {
     _scaleController = SingletonContainer.Instance.ScaleController;
     _sfxController = GetComponent<SFXController>();
     _previousXPosition = transform.localPosition.x;
 
     CanHoldObject = true;
-      
-    base.Start();
     Offset = transform.position - _connectionPoint.position;
   }
 

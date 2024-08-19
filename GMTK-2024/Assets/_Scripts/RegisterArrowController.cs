@@ -6,8 +6,7 @@ public class RegisterArrowControllerDeprecated : ClickableSprite {
     private RegisterController _registerController;
     [SerializeField] private int _amount;
 
-    protected override void Start() {
-        base.Start();
+    private void Start() {
         // _registerController = SingletonContainer.Instance.RegisterController;
     }
     

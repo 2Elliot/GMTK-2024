@@ -27,10 +27,9 @@ public class Consumable : ClickableSprite
     
     
     
-    protected override void Start()
+    
+    private void Start()
     {
-        base.Start();
-
         SetSpriteBasedOnAction();
 
         _gameController = SingletonContainer.Instance.GameController;
