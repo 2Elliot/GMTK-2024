@@ -1,44 +1,48 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class TextTypingAnimator : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI _textMeshPro;
-    [TextArea(3, 10)] public string _text;
-    public float _typingSpeed = 0.1f;
-    public AudioClip _typingSound;
     private string _displayedText;
-    private bool _typing;
+    public bool _isTyping;
+    
+    Coroutine _coroutine;
 
-    private void OnValidate() {
-        if (_textMeshPro != null) {
-            _textMeshPro.text = _text;
+    public void StartTyping(DialogueTurn turn, float durationPerCharacter) {
+        if (_isTyping) {
+            Debug.LogError("TextTypingAnimator: Already typing! Call ResetText() first!");
+            return;
         }
-    }
-
-    public void StartTyping() {
-        if (_typing) return;
         _displayedText = "";
-        StartCoroutine(TypeText());
+        _coroutine = StartCoroutine(TypeText(turn._text, durationPerCharacter));
     }
+    public void DisplayText(DialogueTurn turn) {
+        ResetText();
+        _textMeshPro.text = turn._text;
+    }
+    
+    
     public void ResetText() {
-        StopCoroutine(TypeText());
+        if (_coroutine != null) {
+            StopCoroutine(_coroutine);
+        }
+        _isTyping = false;
         _displayedText = "";
         _textMeshPro.text = _displayedText;
     }
 
-    public IEnumerator TypeText() {
-        _typing = true;
-        _displayedText = "";
-        _textMeshPro.text = _displayedText;
-        for (int i = 0; i < _text.Length; i++) {
-            _displayedText += _text[i];
+    public IEnumerator TypeText(string text, float durationPerCharacter) {
+        _isTyping = true;
+        _textMeshPro.text = "";
+        for (int i = 0; i < text.Length; i++) {
+            _displayedText += text[i];
             _textMeshPro.text = _displayedText;
-            yield return new WaitForSeconds(_typingSpeed);
+            yield return new WaitForSeconds(durationPerCharacter);
         }
-        
-        _typing = false;
+        _isTyping = false;
     }
 }
