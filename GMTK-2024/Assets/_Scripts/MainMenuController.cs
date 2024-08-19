@@ -9,23 +9,29 @@ public class MainMenuController : MonoBehaviour {
 
     [SerializeField] private Crossfade _crossfade;
     [SerializeField] private MusicController _musicController;
+    private SFXController _sfxController;
 
     private void Start() {
+        _sfxController = GetComponent<SFXController>();
+        
         _musicController.PlayMusic();
     }
 
     public void StartButton()
     {
+        _sfxController.PlaySound();
         StartCoroutine(_crossfade.PlayTransition(this, nameof(OnStartButtonTransitionEnd)));
     }
 
     public void SettingsButton()
     {
+        _sfxController.PlaySound();
         StartCoroutine(_crossfade.PlayTransition(this, nameof(OnSettingsButtonTransitionEnd)));
     }
 
     public void QuitButton()
     {
+        _sfxController.PlaySound();
         StartCoroutine(_crossfade.PlayTransition(this, nameof(QuitGame)));
     }
 
