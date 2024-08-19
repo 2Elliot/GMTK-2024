@@ -66,7 +66,7 @@ public class ClickableSprite : MonoBehaviour {
     }
   }
 
-  protected virtual void OnSpriteClicked() {
+  protected virtual void  OnSpriteClicked() {
     // Override this method in derived classes for specific behavior on click
   }
 
