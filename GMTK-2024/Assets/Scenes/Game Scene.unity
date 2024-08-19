@@ -285,6 +285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: c83f55ba8e28b8948a5ebce7a99c08be, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &88275461
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +296,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 88275462}
-  - component: {fileID: 88275465}
   - component: {fileID: 88275464}
   - component: {fileID: 88275463}
   - component: {fileID: 88275466}
@@ -390,21 +391,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &88275465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88275461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &88275466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -463,6 +449,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &163598915
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +883,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 284229495}
-  - component: {fileID: 284229498}
   - component: {fileID: 284229497}
   - component: {fileID: 284229496}
   - component: {fileID: 284229499}
@@ -991,21 +978,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &284229498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284229494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &284229499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1064,6 +1036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &327113787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,6 +1245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &376465271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1304,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 384858858}
-  - component: {fileID: 384858861}
   - component: {fileID: 384858860}
   - component: {fileID: 384858859}
   - component: {fileID: 384858862}
@@ -1424,21 +1399,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &384858861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384858857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &384858862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1497,6 +1457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 8300000, guid: f04de3f00dad54b4b9830a1ae8d088af, type: 3}
+  _sad: {fileID: 8300000, guid: 4242867a3f5f72941ab5a19205f2c5c3, type: 3}
 --- !u!1 &433182265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,7 +2125,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 480970549}
-  - component: {fileID: 480970552}
   - component: {fileID: 480970551}
   - component: {fileID: 480970550}
   - component: {fileID: 480970553}
@@ -2259,21 +2220,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &480970552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480970548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &480970553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2332,6 +2278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &511846685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,7 +2453,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 677165145}
-  - component: {fileID: 677165148}
   - component: {fileID: 677165147}
   - component: {fileID: 677165146}
   - component: {fileID: 677165149}
@@ -2601,21 +2548,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &677165148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677165144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &677165149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2674,6 +2606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &759855394
 GameObject:
   m_ObjectHideFlags: 0
@@ -3074,7 +3008,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1009090830}
-  - component: {fileID: 1009090833}
   - component: {fileID: 1009090832}
   - component: {fileID: 1009090831}
   - component: {fileID: 1009090834}
@@ -3170,21 +3103,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1009090833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009090829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &1009090834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3243,6 +3161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &1011318212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,7 +3418,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117487877}
-  - component: {fileID: 1117487880}
   - component: {fileID: 1117487879}
   - component: {fileID: 1117487878}
   - component: {fileID: 1117487881}
@@ -3594,21 +3513,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1117487880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117487876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &1117487881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3667,6 +3571,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &1125417959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3015424089393550333, guid: 6a7f6e1c991c2dc40b7b0510c8c007d9, type: 3}
@@ -4386,7 +4292,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1378241957}
-  - component: {fileID: 1378241960}
   - component: {fileID: 1378241959}
   - component: {fileID: 1378241958}
   - component: {fileID: 1378241963}
@@ -4482,21 +4387,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1378241960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378241956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &1378241962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4510,6 +4400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!61 &1378241963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4856,7 +4748,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1529059246}
-  - component: {fileID: 1529059249}
   - component: {fileID: 1529059248}
   - component: {fileID: 1529059247}
   - component: {fileID: 1529059250}
@@ -4952,21 +4843,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1529059249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529059245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &1529059250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5025,6 +4901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &1542833123
 GameObject:
   m_ObjectHideFlags: 0
@@ -6009,7 +5887,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850144030}
-  - component: {fileID: 1850144033}
   - component: {fileID: 1850144032}
   - component: {fileID: 1850144031}
   - component: {fileID: 1850144034}
@@ -6105,21 +5982,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1850144033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850144029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &1850144034
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6178,6 +6040,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &1876855293
 GameObject:
   m_ObjectHideFlags: 0
@@ -6407,7 +6271,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1893456802}
-  - component: {fileID: 1893456805}
   - component: {fileID: 1893456804}
   - component: {fileID: 1893456803}
   - component: {fileID: 1893456806}
@@ -6503,21 +6366,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1893456805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893456801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7274c0bf7bc58eb44b4facda9c4f72ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &1893456806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6576,6 +6424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 12529c35a5e9211479295db5823dffcc, type: 3}
+  _happy: {fileID: 0}
+  _sad: {fileID: 0}
 --- !u!1 &2033084952
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,18 @@ public class PrinterButton : ClickableSprite {
     }
 
     protected override void OnSpriteClicked() {
+        if (_buttonType == ButtonType.Check) {
+            if (SingletonContainer.Instance.GameController.CanSubmitPrinter) {
+                GetComponent<SFXController>().PlayHappy();
+            }
+            else {
+                GetComponent<SFXController>().PlaySad();
+            }
+        } else
+        {
+            GetComponent<SFXController>().PlaySound();
+        }
+        
         switch (_buttonType) {
             case ButtonType.Number:
                 _printerController.UpdateGuess(_number);
@@ -32,8 +44,6 @@ public class PrinterButton : ClickableSprite {
         }
 
         _renderer.enabled = true;
-        
-        GetComponent<SFXController>().PlaySound();
     }
 
     protected override void OnSpriteReleased() {
