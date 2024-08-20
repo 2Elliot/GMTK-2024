@@ -123,7 +123,8 @@ public class GameController : MonoBehaviour {
     }
 
     private void WaitForNextCustomer() {
-        float timeToWait = Random.Range(0.5f, 1.5f);
+        float timeToWait = Random.Range(0.1f, 0.3f); // this can feel bad
+        Debug.Log("Adjust this if wait times feel bad");
         CallFunctionsWithDelay(GetNewCustomerOrNewDay, timeToWait);
     }
     
