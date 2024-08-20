@@ -14,7 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 220fba3706fc7f94bb35b8c4d07b3a28, type: 2}
-    _text: John Pos
-    _startDelay: 0
-    _duration: 0
-    _endDelay: 0
+    _text: Have a nice day!

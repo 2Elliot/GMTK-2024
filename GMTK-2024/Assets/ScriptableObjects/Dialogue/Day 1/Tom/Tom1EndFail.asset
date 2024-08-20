@@ -14,7 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: a02528d16a759194e96eb0630ee810b5, type: 2}
-    _text: Tom Neg
-    _startDelay: 0
-    _duration: 0
-    _endDelay: 0
+    _text: Now that can't be right can it?

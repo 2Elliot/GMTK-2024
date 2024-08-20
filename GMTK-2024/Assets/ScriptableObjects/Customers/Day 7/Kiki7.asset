@@ -19,5 +19,5 @@ MonoBehaviour:
   - {fileID: 0}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: edf91dbbd981bc64c98cb31f8fbc6424, type: 2}
-  EndDialogueSuccess: {fileID: 11400000, guid: c126f30b71c566a40a8fe1bf51b7a5b7, type: 2}
-  EndDialogueFailure: {fileID: 11400000, guid: b21352aaab0a13e439d89db4b5089062, type: 2}
+  EndDialogueSuccess: {fileID: 11400000, guid: abc9c2a564a82f348b3df8a67f38758a, type: 2}
+  EndDialogueFailure: {fileID: 11400000, guid: f24e6021748226046864fbc786ae6f53, type: 2}

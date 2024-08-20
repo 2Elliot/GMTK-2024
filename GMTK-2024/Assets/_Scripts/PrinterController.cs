@@ -46,9 +46,9 @@ public class PrinterController : ClickableSprite {
   }
 
   public void SubmitGuess() {
-    _gameController.SubmitGuess(_currentGuess);
-    
     if (_gameController.CanSubmitPrinter) _animator.SetTrigger("StartAnimation");
+    
+    _gameController.SubmitGuess(_currentGuess);
   }
 
   public void Reset() {
