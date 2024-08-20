@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: John
   NameColor: {r: 0, g: 0, b: 0, a: 0}
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 55723d737ee0993468c7aac0475abdc2, type: 3}
   Items:
-  - {fileID: 11400000, guid: 75a5ec9f258fd2946855605f2deeba54, type: 2}
+  - {fileID: 0}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: b97cbf2ed563267428d78696ab8660f2, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: e4221f1dac789e44db34b6cbfa7f5719, type: 2}
