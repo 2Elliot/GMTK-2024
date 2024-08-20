@@ -13,7 +13,8 @@ public class PauseController : MonoBehaviour
     [SerializeField] private CanvasGroup _mainMenu;
     [SerializeField] private CanvasGroup _settingsMenu;
     
-    public bool Paused; 
+    public bool Paused;
+    public bool InShop;
     
     private void Start()
     {

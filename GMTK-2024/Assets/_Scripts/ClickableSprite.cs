@@ -32,7 +32,7 @@ public class ClickableSprite : MonoBehaviour {
   }
     
   protected virtual void OnClick(InputAction.CallbackContext context) {
-    if (SingletonContainer.Instance.PauseController.Paused) return;
+    if (SingletonContainer.Instance.PauseController.Paused || SingletonContainer.Instance.PauseController.InShop) return;
     
     Vector2 mousePosition = Mouse.current.position.ReadValue();
     Vector2 worldPosition = MainCamera.ScreenToWorldPoint(mousePosition);
@@ -46,7 +46,7 @@ public class ClickableSprite : MonoBehaviour {
   }
 
   protected virtual void Update() {
-    if (SingletonContainer.Instance.PauseController.Paused) {
+    if (SingletonContainer.Instance.PauseController.Paused || SingletonContainer.Instance.PauseController.InShop) {
       if (SpriteClicked) {
         SpriteClicked = false;
         OnSpriteReleased();
