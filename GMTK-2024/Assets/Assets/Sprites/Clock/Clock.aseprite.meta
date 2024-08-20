@@ -131,7 +131,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 42
-      height: 24
+      height: 23
     spriteID: 21a3f7e0e508c684d99dbc1d3a892d8a
     spriteBone: []
     spriteOutline: []
@@ -141,6 +141,66 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Clock_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 35
+      width: 42
+      height: 23
+    spriteID: c29180a4e5123a444975d0327a068aff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 35}
+  - name: Clock_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 66
+      width: 42
+      height: 23
+    spriteID: e68aa2549f66f7749a8cdfba8aeadc57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 66}
+  - name: Clock_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 97
+      width: 42
+      height: 23
+    spriteID: add527962dfecc34f93aefde9711f8a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 97}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,15 +210,42 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Clock
+    - name: Clock_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
         width: 42
-        height: 24
+        height: 23
       spriteId: 21a3f7e0e508c684d99dbc1d3a892d8a
+    - name: Clock_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 0
+        width: 42
+        height: 23
+      spriteId: c29180a4e5123a444975d0327a068aff
+    - name: Clock_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 0
+        width: 42
+        height: 23
+      spriteId: e68aa2549f66f7749a8cdfba8aeadc57
+    - name: Clock_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 0
+        width: 42
+        height: 23
+      spriteId: add527962dfecc34f93aefde9711f8a3
     linkedCells: []
     parentIndex: -1
   platformSettings: []
