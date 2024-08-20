@@ -18,6 +18,7 @@ public class ShopInfoUI : MonoBehaviour
     public void ResetUI()
     {
         itemImage.sprite = null;
+        itemImage.color = new Color(1, 1, 1, 0);
         itemName.text = "No Item";
         itemDescription.text = "Select an item to view more information.";
         itemPrice.text = "Cost: 0";
@@ -27,6 +28,7 @@ public class ShopInfoUI : MonoBehaviour
     {
         this.item = item;
         itemImage.sprite = item.Image32;
+        itemImage.color = new Color(1, 1, 1, 1);
         itemName.text = item.ItemName;
         itemDescription.text = item.Description;
         itemPrice.text = $"Cost: {item.Price.ToString()}";
