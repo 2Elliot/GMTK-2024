@@ -33,7 +33,8 @@ public class ValueLerpAnimator : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        _textObject.text = endValue.ToString();
+        valueStr = includeDecimals ? endValue.ToString() : Mathf.RoundToInt(endValue).ToString();
+        _textObject.text = _prefix + valueStr;
         _isAnimating = false;
     }
     

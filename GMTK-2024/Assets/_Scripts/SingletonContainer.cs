@@ -13,6 +13,7 @@ public class SingletonContainer : MonoBehaviour
     public FeedbackHolder FeedbackHolder { get; private set; }
     public MusicController MusicController { get; private set; }
     public PauseController PauseController { get; private set; }
+    public DayCompleteManager DayCompleteManager { get; private set; }
 
     [SerializeField] private GameController _gameController;
     [SerializeField] private DayController _dayController;
@@ -23,6 +24,7 @@ public class SingletonContainer : MonoBehaviour
     [SerializeField] private FeedbackHolder _feedbackHolder;
     [SerializeField] private MusicController _musicController;
     [SerializeField] private PauseController _pauseController;
+    [SerializeField] private DayCompleteManager _dayCompleteManager;
 
     private void Awake()
     {
@@ -43,9 +45,21 @@ public class SingletonContainer : MonoBehaviour
         FeedbackHolder = _feedbackHolder;
         MusicController = _musicController;
         PauseController = _pauseController;
+        DayCompleteManager = _dayCompleteManager;
 
-        if ((GameController == null) || (DayController == null) || (ScaleController == null) || (PrinterController == null) ||
-            (DialogueHandler == null) || (CounterWeightManager == null) || (FeedbackHolder == null) || (MusicController == null) || (PauseController == null)) {
+        if (
+            (GameController == null) || 
+            (DayController == null) || 
+            (ScaleController == null) || 
+            (PrinterController == null) ||
+            (DialogueHandler == null) || 
+            (CounterWeightManager == null) || 
+            (FeedbackHolder == null) || 
+            (MusicController == null) || 
+            (PauseController == null) || 
+            (DayCompleteManager == null)
+            ) 
+        {
             Debug.LogError($"Unassigned Reference in {this}");
         }
     }
