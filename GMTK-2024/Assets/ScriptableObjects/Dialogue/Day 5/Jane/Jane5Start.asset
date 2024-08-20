@@ -17,5 +17,3 @@ MonoBehaviour:
     _text: If you talk to Kiki today, make sure to tell her she's an idiot. If you
       talk to John today though, say "hi" to Charlie for me.
     _startDelay: 0
-    _duration: 0
-    _endDelay: 0

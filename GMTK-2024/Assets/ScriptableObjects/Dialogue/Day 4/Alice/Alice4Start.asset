@@ -17,5 +17,3 @@ MonoBehaviour:
     _text: I love boxes. I found this box, but it felt strangely light? I don't,
       I thought I saw a whole in it.
     _startDelay: 0
-    _duration: 8
-    _endDelay: 0

@@ -18,6 +18,4 @@ MonoBehaviour:
       it's Kiki's bat, Charlie, and she said that as long as it didn't lose too much
       weight, it'd be okay. It's nice to talk to her, so I'm glad I got a reason
       to!
-    _startDelay: 0
-    _duration: 0
-    _endDelay: 0
+    _startDelay: 15

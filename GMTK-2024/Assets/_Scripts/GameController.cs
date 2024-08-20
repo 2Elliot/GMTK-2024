@@ -127,6 +127,14 @@ public class GameController : MonoBehaviour {
         StartGuessTime = Time.time;
         List<Item> items = _currentCustomer.Items;
 
+        if (items.Count == 0) {
+            Debug.Log($"Customer {_currentCustomer.name} doesn't have any items. Skipping to the next customer.");
+            Reset();
+
+            CallFunctionsWithDelay(ChooseNewCustomer, 1f);
+            return;
+        }
+
         int itemIndex = Random.Range(0, items.Count);
         _currentItem = items[itemIndex];
         _currentItemWeight = _currentItem.Weight;

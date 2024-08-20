@@ -14,23 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 27b721d2e5c0da546b79f589eb976d48, type: 2}
-    _text: So you're the new apprentice? Better get your stuff together quick. I
-      don't have time for messing around.
+    _text: Good work.
     _startDelay: 0
-    _duration: 7
-    _endDelay: 0
-  - _customer: {fileID: 11400000, guid: 8d631d329c70dc2408cd93222956408d, type: 2}
-    _text: I know you're new to this town, so I'll give you the quick rundown. Here
-      in this village, people value things by how heavy they are. I know it sounds
-      crazy, but people here like that, so don't complain.
-    _startDelay: 0
-    _duration: 11.4
-    _endDelay: 0
-  - _customer: {fileID: 11400000, guid: 8d631d329c70dc2408cd93222956408d, type: 2}
-    _text: ' Your job is to weigh the items our valued customers bring in. Over here
-      you''ve got your counterweights which you can use to estimate the weight of
-      the valued customer''s item. I''ll give you three to start with, but you''ll
-      have to buy some more from the market if you want to have any chance in succeeding.'
-    _startDelay: 0
-    _duration: 15.2
-    _endDelay: 0

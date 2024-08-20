@@ -17,5 +17,3 @@ MonoBehaviour:
     _text: I found another box today! This one was under my bed, I think. My bed
       looked pretty weird. It's still a little dusty.
     _startDelay: 0
-    _duration: 8
-    _endDelay: 0

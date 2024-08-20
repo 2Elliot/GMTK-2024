@@ -18,6 +18,4 @@ MonoBehaviour:
       to know how heavy they are!
 
 '
-    _startDelay: 0
-    _duration: 6
-    _endDelay: 0
+    _startDelay: 4

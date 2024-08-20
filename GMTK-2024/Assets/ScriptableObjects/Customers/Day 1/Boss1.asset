@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5b59c5bf2f1014db21e12f16867891, type: 3}
   m_Name: Boss1
   m_EditorClassIdentifier: 
-  Name: Boss :)
+  Name: Boss
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 0}
-  Items:
-  - {fileID: 11400000, guid: 0e976c31f13432f4a8d23ba860f60b86, type: 2}
+  Items: []
   Weights: 
   StartDialogue: {fileID: 11400000, guid: bdfd1fc3fc7ea0a468835f40b6af30fc, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: 9a174fbdaad84cf43912dd21b96095ab, type: 2}

@@ -17,5 +17,3 @@ MonoBehaviour:
     _text: I found this box today! Isn't it such a weird shape? I didn't know they
       made boxes in this shape.
     _startDelay: 0
-    _duration: 7
-    _endDelay: 0

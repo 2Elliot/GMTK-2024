@@ -16,6 +16,4 @@ MonoBehaviour:
   - _customer: {fileID: 11400000, guid: ae5cbcfa62c04574d8b3cd9e3661c5ca, type: 2}
     _text: These books are so boooooring. I think I've read just about everything
       in this town. How much are they worth?
-    _startDelay: 0
-    _duration: 0
-    _endDelay: 0
+    _startDelay: 4

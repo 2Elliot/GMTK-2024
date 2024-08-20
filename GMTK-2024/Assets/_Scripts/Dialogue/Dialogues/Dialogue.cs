@@ -8,10 +8,18 @@ public class DialogueTurn
 {
 	public Customer _customer;
 	[TextArea(3, 20)] public string _text;
-	[Header("Time before the text starts typing")]
-	public float _startDelay;
-	[Header("Time it takes to type the text")]
-	public float _duration;
+	public float _startDelay {
+		get { return 0.5f; }
+	}
+	private float timePerCharacter = 0.04f;
+
+	[HideInInspector]
+	public float _duration {
+		get {
+			return _text.Length * timePerCharacter;
+		}
+	}
+
 }
 
 [Serializable]
