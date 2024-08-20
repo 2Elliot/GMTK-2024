@@ -82,6 +82,8 @@ public class GameController : MonoBehaviour {
         newMoney -= Mathf.RoundToInt(6 * deltaGuess);
         float clampedTime10 = Mathf.Clamp(deltaTime - 10, 0, 99);
         newMoney -= Mathf.RoundToInt(4 * clampedTime10);
+
+        if (newMoney < 0) newMoney = 0;
         _money += newMoney;
         
         // Score calculation
@@ -95,6 +97,9 @@ public class GameController : MonoBehaviour {
         if (clampedTime4 == 0) {
             newScore *= 1.5f;
         }
+
+        if (newScore < 0) newScore = 0;
+        
         _score += Mathf.RoundToInt(newScore);
 
         // Success calculation
