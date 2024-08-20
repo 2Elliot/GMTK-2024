@@ -1,20 +1,28 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ShopInfoUI : MonoBehaviour
 {
+    [SerializeField] private GameController _gameController;
     [SerializeField] private PurchasableItem item;
     [SerializeField] private Image itemImage;
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI itemDescription;
     [SerializeField] private TextMeshProUGUI itemPrice;
+    [SerializeField] private Color _cannotAffordColor;
+    [SerializeField] private Color _canAffordColor;
     [SerializeField] private Button purchaseButton;
     [SerializeField] private Button nextDayButton;
     
     public delegate void OnPurchase(PurchasableItem item); 
     public delegate void OnNextDay();
-    
+
+    private void OnEnable() {
+        _gameController = SingletonContainer.Instance.GameController;
+    }
+
     public void ResetUI()
     {
         itemImage.sprite = null;
@@ -32,7 +40,14 @@ public class ShopInfoUI : MonoBehaviour
         itemName.text = item.ItemName;
         itemDescription.text = item.Description;
         itemPrice.text = $"Cost: {item.Price.ToString()}";
-        purchaseButton.interactable = true;
+        if (_gameController.CanAfford(item.Price)) {
+            purchaseButton.interactable = true;
+            itemPrice.color = _canAffordColor;
+        }
+        else {
+            purchaseButton.interactable = false;
+            itemPrice.color = _cannotAffordColor;
+        }
     }
     public void SetPurchaseButtonListener(OnPurchase onPurchase)
     {

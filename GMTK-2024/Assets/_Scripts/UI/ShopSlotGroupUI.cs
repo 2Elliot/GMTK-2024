@@ -24,10 +24,6 @@ public class ShopSlotGroupUI : MonoBehaviour
             slotScript.SetItem(items[i]);
             slotScript.SetSelectButtonListener(OnSelectItemFromSlot);
             print($"Null: _gameController {_gameController == null} items[i] {items[i] == null}");
-            if (!_gameController.CanAfford(items[i].Price)) {
-                print($"Cannot afford {items[i].ItemName}");
-                slotScript.DisableButton();
-            }
             _slots.Add(slotScript);
         }
     }
