@@ -16,8 +16,8 @@ public class GameController : MonoBehaviour {
     private DayCompleteManager _dayCompleteManager;
 
     // TODO: Change these and implement them @Elliot
-    private int _score = 2000;
-    private int _money = 1000;
+    private int _score = 0;
+    private int _money = 0;
     
     [SerializeField] private SpriteRenderer _customerImageRenderer;
     
@@ -55,41 +55,37 @@ public class GameController : MonoBehaviour {
     public void SubmitGuess(int guess) {
         if (!CanSubmitPrinter) return;
         
-        float score = 0;
-
-        float deltaTime = (Time.time - StartGuessTime);
+        float deltaTime = Time.time - StartGuessTime;
         float deltaGuess = Mathf.Abs(guess - _currentItemWeight);
-
-        const float maxTimeBeforePenalty = 8f;
-        // Score calculations
-        if (deltaTime > maxTimeBeforePenalty) {
-            score += (deltaTime - maxTimeBeforePenalty);
-        }
-        score += deltaGuess;
-
-        bool success;
-        string scoreText;
-        if (score == 0) {
-            scoreText = "S+";
-            success = true;
-        } else if (score <= 1.5) {
-            scoreText = "S";
-            success = true;
-        } else if (score <= 3) {
-            scoreText = "A";
-            success = true;
-        } else if (score <= 4.5) {
-            scoreText = "B";
-            success = true;
-        } else if (score <= 6.5) {
-            scoreText = "C";
-            success = false;
-        } else {
-            scoreText = "F";
-            success = false;
-        }
         
-        Debug.Log($"Score {score}.");
+        // Money calculation
+        int newMoney = 50;
+        newMoney -= Mathf.RoundToInt(6 * deltaGuess);
+        float clampedTime10 = Mathf.Clamp(deltaTime - 10, 0, 99);
+        newMoney -= Mathf.RoundToInt(4 * clampedTime10);
+        _money += newMoney;
+        
+        // Score calculation
+        float newScore = 1000;
+        newScore -= (100 * deltaGuess);
+        float clampedTime4 = Mathf.Clamp(deltaTime - 4, 0, 99);
+        newScore -= (50 * clampedTime4);
+        if (deltaGuess == 0) {
+            newScore *= 2f;
+        }
+        if (clampedTime4 == 0) {
+            newScore *= 1.5f;
+        }
+        _score += Mathf.RoundToInt(newScore);
+
+        // Success calculation
+        bool success = true;
+        if (deltaTime > 16f) {
+            success = false;
+        }
+        if (deltaGuess > 3) {
+            success = false;
+        }
         
         Reset();
         
