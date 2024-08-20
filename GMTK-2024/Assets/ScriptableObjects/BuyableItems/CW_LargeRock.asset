@@ -16,6 +16,6 @@ MonoBehaviour:
   UnlockIndex: 2
   Image16: {fileID: 21300000, guid: 46681497f798fcf49aa57cac5dc3ac3a, type: 3}
   Image32: {fileID: 21300000, guid: d4ba7e353a200ad47b032845fdf7c702, type: 3}
-  Price: 0
-  Description: 
+  Price: 325
+  Description: 'Weight: 21'
   Type: 1

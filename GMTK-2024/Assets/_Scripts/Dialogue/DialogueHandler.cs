@@ -63,7 +63,7 @@ public class DialogueHandler : MonoBehaviour
     }
 
     private void AdvanceDialogue() {
-        if (SingletonContainer.Instance.PauseController.Paused) return;
+        if (SingletonContainer.Instance.PauseController.Paused || SingletonContainer.Instance.PauseController.InShop) return;
         
         if (!_isPlayingDialogue) {
             print("AdvanceDialogue() Not advancing dialogue, nothing playing");

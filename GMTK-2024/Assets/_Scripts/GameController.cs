@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
     private FeedbackHolder _feedbackHolder;
     private DayCompleteManager _dayCompleteManager;
     private ShopManager _shopManager;
+    private PauseController _pauseController;
 
     // TODO: Change these and implement them @Elliot
     private int _score = 0;
@@ -57,6 +58,7 @@ public class GameController : MonoBehaviour {
         _feedbackHolder = instance.FeedbackHolder;
         _dayCompleteManager = instance.DayCompleteManager;
         _shopManager = instance.ShopManager;
+        _pauseController = instance.PauseController;
 
         _musicController.PlayMusic();
         
@@ -137,7 +139,15 @@ public class GameController : MonoBehaviour {
 
     private void OnDayEnd() {
         _dayCompleteManager.SubscribeToDayComplete(OnDayEndQuit, OnDayEndContinueToStore);
+
+        if (_dayController._currentDayIndex == 6) {
+            _dayCompleteManager.ShowLastDay(_score, _money);
+        }
         _dayCompleteManager.ShowDayComplete(_score, _money);
+
+        _pauseController.InShop = true;
+        
+        Debug.Log(_dayController._currentDayIndex);
     }
     public void OnDayEndQuit() {
         Debug.LogWarning("Implement return to main menu here.");
@@ -145,6 +155,7 @@ public class GameController : MonoBehaviour {
     public void OnDayEndContinueToStore() {
         _dayCompleteManager.HideDayComplete();
         _shopManager.ShowShop();
+        _pauseController.InShop = true;
     }
     
     private void Reset() {
@@ -154,9 +165,11 @@ public class GameController : MonoBehaviour {
     }
 
     private void ChooseNewCustomer() {
-        if (_currentCustomer.Image != null) _customerImageRenderer.sprite = _currentCustomer.Image;
-        _feedbackHolder.CustomerIn.PlayFeedbacks();
-        _dialogueHandler.PlayDialogue(_currentCustomer.StartDialogue, true, ChooseNewItem);
+        if (_currentCustomer != null) {
+            _customerImageRenderer.sprite = _currentCustomer.Image;
+            _feedbackHolder.CustomerIn.PlayFeedbacks();
+            _dialogueHandler.PlayDialogue(_currentCustomer.StartDialogue, true, ChooseNewItem);
+        }
     }
 
     private void ChooseNewItem() {

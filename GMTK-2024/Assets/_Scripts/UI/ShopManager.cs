@@ -33,6 +33,8 @@ public class ShopManager : MonoBehaviour
         _shopCanvasGroup.alpha = 0;
         _shopCanvasGroup.interactable = false;
         _shopCanvasGroup.blocksRaycasts = false;
+
+        SingletonContainer.Instance.PauseController.InShop = false;
     }
     public void SelectItemFromSlots(PurchasableItem item) {
         _shopInfoUI.SetItem(item);
