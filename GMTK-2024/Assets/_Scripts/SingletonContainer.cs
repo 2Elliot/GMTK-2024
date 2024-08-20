@@ -14,6 +14,7 @@ public class SingletonContainer : MonoBehaviour
     public MusicController MusicController { get; private set; }
     public PauseController PauseController { get; private set; }
     public DayCompleteManager DayCompleteManager { get; private set; }
+    public ShopManager ShopManager { get; private set; }
 
     [SerializeField] private GameController _gameController;
     [SerializeField] private DayController _dayController;
@@ -25,6 +26,7 @@ public class SingletonContainer : MonoBehaviour
     [SerializeField] private MusicController _musicController;
     [SerializeField] private PauseController _pauseController;
     [SerializeField] private DayCompleteManager _dayCompleteManager;
+    [SerializeField] private ShopManager _shopManager;
 
     private void Awake()
     {
@@ -46,6 +48,7 @@ public class SingletonContainer : MonoBehaviour
         MusicController = _musicController;
         PauseController = _pauseController;
         DayCompleteManager = _dayCompleteManager;
+        ShopManager = _shopManager;
 
         if (
             (GameController == null) || 
@@ -57,7 +60,8 @@ public class SingletonContainer : MonoBehaviour
             (FeedbackHolder == null) || 
             (MusicController == null) || 
             (PauseController == null) || 
-            (DayCompleteManager == null)
+            (DayCompleteManager == null) ||
+            (ShopManager == null)
             ) 
         {
             Debug.LogError($"Unassigned Reference in {this}");

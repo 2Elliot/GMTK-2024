@@ -130,8 +130,7 @@ public class GameController : MonoBehaviour {
         Debug.LogWarning("Implement return to main menu here.");
     }
     public void OnDayEndContinueToStore() {
-        Debug.LogWarning("Implement store init here.");
-        GetNewCustomerOrNewDay();
+        
     }
     
     private void Reset() {
