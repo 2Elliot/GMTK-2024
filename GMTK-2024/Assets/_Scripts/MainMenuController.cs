@@ -7,6 +7,9 @@ public class MainMenuController : MonoBehaviour {
     [SerializeField] private Crossfade _crossfade;
     [SerializeField] private MusicController _musicController;
     private SFXController _sfxController;
+    
+    [SerializeField] private CanvasGroup _mainMenu;
+    [SerializeField] private CanvasGroup _settingsMenu;
 
     private void Start() {
         _sfxController = GetComponent<SFXController>();
@@ -17,23 +20,23 @@ public class MainMenuController : MonoBehaviour {
     public void StartButton()
     {
         _sfxController.PlaySound();
-        StartCoroutine(_crossfade.PlayTransition(this, nameof(OnStartButtonTransitionEnd)));
+        OnStartButtonTransitionEnd();
+        // StartCoroutine(_crossfade.PlayTransition(this, nameof(OnStartButtonTransitionEnd)));
     }
 
     public void SettingsButton()
     {
         _sfxController.PlaySound();
-        StartCoroutine(_crossfade.PlayTransition(this, nameof(OnSettingsButtonTransitionEnd)));
+        OnSettingsButtonTransitionEnd();
+        // StartCoroutine(_crossfade.PlayTransition(this, nameof(OnSettingsButtonTransitionEnd)));
     }
 
     public void QuitButton()
     {
         _sfxController.PlaySound();
-        StartCoroutine(_crossfade.PlayTransition(this, nameof(QuitGame)));
+        QuitGame();
+        // StartCoroutine(_crossfade.PlayTransition(this, nameof(QuitGame)));
     }
-
-    
-    
     
     public void OnStartButtonTransitionEnd()
     {
@@ -43,6 +46,13 @@ public class MainMenuController : MonoBehaviour {
 
     public void OnSettingsButtonTransitionEnd()
     {
+        _mainMenu.alpha = 0;
+        _mainMenu.interactable = false;
+        _mainMenu.blocksRaycasts = false;
+        
+        _settingsMenu.alpha = 1;
+        _settingsMenu.interactable = true;
+        _settingsMenu.blocksRaycasts = true;
         // open settings menu
     }
 
@@ -50,9 +60,4 @@ public class MainMenuController : MonoBehaviour {
     {
         Application.Quit();
     }
-    
-    
-    
-    
-    
 }

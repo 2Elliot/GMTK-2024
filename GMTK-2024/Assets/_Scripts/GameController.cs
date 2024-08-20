@@ -41,6 +41,8 @@ public class GameController : MonoBehaviour {
         _feedbackHolder = instance.FeedbackHolder;
 
         _musicController.PlayMusic();
+        
+        GetNewCustomerOrNewDay();
     }
 
     private IEnumerator CallAfterOneFrame(System.Action callback) {
