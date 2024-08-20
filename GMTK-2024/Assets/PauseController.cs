@@ -69,13 +69,13 @@ public class PauseController : MonoBehaviour
     }
 
     private void UnSettingsButton() {
-        _mainMenu.alpha = 0;
-        _mainMenu.interactable = false;
-        _mainMenu.blocksRaycasts = false;
+        _mainMenu.alpha = 1;
+        _mainMenu.interactable = true;
+        _mainMenu.blocksRaycasts = true;
         
-        _settingsMenu.alpha = 1;
-        _settingsMenu.interactable = true;
-        _settingsMenu.blocksRaycasts = true;
+        _settingsMenu.alpha = 0;
+        _settingsMenu.interactable = false;
+        _settingsMenu.blocksRaycasts = false;
     }
 
     public void QuitButton() {

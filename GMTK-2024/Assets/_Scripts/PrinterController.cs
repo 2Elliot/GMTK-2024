@@ -20,6 +20,8 @@ public class PrinterController : ClickableSprite {
   }
 
   protected override void OnMouseHoverEnter() {
+    if (!_gameController.CanSubmitPrinter) return;
+    
     _downAsset.SetActive(false);
     _upAsset.SetActive(true);
     _text.gameObject.SetActive(true);

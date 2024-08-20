@@ -19,18 +19,18 @@ public class GameController : MonoBehaviour {
 
     // TODO: Change these and implement them @Elliot
     private int _score = 0;
-    private int _money = 0;
+    public int Money = 0;
 
     public bool SpendMoney(int amount) {
         if (CanAfford(amount)) {
-            _money -= amount;
+            Money -= amount;
             return true;
         }
         return false;
     }
 
     public bool CanAfford(int amount) {
-        if (amount <= _money) {
+        if (amount <= Money) {
             return true;
         }
         return false;
@@ -84,7 +84,7 @@ public class GameController : MonoBehaviour {
         newMoney -= Mathf.RoundToInt(4 * clampedTime10);
 
         if (newMoney < 0) newMoney = 0;
-        _money += newMoney;
+        Money += newMoney;
         
         // Score calculation
         float newScore = 1000;
@@ -146,9 +146,9 @@ public class GameController : MonoBehaviour {
         _dayCompleteManager.SubscribeToDayComplete(OnDayEndQuit, OnDayEndContinueToStore);
 
         if (_dayController._currentDayIndex == 6) {
-            _dayCompleteManager.ShowLastDay(_score, _money);
+            _dayCompleteManager.ShowLastDay(_score, Money);
         }
-        _dayCompleteManager.ShowDayComplete(_score, _money);
+        _dayCompleteManager.ShowDayComplete(_score, Money);
 
         _pauseController.InShop = true;
         
