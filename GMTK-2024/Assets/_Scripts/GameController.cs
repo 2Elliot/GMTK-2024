@@ -13,6 +13,11 @@ public class GameController : MonoBehaviour {
     private DayController _dayController;
     private MusicController _musicController;
     private FeedbackHolder _feedbackHolder;
+    private DayCompleteManager _dayCompleteManager;
+
+    // TODO: Change these and implement them @Elliot
+    private int _score = 2000;
+    private int _money = 1000;
     
     [SerializeField] private SpriteRenderer _customerImageRenderer;
     
@@ -25,6 +30,7 @@ public class GameController : MonoBehaviour {
     public bool CanSubmitPrinter;
 
     private void Start() {
+        Debug.Log("Elliot make sure to implement money and score in GameController.");
         SingletonContainer instance = SingletonContainer.Instance;
         _scaleController = instance.ScaleController;
         _printerController = instance.PrinterController;
@@ -98,7 +104,7 @@ public class GameController : MonoBehaviour {
     public void GetNewCustomerOrNewDay() {
         Customer customer = _dayController.FetchNewCustomer();
         if (customer == null) {
-            Debug.Log("New day, put code here.");
+            OnDayEnd();
             GetNewCustomerOrNewDay();
             return;
         }
@@ -109,6 +115,17 @@ public class GameController : MonoBehaviour {
         CallFunctionsWithDelay(ChooseNewCustomer, 0.1f);
     }
 
+    private void OnDayEnd() {
+        _dayCompleteManager.SubscribeToDayComplete(OnDayEndQuit, OnDayEndContinueToStore);
+        _dayCompleteManager.ShowDayComplete(_score, _money);
+    }
+    public void OnDayEndQuit() {
+        Debug.LogWarning("Implement return to main menu here.");
+    }
+    public void OnDayEndContinueToStore() {
+        
+    }
+    
     private void Reset() {
         _counterWeightManager.Reset();
         _scaleController.ResetScale();
