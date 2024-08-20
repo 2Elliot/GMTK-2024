@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: b025772c25e570649baba3d9dc66ebad, type: 2}
-    _text: 'Kiki found some old books. She''s probably so excited to to read them!
-
-'
-    _startDelay: 0
+    _text: God, can you believe this? Kiki found some weird spellbooks in the forest,
+      and they're causing all sorts of problems.
+  - _customer: {fileID: 11400000, guid: b025772c25e570649baba3d9dc66ebad, type: 2}
+    _text: I think they're from my dad's old projects. The things these books are
+      doing seem pretty familiar...

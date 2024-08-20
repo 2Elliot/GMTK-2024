@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 97fe927bdd350fb46a21c5eb07760968, type: 2}
-    _text: My damn backs been pissing me off lately.
-    _startDelay: 2
+    _text: My damn back's been pissing me off lately.

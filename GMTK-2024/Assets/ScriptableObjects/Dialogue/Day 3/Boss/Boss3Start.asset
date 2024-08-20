@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: aa55c4a32a9b75f49848fb7f37cef8c4, type: 2}
-    _text: Your still here?
-    _startDelay: 0
+    _text: You're still going? Good to see.

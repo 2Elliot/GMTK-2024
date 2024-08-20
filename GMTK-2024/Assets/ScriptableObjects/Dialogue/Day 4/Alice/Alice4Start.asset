@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 0c58b8ee0e2f8854d8e99a058f4c0939, type: 2}
-    _text: I love boxes. I found this box, but it felt strangely light? I don't,
-      I thought I saw a whole in it.
-    _startDelay: 0
+    _text: I love boxes. I found this box, but it had a hole in it. I wonder what
+      was inside...

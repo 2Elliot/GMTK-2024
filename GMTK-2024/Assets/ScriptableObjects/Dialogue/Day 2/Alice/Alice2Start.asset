@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 72c1d45113cea724eaa0f8e38d90da15, type: 2}
-    _text: I found this box today! Isn't it such a weird shape? I didn't know they
+    _text: I got this box today! Isn't it such a weird shape? I didn't know they
       made boxes in this shape.
-    _startDelay: 0

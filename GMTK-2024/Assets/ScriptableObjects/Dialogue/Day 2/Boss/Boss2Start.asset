@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: b8b0132abd46b544d9d22e4d1c151306, type: 2}
-    _text: So you survived your first day? Keep working.
+    _text: So you survived your first day? Good. Keep working.

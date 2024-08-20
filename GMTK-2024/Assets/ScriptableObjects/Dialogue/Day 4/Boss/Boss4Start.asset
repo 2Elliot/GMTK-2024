@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 348c0709f3f7b0440a5b2142f89badf4, type: 2}
-    _text: ...
-    _startDelay: 0
+    _text: Nice to see that you're still keeping on! You might just make it here
+      after all. Make sure to grab a variety of weights from the shop to make your
+      job easier.

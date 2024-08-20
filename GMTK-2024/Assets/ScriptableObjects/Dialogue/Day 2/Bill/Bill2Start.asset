@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 8c7b08db2a81f2442a4bb96345a26764, type: 2}
-    _text: "I often wonder if I could grow a rock? Normal people would say no, but
-      I believe it could be possible\u2026"
-    _startDelay: 0
+    _text: "I often wonder if I could grow a rock? Others may say no, but I believe
+      it could be possible\u2026"
