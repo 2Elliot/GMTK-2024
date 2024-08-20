@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,7 +26,7 @@ public class ShopInfoUI : MonoBehaviour
     public void SetItem(PurchasableItem item)
     {
         this.item = item;
-        itemImage.sprite = item.Image;
+        itemImage.sprite = item.Image16;
         itemName.text = item.ItemName;
         itemDescription.text = item.Description;
         itemPrice.text = $"Cost: {item.Price.ToString()}";

@@ -14,7 +14,7 @@ public class ShopSlotPrefab : MonoBehaviour
     public void SetItem(PurchasableItem item)
     {
         Item = item;
-        _itemImage.sprite = item.Image;
+        _itemImage.sprite = item.Image32;
     }
     public void SetSelectButtonListener(OnSelect onSelect)
     {

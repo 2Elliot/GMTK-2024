@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
+    [SerializeField] private GameController _gameController;
     [SerializeField] private CounterWeightManager _counterWeightManager;
     [SerializeField] private List<PurchasableItem> _shopItems;
     [SerializeField] private ShopInfoUI _shopInfoUI;
@@ -12,9 +13,13 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private CanvasGroup _shopCanvasGroup;
 
     private void Start() {
+        HideShop();
+        _gameController = SingletonContainer.Instance.GameController;
+        _counterWeightManager = SingletonContainer.Instance.CounterWeightManager;
         _shopSlotsGroup.SetItems(_shopItems);
         _shopInfoUI.ResetUI();
         _shopInfoUI.SetPurchaseButtonListener(PurchaseItemFromInfo);
+        _shopInfoUI.SetNextDayButtonListener(ContinueToNextDay);
     }
 
     public void ShowShop() {
@@ -36,5 +41,9 @@ public class ShopManager : MonoBehaviour
         _shopInfoUI.ResetUI();
         _shopSlotsGroup.DisableItem(item);
         _counterWeightManager.Unlocks[item.UnlockIndex] = true;
+    }
+    public void ContinueToNextDay() {
+        HideShop();
+        _gameController.GetNewCustomerOrNewDay();
     }
 }

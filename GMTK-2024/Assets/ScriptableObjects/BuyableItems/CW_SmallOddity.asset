@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: CW_SmallOddity
   m_EditorClassIdentifier: 
   ItemName: Small Oddity
-  Image: {fileID: 21300000, guid: fdbdccd3823e8ba4b8b16d7ec7e4355d, type: 3}
+  UnlockIndex: 9
+  Image16: {fileID: 21300000, guid: 57306ab160a369a43ac30f2f8fbe3204, type: 3}
+  Image32: {fileID: 21300000, guid: fdbdccd3823e8ba4b8b16d7ec7e4355d, type: 3}
   Price: 0
   Description: 
   Type: 1

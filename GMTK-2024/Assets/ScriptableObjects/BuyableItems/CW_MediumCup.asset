@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: CW_MediumCup
   m_EditorClassIdentifier: 
   ItemName: Medium Cup
-  Image: {fileID: 21300000, guid: 3d93fc218d23ff54cb55013ed4f669a3, type: 3}
+  UnlockIndex: 7
+  Image16: {fileID: 21300000, guid: 57eeae2d96936f145b05ce18c10872bb, type: 3}
+  Image32: {fileID: 21300000, guid: 3d93fc218d23ff54cb55013ed4f669a3, type: 3}
   Price: 0
   Description: 
   Type: 1

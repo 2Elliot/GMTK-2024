@@ -18,7 +18,6 @@ public class CounterWeightManager : MonoBehaviour {
             OriginalPositions.Add(_originalObjects[i].transform.position);
             Destroy(_originalObjects[i]);
         }
-        
         Reset();
     }
 
