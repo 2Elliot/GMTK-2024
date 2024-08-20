@@ -40,6 +40,7 @@ public class ShopManager : MonoBehaviour
     public void PurchaseItemFromInfo(PurchasableItem item) {
         _shopInfoUI.ResetUI();
         _shopSlotsGroup.DisableItem(item);
+        _gameController.SpendMoney(item.Price);
         _counterWeightManager.Unlocks[item.UnlockIndex] = true;
     }
     public void ContinueToNextDay() {

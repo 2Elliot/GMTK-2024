@@ -26,7 +26,7 @@ public class ShopInfoUI : MonoBehaviour
     public void SetItem(PurchasableItem item)
     {
         this.item = item;
-        itemImage.sprite = item.Image16;
+        itemImage.sprite = item.Image32;
         itemName.text = item.ItemName;
         itemDescription.text = item.Description;
         itemPrice.text = $"Cost: {item.Price.ToString()}";

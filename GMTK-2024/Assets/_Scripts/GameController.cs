@@ -19,6 +19,21 @@ public class GameController : MonoBehaviour {
     // TODO: Change these and implement them @Elliot
     private int _score = 0;
     private int _money = 0;
+
+    public bool SpendMoney(int amount) {
+        if (CanAfford(amount)) {
+            _money -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    public bool CanAfford(int amount) {
+        if (amount <= _money) {
+            return true;
+        }
+        return false;
+    }
     
     [SerializeField] private SpriteRenderer _customerImageRenderer;
     
