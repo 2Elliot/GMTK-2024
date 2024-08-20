@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: f924527aedf8db147befd1d4dc0c7d6a
 =======
 guid: 4cc2fc9a3f8d6dd438706e15ede1032f
 >>>>>>> 57b89de4f806b957488f55da5f46b26fc42da3bb
+=======
+<<<<<<< Updated upstream
+guid: 9a2d2b565c4a95848a4c9658793f0006
+=======
+guid: 31461c376450ffd47808cd39cec83ca2
+>>>>>>> Stashed changes
+>>>>>>> 1fcde6c0898b0f6041e36d2eb9f2134b6b0280c7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,6 +105,22 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< Updated upstream
+=======
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites: []
