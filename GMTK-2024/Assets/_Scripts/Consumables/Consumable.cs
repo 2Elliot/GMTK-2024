@@ -86,7 +86,9 @@ public class Consumable : ClickableSprite
 
     private void Skip()
     {
-        // add later
+        // COULD BE BUGGY!!!!!!!
+        _gameController.GetNewCustomerOrNewDay();
+        Destroy();
     }
 
 
