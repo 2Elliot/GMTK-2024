@@ -12,6 +12,7 @@ public class UniqueActiveIndividual : MonoBehaviour, IPointerEnterHandler, IPoin
     [SerializeField] private List<GameObject> _objects;
    
     private void OnEnable() {
+        _group = GetComponentInParent<UniqueActiveGroup>();
         _group.AttachToGroup(this);
     }
 

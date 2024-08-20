@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,11 @@ public class ShopSlotGroupUI : MonoBehaviour
     [SerializeField] private ShopManager _shopManager;
     [SerializeField] private GameObject _slotPrefab;
     [SerializeField] private List<ShopSlotPrefab> _slots;
-    
+
+    private void Start() {
+        _shopManager = SingletonContainer.Instance.ShopManager;
+    }
+
     public void SetItems(List<PurchasableItem> items) {
         RemoveAllSlots();
         for (int i = 0; i < items.Count; i++) {
@@ -18,7 +23,7 @@ public class ShopSlotGroupUI : MonoBehaviour
             _slots.Add(slotScript);
         }
     }
-    public void OnSelectItemFromSlot(PurchasableItem item) {
+    private void OnSelectItemFromSlot(PurchasableItem item) { // slotprefab -> *shopslotgroupui* -> shopmanager
         _shopManager.SelectItemFromSlots(item);
     }
     public void DisableItem(PurchasableItem item) {

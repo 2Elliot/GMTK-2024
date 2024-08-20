@@ -279,9 +279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7fe43b13d5d54b48ab5643c5c9cad3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  itemImage: {fileID: 3460666661677963637}
-  selectButton: {fileID: 4471841785482042874}
+  Item: {fileID: 0}
+  _itemImage: {fileID: 3460666661677963637}
+  _selectButton: {fileID: 4471841785482042874}
 --- !u!114 &4471841785482042874
 MonoBehaviour:
   m_ObjectHideFlags: 0

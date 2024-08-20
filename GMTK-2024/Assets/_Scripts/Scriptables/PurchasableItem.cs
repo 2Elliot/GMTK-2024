@@ -5,7 +5,8 @@ public class PurchasableItem : ScriptableObject
 {
 	public string ItemName;
 	public int UnlockIndex;
-	public Sprite Image;
+	public Sprite Image16;
+	public Sprite Image32;
 	public int Price;
 	public string Description;
 	public enum ItemType

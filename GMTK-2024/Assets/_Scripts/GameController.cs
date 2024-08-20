@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
     private MusicController _musicController;
     private FeedbackHolder _feedbackHolder;
     private DayCompleteManager _dayCompleteManager;
+    private ShopManager _shopManager;
 
     // TODO: Change these and implement them @Elliot
     private int _score = 0;
@@ -40,6 +41,7 @@ public class GameController : MonoBehaviour {
         _musicController = instance.MusicController;
         _feedbackHolder = instance.FeedbackHolder;
         _dayCompleteManager = instance.DayCompleteManager;
+        _shopManager = instance.ShopManager;
 
         _musicController.PlayMusic();
         
@@ -126,7 +128,8 @@ public class GameController : MonoBehaviour {
         Debug.LogWarning("Implement return to main menu here.");
     }
     public void OnDayEndContinueToStore() {
-        
+        _dayCompleteManager.HideDayComplete();
+        _shopManager.ShowShop();
     }
     
     private void Reset() {

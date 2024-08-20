@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eee70a2a25e6bd4680718896194705e, type: 3}
   m_Name: CW_LargeOddity
   m_EditorClassIdentifier: 
-  ItemName: HeavyOddity
-  Image: {fileID: 0}
+  ItemName: Large Oddity
+  UnlockIndex: 11
+  Image16: {fileID: 21300000, guid: 420cbad408d827046b2c8af02a292878, type: 3}
+  Image32: {fileID: 21300000, guid: 08725442e718eeb41bed0827614d5e75, type: 3}
   Price: 0
   Description: 
   Type: 1
