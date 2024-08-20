@@ -18,6 +18,8 @@ public class DayCompleteManager : MonoBehaviour
 
     private void Start() {
         _canvasGroup.alpha = 0;
+        _canvasGroup.interactable = false;
+        _canvasGroup.blocksRaycasts = false;
     }
     public void SubscribeToDayComplete(OnQuitButtonClicked quitCallback, OnContinueButtonClicked continueCallback) {
         _quitButton.onClick.AddListener(() => {
