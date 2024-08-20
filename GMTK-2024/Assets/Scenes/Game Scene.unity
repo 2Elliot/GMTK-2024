@@ -7551,7 +7551,7 @@ MonoBehaviour:
   - {fileID: 8045829731415499767, guid: 14300bfdb094d2d48bec479a8778c88e, type: 3}
   - {fileID: 3228665640931858766, guid: 70f6b3661867ab149b4e5ba5dd116240, type: 3}
   - {fileID: 535813721435203051, guid: e2fb0909ae8a08c419e44f3ee2a8786e, type: 3}
-  Unlocks: 010100010001010001010001
+  Unlocks: 010100010000000000000000
   _originalObjects:
   - {fileID: 1638953245}
   - {fileID: 539526569}
@@ -10438,8 +10438,8 @@ RectTransform:
   m_GameObject: {fileID: 1419628285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 43961763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11678,8 +11678,8 @@ RectTransform:
   m_GameObject: {fileID: 1576596159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 249023746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
