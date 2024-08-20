@@ -1998,6 +1998,7 @@ GameObject:
   - component: {fileID: 274425637}
   - component: {fileID: 274425636}
   - component: {fileID: 274425635}
+  - component: {fileID: 274425638}
   m_Layer: 5
   m_Name: Fullscreen Toggle
   m_TagString: Untagged
@@ -2124,6 +2125,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274425633}
   m_CullTransparentMesh: 1
+--- !u!114 &274425638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274425633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1583d277d97e1b24d9d141d9a9f6b90a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &284229494
 GameObject:
   m_ObjectHideFlags: 0
