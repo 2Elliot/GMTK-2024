@@ -74,14 +74,14 @@ public class GameController : MonoBehaviour {
     public void SubmitGuess(int guess) {
         if (!CanSubmitPrinter) return;
         
-        float deltaTime = Time.time - StartGuessTime;
+        // float deltaTime = Time.time - StartGuessTime;
         float deltaGuess = Mathf.Abs(guess - _currentItemWeight);
         
         // Money calculation
         int newMoney = 50;
         newMoney -= Mathf.RoundToInt(6 * deltaGuess);
-        float clampedTime10 = Mathf.Clamp(deltaTime - 10, 0, 99);
-        newMoney -= Mathf.RoundToInt(4 * clampedTime10);
+        // float clampedTime10 = Mathf.Clamp(deltaTime - 10, 0, 99);
+        // newMoney -= Mathf.RoundToInt(4 * clampedTime10);
 
         if (newMoney < 0) newMoney = 0;
         Money += newMoney;
@@ -89,14 +89,14 @@ public class GameController : MonoBehaviour {
         // Score calculation
         float newScore = 1000;
         newScore -= (100 * deltaGuess);
-        float clampedTime4 = Mathf.Clamp(deltaTime - 4, 0, 99);
-        newScore -= (50 * clampedTime4);
+        // float clampedTime4 = Mathf.Clamp(deltaTime - 4, 0, 99);
+        // newScore -= (50 * clampedTime4);
         if (deltaGuess == 0) {
             newScore *= 2f;
         }
-        if (clampedTime4 == 0) {
-            newScore *= 1.5f;
-        }
+        // if (clampedTime4 == 0) {
+        //     newScore *= 1.5f;
+        // }
 
         if (newScore < 0) newScore = 0;
         
@@ -104,9 +104,9 @@ public class GameController : MonoBehaviour {
 
         // Success calculation
         bool success = true;
-        if (deltaTime > 16f) {
-            success = false;
-        }
+        // if (deltaTime > 16f) {
+        //     success = false;
+        // }
         if (deltaGuess > 3) {
             success = false;
         }
