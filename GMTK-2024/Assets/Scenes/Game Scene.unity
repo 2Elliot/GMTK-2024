@@ -1340,7 +1340,7 @@ MonoBehaviour:
   _musicController: {fileID: 163598924}
   _pauseController: {fileID: 809615772}
   _dayCompleteManager: {fileID: 2137243303}
-  _shopManager: {fileID: 219668408}
+  _shopManager: {fileID: 0}
 --- !u!320 &163598922
 PlayableDirector:
   m_ObjectHideFlags: 0

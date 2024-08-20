@@ -1,3 +1,4 @@
+using System;
 using InputHandler;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,8 +25,16 @@ public class PauseController : MonoBehaviour
         };
     }
 
+    private void OnEnable() {
+        Paused = false;
+        Time.timeScale = 1;
+        _pauseMenu.SetActive(false);
+    }
+
     private void PauseToggle() {
         if (Paused) { // Unpause
+            UnSettingsButton();
+            
             Paused = false;
             Debug.Log("Unpaused");
             Time.timeScale = 1;
@@ -45,8 +54,20 @@ public class PauseController : MonoBehaviour
     }
 
     public void SettingsButton() {
+        Debug.Log("Settings");
+        
         _sfxController.PlaySound();
         
+        _mainMenu.alpha = 0;
+        _mainMenu.interactable = false;
+        _mainMenu.blocksRaycasts = false;
+        
+        _settingsMenu.alpha = 1;
+        _settingsMenu.interactable = true;
+        _settingsMenu.blocksRaycasts = true;
+    }
+
+    private void UnSettingsButton() {
         _mainMenu.alpha = 0;
         _mainMenu.interactable = false;
         _mainMenu.blocksRaycasts = false;
