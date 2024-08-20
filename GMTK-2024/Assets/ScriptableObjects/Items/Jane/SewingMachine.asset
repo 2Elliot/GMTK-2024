@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SewingMachine
   m_EditorClassIdentifier: 
   Name: SewingMachine
-  Weight: 0
-  Image: {fileID: 21300000, guid: c487d4e1e9f913941aeae58e7b081d0c, type: 3}
+  Weight: 7
+  Image: {fileID: 21300000, guid: 469edfe765150764a81c94b4ec426396, type: 3}

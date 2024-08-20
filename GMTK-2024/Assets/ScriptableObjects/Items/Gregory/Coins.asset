@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Coins
   m_EditorClassIdentifier: 
   Name: Coins
-  Weight: 2
+  Weight: 6
   Image: {fileID: 21300000, guid: 1a1655fd4a97cee42a38fcbbe4e4a810, type: 3}

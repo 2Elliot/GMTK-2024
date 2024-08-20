@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CharlieTheBat
   m_EditorClassIdentifier: 
   Name: CharlieTheBat
-  Weight: 24
+  Weight: 18
   Image: {fileID: 21300000, guid: 030b69d6539924e4f9f581cae491c909, type: 3}

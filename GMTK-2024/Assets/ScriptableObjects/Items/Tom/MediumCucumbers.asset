@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MediumCucumbers
   m_EditorClassIdentifier: 
   Name: MediumCucumbers
-  Weight: 0
-  Image: {fileID: 21300000, guid: 6f9a4c634048fcc4f8be3bf79bdc4a26, type: 3}
+  Weight: 7
+  Image: {fileID: 21300000, guid: 2fef263c5f4888c42babda08c38f5ed9, type: 3}

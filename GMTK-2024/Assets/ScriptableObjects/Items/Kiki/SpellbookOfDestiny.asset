@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SpellbookOfDestiny
   m_EditorClassIdentifier: 
   Name: SpellbookOfDestiny
-  Weight: 0
-  Image: {fileID: 21300000, guid: 173c59277aa703647bfcdf7607a1da80, type: 3}
+  Weight: 5
+  Image: {fileID: 21300000, guid: 6f447f07f34eeaa4b9a25c69a3850088, type: 3}

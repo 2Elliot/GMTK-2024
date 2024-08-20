@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HowToTakeCareOfBats
   m_EditorClassIdentifier: 
   Name: HowToTakeCareOfBats
-  Weight: 0
-  Image: {fileID: 21300000, guid: 5e4050e8d5e660442964c62fa58c167d, type: 3}
+  Weight: 16
+  Image: {fileID: 21300000, guid: a89c9b7295b0a804490c1879f6205d09, type: 3}

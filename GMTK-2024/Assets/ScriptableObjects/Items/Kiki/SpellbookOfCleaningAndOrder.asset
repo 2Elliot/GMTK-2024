@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SpellbookOfCleaningAndOrder
   m_EditorClassIdentifier: 
   Name: SpellbookOfCleaningAndOrder
-  Weight: 0
-  Image: {fileID: 21300000, guid: e78bef9b3145975448a6990d22f5908a, type: 3}
+  Weight: 15
+  Image: {fileID: 21300000, guid: 16edc33cde943cd48b40065ef5b66845, type: 3}

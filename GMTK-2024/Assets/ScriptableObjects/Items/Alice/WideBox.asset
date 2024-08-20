@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WideBox
   m_EditorClassIdentifier: 
   Name: TinyBox
-  Weight: 22
+  Weight: 16
   Image: {fileID: 21300000, guid: d63e587b69fb9404eab1e789e09de439, type: 3}

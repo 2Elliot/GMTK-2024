@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HowToBeALovingWife
   m_EditorClassIdentifier: 
   Name: HowToBeALovingWife
-  Weight: 0
-  Image: {fileID: 21300000, guid: c6a5bc336aec17848b49d8c10a377242, type: 3}
+  Weight: 16
+  Image: {fileID: 21300000, guid: fddcde42052cda246bd1a4032fc36797, type: 3}

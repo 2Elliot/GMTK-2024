@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SmallTurnip
   m_EditorClassIdentifier: 
   Name: SmallTurnip
-  Weight: 0
-  Image: {fileID: 21300000, guid: f30c1ee80f1ffff4d9b5d0888dc95972, type: 3}
+  Weight: 3
+  Image: {fileID: 21300000, guid: 9479dff7f11171e4ba1dc73c7ab7b837, type: 3}

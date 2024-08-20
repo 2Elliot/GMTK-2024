@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Flowers
   m_EditorClassIdentifier: 
   Name: Flowers
-  Weight: 20
+  Weight: 7
   Image: {fileID: 21300000, guid: 4f5fbcaea343ee445a3bd80149c01b58, type: 3}

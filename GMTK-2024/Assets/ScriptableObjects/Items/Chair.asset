@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94cb329c59746be4985c2104b00f152f, type: 3}
-  m_Name: SpellbookOfCleaningAndOrder
+  m_Name: Chair
   m_EditorClassIdentifier: 
-  Name: SpellbookOfCleaningAndOrder
-  Weight: 0
-  Image: {fileID: 21300000, guid: ce84f09c7c6c95248a14cbfedbb86f58, type: 3}
+  Name: Chair
+  Weight: 31
+  Image: {fileID: 21300000, guid: b40ce229ab8c0814682b64123bfc7e62, type: 3}

@@ -16,7 +16,7 @@ MonoBehaviour:
   NameColor: {r: 0, g: 0, b: 0, a: 0}
   Image: {fileID: 21300000, guid: 55723d737ee0993468c7aac0475abdc2, type: 3}
   Items:
-  - {fileID: 11400000, guid: ba247a943c2eeac47bcd1f97ce1c1bff, type: 2}
+  - {fileID: 11400000, guid: 980e5f4431f9df541981f4bb223da49e, type: 2}
   Weights: 
   StartDialogue: {fileID: 11400000, guid: 9d9c78f6b287e4e4aad96c8aa7dfb9ff, type: 2}
   EndDialogueSuccess: {fileID: 11400000, guid: c57a5ae43728d884b934cfa54ddf39ee, type: 2}

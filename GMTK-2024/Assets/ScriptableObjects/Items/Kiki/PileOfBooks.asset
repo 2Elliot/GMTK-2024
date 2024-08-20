@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PileOfBooks
   m_EditorClassIdentifier: 
   Name: PileOfBooks
-  Weight: 0
-  Image: {fileID: 21300000, guid: 6ae6155fba6ac02409ced154d008a983, type: 3}
+  Weight: 6
+  Image: {fileID: 21300000, guid: f24ba3116be1673489e3646919cca7d2, type: 3}

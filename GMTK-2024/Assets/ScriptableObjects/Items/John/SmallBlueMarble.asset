@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SmallBlueMarble
   m_EditorClassIdentifier: 
   Name: SmallBlueMarble
-  Weight: 3
+  Weight: 8
   Image: {fileID: 21300000, guid: 930b330da31c4fa4db5ee0591e63b825, type: 3}

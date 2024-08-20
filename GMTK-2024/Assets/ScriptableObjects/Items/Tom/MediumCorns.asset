@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MediumCorns
   m_EditorClassIdentifier: 
   Name: MediumCorns
-  Weight: 0
-  Image: {fileID: 21300000, guid: 090b23b4d9c1f3843971d663f2ddfd1b, type: 3}
+  Weight: 12
+  Image: {fileID: 21300000, guid: 52308d70e4063e64c92c97d04b11bbd5, type: 3}

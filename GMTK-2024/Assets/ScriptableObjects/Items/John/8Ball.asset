@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 8Ball
   m_EditorClassIdentifier: 
   Name: 8Ball
-  Weight: 27
+  Weight: 3
   Image: {fileID: 21300000, guid: 9a04a258dd10300438d758070483226a, type: 3}

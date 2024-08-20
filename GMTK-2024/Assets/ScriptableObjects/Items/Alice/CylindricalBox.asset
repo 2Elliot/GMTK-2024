@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CylindricalBox
   m_EditorClassIdentifier: 
   Name: CylindricalBox
-  Weight: 8
+  Weight: 3
   Image: {fileID: 21300000, guid: 71dca717b0d94b541ad76a4e072a5958, type: 3}

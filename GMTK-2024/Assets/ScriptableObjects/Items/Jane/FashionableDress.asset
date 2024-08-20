@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FashionableDress
   m_EditorClassIdentifier: 
   Name: FashionableDress
-  Weight: 0
-  Image: {fileID: 21300000, guid: 5076458a62c201b488de29b777db912f, type: 3}
+  Weight: 4
+  Image: {fileID: 21300000, guid: bc18f47c1fa0da94b81beefb1fb851e6, type: 3}

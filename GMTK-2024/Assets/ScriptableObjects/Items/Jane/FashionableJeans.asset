@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FashionableJeans
   m_EditorClassIdentifier: 
   Name: FashionableJeans
-  Weight: 0
-  Image: {fileID: 21300000, guid: 29c92ab2017e5104ba688ff444bca22b, type: 3}
+  Weight: 3
+  Image: {fileID: 21300000, guid: 9dec6d15df0f6164cb009f79c9b0618a, type: 3}

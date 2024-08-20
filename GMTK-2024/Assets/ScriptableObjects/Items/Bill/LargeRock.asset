@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LargeRock
   m_EditorClassIdentifier: 
   Name: LargeRock
-  Weight: 0
-  Image: {fileID: 21300000, guid: a44e07bfced484945b45564cb851c2ae, type: 3}
+  Weight: 18
+  Image: {fileID: 21300000, guid: d4ba7e353a200ad47b032845fdf7c702, type: 3}

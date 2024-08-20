@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94cb329c59746be4985c2104b00f152f, type: 3}
   m_Name: HowToLoveForDummiesAstray
   m_EditorClassIdentifier: 
-  Name: HowToLoveForDummies
-  Weight: 0
-  Image: {fileID: 21300000, guid: c6a5bc336aec17848b49d8c10a377242, type: 3}
+  Name: HowToloveForDummiesAstray
+  Weight: 2
+  Image: {fileID: 21300000, guid: 87895c4c73037924f81b1533b29389ae, type: 3}

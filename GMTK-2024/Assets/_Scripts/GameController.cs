@@ -154,7 +154,7 @@ public class GameController : MonoBehaviour {
     }
 
     private void ChooseNewCustomer() {
-        _customerImageRenderer.sprite = _currentCustomer.Image;
+        if (_currentCustomer.Image != null) _customerImageRenderer.sprite = _currentCustomer.Image;
         _feedbackHolder.CustomerIn.PlayFeedbacks();
         _dialogueHandler.PlayDialogue(_currentCustomer.StartDialogue, true, ChooseNewItem);
     }

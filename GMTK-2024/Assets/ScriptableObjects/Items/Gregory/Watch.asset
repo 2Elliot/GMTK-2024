@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Watch
   m_EditorClassIdentifier: 
   Name: Watch
-  Weight: 11
+  Weight: 3
   Image: {fileID: 21300000, guid: 0f8107f108ec29a43a76388a7ed7ec7a, type: 3}
