@@ -15,8 +15,8 @@ public class CounterWeightManager : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         for (int i = 0; i < _originalObjects.Count; i++) {
-            OriginalPositions.Add(_originalObjects[i].transform.position);
-            Destroy(_originalObjects[i]);
+            OriginalPositions.Add(_originalObjects[_originalObjects.Count - 1 - i].transform.position);
+            Destroy(_originalObjects[_originalObjects.Count - 1 - i]);
         }
         Reset();
     }
