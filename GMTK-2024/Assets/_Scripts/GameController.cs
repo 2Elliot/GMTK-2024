@@ -150,7 +150,7 @@ public class GameController : MonoBehaviour {
     private void OnDayEnd() {
         _dayCompleteManager.SubscribeToDayComplete(OnDayEndQuit, OnDayEndContinueToStore);
 
-        if (_dayController._currentDayIndex == 6) {
+        if (_dayController._currentDayIndex == 7) {
             _dayCompleteManager.ShowLastDay(_score, Money);
         }
         _dayCompleteManager.ShowDayComplete(_score, Money);

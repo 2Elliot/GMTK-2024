@@ -17,6 +17,7 @@ public class DayController : MonoBehaviour {
         Reset();
 
         _currentDayIndex++;
+        if (_currentDayIndex == 7) return;
         _currentDay = _days[_currentDayIndex];
 
         int[] customerIndices = Enumerable.Range(0, _currentDay.Customers.Count).ToArray();
