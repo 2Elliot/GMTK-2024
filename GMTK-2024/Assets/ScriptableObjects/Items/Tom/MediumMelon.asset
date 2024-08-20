@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: MediumMelon
   Weight: 20
-  Image: {fileID: 21300000, guid: f17d234ef3c956148b33298023ed4079, type: 3}
+  Image: {fileID: 21300000, guid: 0cf96a275788f7041b1f95f134cc5afa, type: 3}
