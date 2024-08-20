@@ -1,11 +1,14 @@
 using System.Linq;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DayController : MonoBehaviour {
     [SerializeField] private List<Day> _days;
     public Day _currentDay;
     private List<Customer> _customers = new();
+
+    [SerializeField] private TextMeshProUGUI _dayText;
     
     public int _currentDayIndex = -1; // Must start before day 0
     private int _currentCustomerIndex;
@@ -37,6 +40,9 @@ public class DayController : MonoBehaviour {
         if (_currentCustomerIndex == -1) {
             Debug.Log("Boss");
             _currentCustomerIndex++;
+            
+            _dayText.text = $"Day {_currentDayIndex + 1}";
+            
             return _currentDay.Boss;
         }
         else {
