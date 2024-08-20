@@ -758,6 +758,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3fa117eb368398543ad84480df846af9, type: 2}
   - {fileID: 11400000, guid: cc9d176e3a4d2ea4ca63c72ae331cedf, type: 2}
   _currentDay: {fileID: 0}
+  _currentDayIndex: -1
 --- !u!114 &163598924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6210,7 +6211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textMeshPro: {fileID: 1839837083}
   _isTyping: 0
-  _skipText: {fileID: 0}
+  _skipText: {fileID: 2069952370}
 --- !u!1 &1439393330
 GameObject:
   m_ObjectHideFlags: 0

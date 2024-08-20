@@ -118,7 +118,7 @@ public class GameController : MonoBehaviour {
 
         _currentCustomer = customer;
 
-        _feedbackHolder.CustomerOut.PlayFeedbacks();
+        // _feedbackHolder.CustomerOut.PlayFeedbacks();
         CallFunctionsWithDelay(ChooseNewCustomer, 0.1f);
     }
 
