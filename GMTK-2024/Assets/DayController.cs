@@ -7,7 +7,7 @@ public class DayController : MonoBehaviour {
     public Day _currentDay;
     private List<Customer> _customers = new();
     
-    private int _currentDayIndex = -1; // Must start before day 0
+    public int _currentDayIndex = -1; // Must start before day 0
     private int _currentCustomerIndex;
     
     public void NewDay() {

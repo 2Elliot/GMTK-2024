@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour {
         _dayController = instance.DayController;
         _musicController = instance.MusicController;
         _feedbackHolder = instance.FeedbackHolder;
+        _dayCompleteManager = instance.DayCompleteManager;
 
         _musicController.PlayMusic();
     }
@@ -104,9 +105,13 @@ public class GameController : MonoBehaviour {
     public void GetNewCustomerOrNewDay() {
         Customer customer = _dayController.FetchNewCustomer();
         if (customer == null) {
-            OnDayEnd();
-            GetNewCustomerOrNewDay();
-            return;
+            if (_dayController._currentDayIndex != 0) { // day -1 needs to be finished to init everything probably
+                OnDayEnd();
+            }
+            else {
+                GetNewCustomerOrNewDay();
+                return;
+            }
         }
 
         _currentCustomer = customer;
@@ -123,7 +128,8 @@ public class GameController : MonoBehaviour {
         Debug.LogWarning("Implement return to main menu here.");
     }
     public void OnDayEndContinueToStore() {
-        
+        Debug.LogWarning("Implement store init here.");
+        GetNewCustomerOrNewDay();
     }
     
     private void Reset() {

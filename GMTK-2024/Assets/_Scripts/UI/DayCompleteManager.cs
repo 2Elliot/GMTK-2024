@@ -34,11 +34,15 @@ public class DayCompleteManager : MonoBehaviour
 
     public void ShowDayComplete(int score, int money) {
         _canvasGroup.alpha = 1;
+        _canvasGroup.interactable = true;
+        _canvasGroup.blocksRaycasts = true;
         _scoreAnimator.AnimateValue(0, score);
         _moneyAnimator.AnimateValue(0, money);
     }
     
     public void HideDayComplete() {
         _canvasGroup.alpha = 0;
+        _canvasGroup.interactable = false;
+        _canvasGroup.blocksRaycasts = false;
     }
 }
