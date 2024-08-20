@@ -54,6 +54,7 @@ public class ShopManager : MonoBehaviour
         _shopSlotsGroup.DisableItem(item);
         _gameController.SpendMoney(item.Price);
         _counterWeightManager.Unlocks[item.UnlockIndex] = true;
+        _moneyText.text = $"Money: {_gameController.Money}";
     }
     public void ContinueToNextDay() {
         _sfxController.PlaySound();

@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour {
     private DayCompleteManager _dayCompleteManager;
     private ShopManager _shopManager;
     private PauseController _pauseController;
+    [SerializeField] private ValueLerpAnimator _scoreDisplay;
+    [SerializeField] private FadeElementInOut _scoreFadeInOut;
 
     // TODO: Change these and implement them @Elliot
     private int _score = 0;
@@ -99,7 +101,8 @@ public class GameController : MonoBehaviour {
         // }
 
         if (newScore < 0) newScore = 0;
-        
+        _scoreFadeInOut.FadeIn();
+        _scoreDisplay.AnimateValue(0, newScore);
         _score += Mathf.RoundToInt(newScore);
 
         // Success calculation
@@ -125,6 +128,7 @@ public class GameController : MonoBehaviour {
     }
     
     public void GetNewCustomerOrNewDay() {
+        _scoreFadeInOut.FadeOut();
         Customer customer = _dayController.FetchNewCustomer();
         if (customer == null) {
             if (_dayController._currentDayIndex != 0) { // day -1 needs to be finished to init everything probably

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 64c369c8194c86249829dfae848652a2
+guid: 54fef42924adf8540bef5dc9a29b47ba
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Clock
+  - name: ClockLong
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 90
       height: 23
-    spriteID: 21a3f7e0e508c684d99dbc1d3a892d8a
+    spriteID: 5e48cd66f65ec3c448569c98af3bfcd9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,13 +144,13 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1048988516
-    name: Clock
+    guid: -316752054
+    name: ClockLong
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Clock
+    - name: ClockLong
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -158,7 +158,7 @@ ScriptedImporter:
         y: 0
         width: 90
         height: 23
-      spriteId: 21a3f7e0e508c684d99dbc1d3a892d8a
+      spriteId: 5e48cd66f65ec3c448569c98af3bfcd9
     linkedCells: []
     parentIndex: -1
   platformSettings: []
