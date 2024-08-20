@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShopManager : MonoBehaviour
@@ -11,8 +12,13 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private ShopInfoUI _shopInfoUI;
     [SerializeField] private ShopSlotGroupUI _shopSlotsGroup;
     [SerializeField] private CanvasGroup _shopCanvasGroup;
+    [SerializeField] private TextMeshProUGUI _moneyText;
+
+    private SFXController _sfxController;
 
     private void Start() {
+        _sfxController = GetComponent<SFXController>();
+        
         HideShop();
         _gameController = SingletonContainer.Instance.GameController;
         _counterWeightManager = SingletonContainer.Instance.CounterWeightManager;
@@ -27,6 +33,8 @@ public class ShopManager : MonoBehaviour
         _shopCanvasGroup.alpha = 1;
         _shopCanvasGroup.interactable = true;
         _shopCanvasGroup.blocksRaycasts = true;
+
+        _moneyText.text = $"Money: {_gameController.Money}";
     }
     public void HideShop() {
         Debug.Log("Add effects to the shop disappearing here.");
@@ -37,15 +45,18 @@ public class ShopManager : MonoBehaviour
         SingletonContainer.Instance.PauseController.InShop = false;
     }
     public void SelectItemFromSlots(PurchasableItem item) {
+        _sfxController.PlaySound();
         _shopInfoUI.SetItem(item);
     }
     public void PurchaseItemFromInfo(PurchasableItem item) {
+        _sfxController.PlaySound();
         _shopInfoUI.ResetUI();
         _shopSlotsGroup.DisableItem(item);
         _gameController.SpendMoney(item.Price);
         _counterWeightManager.Unlocks[item.UnlockIndex] = true;
     }
     public void ContinueToNextDay() {
+        _sfxController.PlaySound();
         HideShop();
         _gameController.GetNewCustomerOrNewDay();
     }
