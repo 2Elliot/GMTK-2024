@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Tom
   NameColor: {r: 0, g: 0, b: 0, a: 0}
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 324c8709b81a62543ab1dfeb936c2470, type: 3}
   Items:
   - {fileID: 11400000, guid: e52ec6edcd10a644c9c3864a91f31ea1, type: 2}
   Weights: 

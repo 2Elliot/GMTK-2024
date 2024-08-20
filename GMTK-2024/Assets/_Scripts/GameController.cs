@@ -131,7 +131,7 @@ public class GameController : MonoBehaviour {
             Debug.Log($"Customer {_currentCustomer.name} doesn't have any items. Skipping to the next customer.");
             Reset();
 
-            CallFunctionsWithDelay(ChooseNewCustomer, 1f);
+            CallFunctionsWithDelay(GetNewCustomerOrNewDay, 1f);
             return;
         }
 

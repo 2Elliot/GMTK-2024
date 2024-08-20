@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Alice
   NameColor: {r: 0, g: 0, b: 0, a: 0}
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 24f66a197650b03408c08d254ddd4254, type: 3}
   Items:
   - {fileID: 11400000, guid: 417f9aedd17ead143a5ee5406713a237, type: 2}
   - {fileID: 11400000, guid: 8bb04adc13e7d4d4db7d51b5b227873f, type: 2}

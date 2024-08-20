@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Jane
   NameColor: {r: 0, g: 0, b: 0, a: 0}
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: b0c237a0c0cba2549bc4dd792079229d, type: 3}
   Items:
   - {fileID: 11400000, guid: 35baa8d0d89bcaa449769e1f813d9e47, type: 2}
   Weights: 
