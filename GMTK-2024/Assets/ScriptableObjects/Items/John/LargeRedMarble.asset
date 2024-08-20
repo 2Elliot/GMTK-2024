@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LargeRedMarble
   m_EditorClassIdentifier: 
   Name: LargeRedMarble
-  Weight: 0
-  Image: {fileID: 21300000, guid: 4125e61a93a3dd542940678120b5df68, type: 3}
+  Weight: 9
+  Image: {fileID: 21300000, guid: ebe5094e91481614cbdc45bc01a0f0ab, type: 3}

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94cb329c59746be4985c2104b00f152f, type: 3}
-  m_Name: StarShapedToy
+  m_Name: Nail
   m_EditorClassIdentifier: 
-  Name: StarShapedToy
-  Weight: 8
-  Image: {fileID: 21300000, guid: 9327de291690acb4593758b7119bc412, type: 3}
+  Name: Nail
+  Weight: 3
+  Image: {fileID: 21300000, guid: a56d652ce89e9fe4e894219411acf797, type: 3}

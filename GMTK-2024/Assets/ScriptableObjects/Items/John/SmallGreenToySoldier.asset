@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SmallGreenToySoldier
   m_EditorClassIdentifier: 
   Name: SmallGreenToySoldier
-  Weight: 0
-  Image: {fileID: 21300000, guid: 71a65e1672f4ce34ca55c757b71b3226, type: 3}
+  Weight: 2
+  Image: {fileID: 21300000, guid: ab19097381966a543966a49d17057167, type: 3}

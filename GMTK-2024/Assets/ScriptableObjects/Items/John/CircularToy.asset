@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94cb329c59746be4985c2104b00f152f, type: 3}
   m_Name: CircularToy
   m_EditorClassIdentifier: 
-  Name: CircularToy
-  Weight: 0
-  Image: {fileID: 21300000, guid: 7bc0d7401373f5a489441a9e3d087847, type: 3}
+  Name: Circular Toy
+  Weight: 14
+  Image: {fileID: 21300000, guid: 703b43afc3e704b48aee8caa359b04c0, type: 3}
