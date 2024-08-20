@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 4bb884b1735dd0c4199da282ab9aa838, type: 2}
-    _text: I'm proud of you. Tomorrow I'm off to the city. Can I depend on you to
-      hold down the shop?
+    _text: I'm proud of you. This weekend, I'll be heading off to the city. Can I
+      depend on you to keep this shop afloat?

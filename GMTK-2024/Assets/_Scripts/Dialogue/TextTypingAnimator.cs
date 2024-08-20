@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using MoreMountains.Feedbacks;
+using MoreMountains.Tools;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +10,8 @@ public class TextTypingAnimator : MonoBehaviour
     public TMPro.TextMeshProUGUI _textMeshPro;
     private string _displayedText;
     public bool _isTyping;
+    [SerializeField] private bool _useSounds;
+    [SerializeField] private List<AudioClip> _typingSounds;
 
     [SerializeField] private TextMeshProUGUI _skipText;
     
@@ -48,6 +50,11 @@ public class TextTypingAnimator : MonoBehaviour
         for (int i = 0; i < text.Length; i++) {
             _displayedText += text[i];
             _textMeshPro.text = _displayedText;
+            Debug.Log("Enable this to use sounds");
+            // if (_useSounds && _typingSounds.Count > 0) {
+            //     int randomIndex = UnityEngine.Random.Range(0, _typingSounds.Count);
+            //     MMSoundManagerSoundPlayEvent.Trigger(_typingSounds[randomIndex], MMSoundManager.MMSoundManagerTracks.Sfx, transform.position, soloSingleTrack: false);
+            // }
             yield return new WaitForSeconds(durationPerCharacter);
         }
 

@@ -10896,6 +10896,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textMeshPro: {fileID: 1839837083}
   _isTyping: 0
+  _useSounds: 1
+  _typingSounds:
+  - {fileID: 8300000, guid: 310ee00da23e1ee45b3184c23abfca8d, type: 3}
+  - {fileID: 8300000, guid: 1b800ec8b8b10dc4db10594dfa5cc27d, type: 3}
   _skipText: {fileID: 2069952370}
 --- !u!1 &1439393330
 GameObject:

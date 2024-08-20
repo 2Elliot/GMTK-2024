@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 27b721d2e5c0da546b79f589eb976d48, type: 2}
-    _text: Good work.
-    _startDelay: 0
+    _text: Good work. You've got just two more days until you prove yourself.

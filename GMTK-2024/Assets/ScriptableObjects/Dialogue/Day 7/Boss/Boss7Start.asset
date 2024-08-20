@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 8d631d329c70dc2408cd93222956408d, type: 2}
-    _text: I'm heading off to the city tomorrow. Do you think you can Good work with
-      the weights. Today will tell me if I'm ready to let you run the shop on your
-      own.
+    _text: Today's the last day of your training. Tomorrow, I'll be in the city,
+      so make sure to finalize what you've learned. This weightsmithing shop is the
+      most prestigious in the village. Make sure to act like such.

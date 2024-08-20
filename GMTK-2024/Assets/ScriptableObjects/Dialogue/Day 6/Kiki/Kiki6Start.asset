@@ -14,8 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: 2e7ad4d62d1ca254ab9bf48ff8311337, type: 2}
-    _text: I tried reading this damn book and it didn't help at all. I'm still so
-      nervous!
-    _startDelay: 0
-    _duration: 0
-    _endDelay: 0
+    _text: I tried reading this book and it didn't help at all. I'm still so nervous!

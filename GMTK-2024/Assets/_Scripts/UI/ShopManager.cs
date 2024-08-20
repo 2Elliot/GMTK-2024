@@ -49,7 +49,7 @@ public class ShopManager : MonoBehaviour
         _shopInfoUI.SetItem(item);
     }
     public void PurchaseItemFromInfo(PurchasableItem item) {
-        _sfxController.PlaySound();
+        _sfxController.PlayHappy();
         _shopInfoUI.ResetUI();
         _shopSlotsGroup.DisableItem(item);
         _gameController.SpendMoney(item.Price);

@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: c82ef99e4fdf8c9498d28fc8014bf9f3, type: 2}
-    _text: I'm so embarrassed. I left one of my books at John's place yesterday,
-      and now marbles are in his house too! I'm really really hoping he doesn't mind
-      I'm using this to help. Speaking of helping, Gregory asked me if I had a bat
-      he could borrow, so I let him have Charlie. Could you make sure Charlie's doing
-      okay for me?
-    _startDelay: 0
+    _text: 'I''m so embarrassed. I left one of my books at John''s place yesterday,
+      and now marbles are in his house too! I''m really really hoping he doesn''t
+      mind I''m using this to help. '
+  - _customer: {fileID: 11400000, guid: c82ef99e4fdf8c9498d28fc8014bf9f3, type: 2}
+    _text: Speaking of helping, Gregory asked me if I had a bat he could borrow,
+      so I let him have Charlie. I'm not sure why he was looking for a cave bat,
+      but could you make sure Charlie's doing okay for me?

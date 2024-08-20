@@ -14,9 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textTurns:
   - _customer: {fileID: 11400000, guid: ae5cbcfa62c04574d8b3cd9e3661c5ca, type: 2}
-    _text: I feel I'm a ray of sunshine! John not only asked if I was to be his girlfriend,
-      but also a wife! What a surprise! Of course I'd say yes in a small town like
-      this.
-    _startDelay: 0
-    _duration: 0
-    _endDelay: 0
+    _text: I've had so many things happen to me lately... I think I need to get some
+      rest.
