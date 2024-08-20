@@ -28,11 +28,10 @@ public class SettingsController : MonoBehaviour
         
         _sfxController.PlaySound();
     }
-    
-    public void FullscreenToggle()
-    {
-        Screen.fullScreen = !Screen.fullScreen;
-        
+
+    public void Fullscreen(bool isFullscreen) {
+        Screen.fullScreen = isFullscreen;
+
         _sfxController.PlaySound();
     }
 

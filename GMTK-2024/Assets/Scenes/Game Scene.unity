@@ -1250,7 +1250,6 @@ GameObject:
   - component: {fileID: 163598919}
   - component: {fileID: 163598920}
   - component: {fileID: 163598921}
-  - component: {fileID: 163598922}
   - component: {fileID: 163598923}
   - component: {fileID: 163598924}
   m_Layer: 0
@@ -1341,23 +1340,6 @@ MonoBehaviour:
   _pauseController: {fileID: 809615772}
   _dayCompleteManager: {fileID: 2137243303}
   _shopManager: {fileID: 219668408}
---- !u!320 &163598922
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163598915}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 33a2371bf2547e34aa9ef7da996f8fdd, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings: []
-  m_ExposedReferences:
-    m_References: []
 --- !u!114 &163598923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1527,10 +1509,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.03147877
+    y: 0.03125
+    width: 0.9370425
+    height: 0.9375
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
