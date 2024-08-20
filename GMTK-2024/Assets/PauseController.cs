@@ -9,6 +9,9 @@ public class PauseController : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu;
     private SFXController _sfxController;
     
+    [SerializeField] private CanvasGroup _mainMenu;
+    [SerializeField] private CanvasGroup _settingsMenu;
+    
     public bool Paused; 
     
     private void Start()
@@ -43,7 +46,14 @@ public class PauseController : MonoBehaviour
 
     public void SettingsButton() {
         _sfxController.PlaySound();
-        Debug.Log("Needs to be added");
+        
+        _mainMenu.alpha = 0;
+        _mainMenu.interactable = false;
+        _mainMenu.blocksRaycasts = false;
+        
+        _settingsMenu.alpha = 1;
+        _settingsMenu.interactable = true;
+        _settingsMenu.blocksRaycasts = true;
     }
 
     public void QuitButton() {
